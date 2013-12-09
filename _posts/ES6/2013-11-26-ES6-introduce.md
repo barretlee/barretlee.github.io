@@ -24,7 +24,7 @@ ECMAScript 6 的目标，是使得JavaScript可以用来编写复杂的应用程
 
 5. **spread**: `let a = [0,1,2,3]`, `o = new Something(...a);`
 
-6. **proxies**: `let obj = Proxy.create(handler, proto)`. 简单地说，就是类对象元素的符号重载.
+6. **proxies**: `let obj = new Proxy(target, handler)`. 简单地说，就是类对象元素的符号重载.
 
 7. **weak map**: `let map = new WeakMap`. 当你有循环应用的时候用它.
 
