@@ -324,6 +324,6 @@ JS模板引擎应该做哪些事情？看看下面一串代码：
 
 <div class="page-ctrl">
 	<span class="page-old" title="上一篇">&lt;&lt;<a href="/authentication-in-web">OAuth认证原理及HTTP下的密码安全传输</a></span>
-	<span class="page-new" title="下一篇"><a href="/history-api-in-html5">拿history API玩点花样</a></span>
+	<span class="page-new" title="下一篇"><a href="/history-api-in-html5">PJAX的实现与应用</a>&gt;&gt;</span>
 </div>
 

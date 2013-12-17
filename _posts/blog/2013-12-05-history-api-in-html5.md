@@ -147,5 +147,5 @@ DEMO地址：<http://qianduannotes.duapp.com/demo/PJAX/index.html>
 
 <div class="page-ctrl">
 	<span class="page-old" title="上一篇">&lt;&lt;<a href="/principle-of-javascript-template">javascript模板引擎原理，几行代码的事儿</a></span>
-	<span class="page-new" title="下一篇"><a href="#"></a></span>
+	<span class="page-new" title="下一篇"><a href="/web-communication">javascript之web通信</a>&gt;&gt;</span>
 </div>
