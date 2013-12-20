@@ -3,7 +3,7 @@ layout: post
 title: 细说WebSocket - Node篇
 description: websocket协议允许一个不受信用的客户端代码在受控环境中去操控远程主机。
 category: blog
-tags: javascript communication
+tags: javascript communication websocket
 ---
 
 在上一篇提高到了 [web 通信的各种方式](/web-communication)，包括 轮询、长连接 以及各种 HTML5 中提到的手段。本文将详细描述 WebSocket协议 在 web通讯 中的实现。
@@ -311,6 +311,10 @@ Server 收到的信息是这样的：
 握手请求中包含Sec-WebSocket-Key字段，明眼人一下就能看出来是websocket连接，而且这个字段的加密方式在服务器也是固定的，如果别人想黑你，不会太难。
 
 再就是那个mask掩码，既然强制加密了，还有必要让开发者处理这个东西么？直接封装到内部不就行了？
+
+### 3. 与 TCP 和 HTTP 之间的关系
+
+WebSocket协议是一个基于TCP的协议，就是握手链接的时候跟HTTP相关（发了一个HTTP请求），这个请求被Server切换到（Upgrade）websocket协议了。websocket把 80 端口作为默认websocket连接端口，而websocket的运行使用的是443端口。
 
 ## 三、参考资料
 
