@@ -71,6 +71,20 @@ pre.prettyprint  ol li, pre.prettyprint  ul li {
     -o-transition: all 1s ease;
     transition: all 1s ease;
 }*/
+table{
+    border: 1px solid #CCC;
+    margin: 15px 0;
+    box-shadow: 3px 3px 5px #CCC;
+    border-radius: 5px;
+}
+table th {
+    background: #F8F8F8;
+    text-align: center;
+}
+table td, table th {
+    padding: 5px;
+    border: 1px solid #CCC;
+}
 /************layout style*****************/
 #content {width:680px;margin:90px auto 20px;*padding-top:90px;min-height:400px;height:auto !important;height:400px;}
 
