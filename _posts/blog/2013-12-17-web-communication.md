@@ -271,5 +271,5 @@ HTML5中提供的EventSource这玩意儿，这是无比简洁的服务器推送�
 
 <div class="page-ctrl">
 	<span class="page-old" title="上一篇">&lt;&lt;<a href="/history-api-in-html5">PJAX的实现与应用</a></span>
-	<span class="page-new" title="下一篇"><a href="/web-communication">细说WebSocket - Node篇</a>&gt;&gt;</span>
+	<span class="page-new" title="下一篇"><a href="/websocket-with-node">细说WebSocket - Node篇</a>&gt;&gt;</span>
 </div>

@@ -176,7 +176,7 @@ WebSocket 连接是由客户端主动发起的，所以一切要从客户端出�
 [![shake-ok]({{ site.repo }}/images/blog-article-images/blog/ws/shake-ok.jpg)]({{ site.repo }}/images/blog-article-images/blog/ws/shake-ok.jpg)
 
 
-### 4. 数据帧处理
+### 5. 数据帧处理
 
 	// 解析数据帧
 	function decode($buffer)  {
@@ -295,7 +295,7 @@ WebSocket 连接是由客户端主动发起的，所以一切要从客户端出�
         });
     }).listen(8000);
 
-多么简洁，多么方面！有谁还愿意使用 php 呢。。。。
+多么简洁，多么方便！有谁还愿意使用 php 呢。。。。
 
 ### 2. 数据帧解析代码
 
@@ -315,6 +315,6 @@ Google 上搜索 [php+websoket+class](https://www.google.com.hk/search?q=php+web
 - <http://www.rfc-editor.org/rfc/rfc6455.txt> [RFC6455](http://www.rfc-editor.org/rfc/rfc6455.txt) WebSocket
 
 <div class="page-ctrl">
-	<span class="page-old" title="上一篇">&lt;&lt;<a href="/web-communication">细说WebSocket - Node篇</a></span>
+	<span class="page-old" title="上一篇">&lt;&lt;<a href="/websocket-with-node">细说WebSocket - Node篇</a></span>
 	<span class="page-new" title="下一篇"><a href="#"></a></span>
 </div>
