@@ -141,7 +141,7 @@ WebSocket 连接是由客户端主动发起的，所以一切要从客户端出�
 
 这里比较简单，直接正则匹配，websocket 信息头一定包含 Sec-WebSocket-Key，所以我们匹配起来也比较快捷~
 
-### 4. 加密 Sec-WebSocket-Key
+### 3. 加密 Sec-WebSocket-Key
 
 	function encry($req){
 		$key = $this->getKey($req);
@@ -153,7 +153,7 @@ WebSocket 连接是由客户端主动发起的，所以一切要从客户端出�
 将 SHA-1 加密后的字符串再进行一次 base64 加密。如果加密算法错误，客户端在进行校检的时候会直接报错：
 [![shake-error]({{ site.repo }}/images/blog-article-images/blog/ws/shake-error.jpg)]({{ site.repo }}/images/blog-article-images/blog/ws/shake-error.jpg)
 
-### 3. 应答 Sec-WebSocket-Origin
+### 4. 应答 Sec-WebSocket-Accept
 
 	function dohandshake($socket, $req){
 		// 获取加密key
