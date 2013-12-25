@@ -3,7 +3,7 @@ layout: post
 title: 细说WebSocket - Node篇
 description: websocket协议允许一个不受信用的客户端代码在受控环境中去操控远程主机。
 category: blog
-tags: javascript communication websocket
+tags: javascript communication websocket nodeJs
 ---
 
 在上一篇提高到了 [web 通信的各种方式](/web-communication)，包括 轮询、长连接 以及各种 HTML5 中提到的手段。本文将详细描述 WebSocket协议 在 web通讯 中的实现。
@@ -328,5 +328,5 @@ WebSocket协议是一个基于TCP的协议，就是握手链接的时候跟HTTP�
 
 <div class="page-ctrl">
 	<span class="page-old" title="上一篇">&lt;&lt;<a href="/web-communication">javascript之web通信</a></span>
-	<span class="page-new" title="下一篇"><a href="#"></a></span>
+	<span class="page-new" title="下一篇"><a href="/websocket-with-php"></a></span>
 </div>
