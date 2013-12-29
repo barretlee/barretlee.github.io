@@ -18,7 +18,7 @@ tags: javascript require 模块化 CMD
 
 先不考虑各种模块定义规范，本文目的只是简要的分析加载原理， CMD / AMD 规范虽内容然不多，但是要实现起来，工程量还是不小。文章后面会提到。
 
-### 1. 数据的模块的加载
+### 1. 数据模块的加载
 
 既然是模块化加载，想办法把模块内容拿到当然是重头戏，无论是 script 还是 css 文件的加载，一个 script 或者 link 标签就可以搞定问题，不过我这里采用的是 ajax，目的是为了拿到 script 的代码，也是为了照顾后面要说的 CMD 规范。
 
@@ -275,7 +275,7 @@ tags: javascript require 模块化 CMD
 然后就是很多很多细节，本文的目的并不是写一个类似 seajs 的模块管理工具，只是稍微说几句自己对这玩意儿的看法，如果说的有错，请多多吐槽！
 
 ## 三、参考资料
-- <https://github.com/seajs/issues> seajs issues
+- <https://github.com/seajs/seajs/issues> seajs issues
 
 
 <div class="page-ctrl">
