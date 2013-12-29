@@ -230,7 +230,50 @@ tags: javascript require 模块化 CMD
 
 剩下的工作就是针对 CMD 规范写一套符合标准的代码接口，这个比较琐碎，就不写了。
 
-## 参考资料
+
+## 二、额外的话题
+
+上面的代码中提到了关于 Event 的事件管理。在模块全部加在完毕之后，需要有个东西告诉你，所以顺手写了一个 Event 的事件管理器。
+
+	// Event
+	var Event = {};
+	Event.events = [];
+	Event.on = function(evt, func){
+		for(var i = 0; i < Event.events.length; i++){
+			if(Event.events[i].evt == evt){
+				Event.events[i].func.push(func);
+				return;
+			}
+		}
+
+		Event.events.push({
+			evt: evt,
+			func: [func]
+		});
+	};
+	Event.trigger = function(evt){
+		for(var i = 0; i < Event.events.length; i++){
+			if(Event.events[i].evt == evt){
+				for(var j = 0; j < Event.events[i].func.length; j++){
+					Event.events[i].func[j]();
+				}
+				return;
+			}
+		}
+	};
+	Event.off = function(evt){
+		for(var i = 0; i < Event.events.length; i++){
+			Event.events.splice(i, 1);
+		}		
+	};
+
+我觉得 seajs 是一个很不错的模块加载器，如果感兴趣，可以去看看他的源码实现，代码不长，只有一千多行。模块的加载它采用的是创建文本节点，让文档去加载模块，实时查看状态为 interactive 的 script 标签，如果处于交互状态就拿到他的代码，接着删除节点。当节点数目为 0 的时候，加载工作完成。
+
+本文没有考虑 css 文件的加载问题，我们可以把它当做一个没有 require 关键词的 js 文件，或者把它匹配出来之后另作处理，因为他是不可能存在模块依赖关系的。
+
+然后就是很多很多细节，本文的目的并不是写一个类似 seajs 的模块管理工具，只是稍微说几句自己对这玩意儿的看法，如果说的有错，请多多吐槽！
+
+## 三、参考资料
 - <https://github.com/seajs/issues> seajs issues
 
 
