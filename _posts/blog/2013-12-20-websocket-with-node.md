@@ -328,5 +328,5 @@ WebSocket协议是一个基于TCP的协议，就是握手链接的时候跟HTTP�
 
 <div class="page-ctrl">
 	<span class="page-old" title="上一篇">&lt;&lt;<a href="/web-communication">javascript之web通信</a></span>
-	<span class="page-new" title="下一篇"><a href="/websocket-with-php"></a></span>
+	<span class="page-new" title="下一篇"><a href="/websocket-with-php">细说websocket - php篇</a>&gt;&gt;</span>
 </div>
