@@ -211,6 +211,7 @@ tags: javascript require 模块化 CMD
 				└> b.js -> e.js
 
 戳我 → [Demo][4]
+[![require2]({{ site.repo }}/images/blog-article-images/blog/require2.jpg)]({{ site.repo }}/images/blog-article-images/blog/require2.jpg)
 
 ### 4. CMD 规范的介绍
 
