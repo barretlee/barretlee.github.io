@@ -121,7 +121,7 @@ table td, table th {
 .entry ol li{list-style:decimal;}
 .entry blockquote{margin:20px;background:#FCFCFC;border-left:6px solid #DBDBDB;font-size: 13px;padding:10px; line-height: 24px;padding-left: 20px;}
 .entry blockquote p {margin-bottom: 10px;}
-.entry img{border: 1px solid #CCC; max-width:650px;_width:500px;display:block;margin:15px 0;padding:3px;box-shadow: 3px 3px 5px #CCC;}
+.entry img{border: 1px solid #CCC; max-width:650px;_width:500px;display:block;margin:15px 0;padding:3px;box-shadow: 5px 5px 8px #CCC;}
 .entry img:hover {
     opacity:0.8;-moz-opacity:0.8;filter:alpha(opacity=80);
 }
@@ -290,6 +290,8 @@ figure p { text-align: center}
     color: #202020;
     font-weight: bold;
     zoom: 1;color: #4A75B5;
+    border-top: 1px solid #4A75B5;
+    margin-top: 20px;
 }
 .page-ctrl a {
     display: inline-block;
@@ -392,6 +394,13 @@ figure p { text-align: center}
 .categoryList strong {
     margin-right: -7px;
 }
+.entry .categoryList a:hover {
+    background: none;
+    padding:3px;
+    color: #000;
+    border-radius: 0;
+    box-shadow: none;
+}
 
 .aboutMe .bdsharebuttonbox  {
     display:none;
@@ -402,7 +411,6 @@ figure p { text-align: center}
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 60px;
-    margin-top: 50px;
     background-image: url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/warn.png);
     background-repeat: no-repeat;
     background-position: 15px;

@@ -5,7 +5,7 @@
         <a href="/?category={{ category }}" itemprop="url">{{ category }}</a> 
     {% endfor %}
     <strong style="margin-left:20px;">标签：</strong>
-    {% for tag in page.tags %}
+    {% for tag in page.tags limits:6 %}
         <a href="/?tag={{ tag }}" itemprop="url">{{ tag }}</a> 
     {% endfor %}
 </div>
