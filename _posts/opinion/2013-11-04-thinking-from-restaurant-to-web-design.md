@@ -28,8 +28,5 @@ tags: design life
 *（算了，这样的文章写不好，等以后感触深了之后继续补充）*
 
 
-<div class="page-ctrl">
-	<span class="page-old" title="上一篇">&lt;&lt;<a href="/something-in-i-like">“点赞”心理浅析</a></span>
-	<span class="page-new" title="下一篇"><a href="#"></a></span>
-</div>
+
 

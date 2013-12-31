@@ -1,11 +1,11 @@
 <!-- category list  -->
 <div class="categoryList">
 	<strong>分类：</strong>
-	{% for category in post.categories %}
+	{% for category in page.categories %}
         <a href="/{{ category }}" itemprop="url">{{ category }}</a> 
     {% endfor %}
     <strong>标签：</strong>
-    {% for tag in post.tags %}
+    {% for tag in page.tags %}
         <a href="/{{ tag }}" itemprop="url">{{ tag }}</a> 
     {% endfor %}
 </div>

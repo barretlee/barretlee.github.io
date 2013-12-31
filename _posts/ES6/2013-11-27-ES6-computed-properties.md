@@ -67,7 +67,4 @@ ECMAScript 6系列文章请移步：<http://barretlee.com/ES6/>
 [2]: http://wiki.ecmascript.org/doku.php?id=harmony:const  const
 [3]: https://github.com/ariya/esprima esprima
 
-<div class="page-ctrl">
-	<span class="page-old" title="上一篇">&lt;&lt;<a href="/ES6-introduce">一、ECMAScript 6简介</a></span>
-	<span class="page-new" title="下一篇"><a href="#"></a></span>
-</div>
+

@@ -77,10 +77,7 @@ tags:   document.write 统计
 上述代码中，head标签，如果你没写，(webkit内核和Geoko内核)浏览器也会兼容性地补上，详情请参阅[HTML语法解析][3]，IE我不太清楚。
 
 
-<div class="page-ctrl">
-	<span class="page-old" title="上一篇">&lt;&lt;<a href="/test-with-jekyll">jekyll语法练手</a></span>
-	<span class="page-new" title="下一篇"><a href="/let-your-page-understood-by-search-engine">SEO：让搜索引擎对你的网站更有亲和力(译)</a>&gt;&gt;</span>
-</div>
+
 
 [1]: http://jekyllrb.com "jekyll"
 [2]: https://github.com/barretlee/barretlee.github.io "Barret Lee's github"

@@ -314,7 +314,3 @@ Google 上搜索 [php+websoket+class](https://www.google.com.hk/search?q=php+web
 - <http://www.php.net/manual/zh/ref.sockets.php> php manual
 - <http://www.rfc-editor.org/rfc/rfc6455.txt> [RFC6455](http://www.rfc-editor.org/rfc/rfc6455.txt) WebSocket
 
-<div class="page-ctrl">
-	<span class="page-old" title="上一篇">&lt;&lt;<a href="/websocket-with-node">细说WebSocket - Node篇</a></span>
-	<span class="page-new" title="下一篇"><a href="/how-to-achieve-loading-module">浅谈模块化加载的实现原理</a>&gt;&gt;</span>
-</div>

@@ -144,10 +144,7 @@ webmasters][3]，你可以用这些工具来检测格式是不是正确。
 因后面几个用的比较少，如果要做具体了解，请移步[原网页][5]。
 
 
-<div class="page-ctrl">
-	<span class="page-old" title="上一篇">&lt;&lt;<a href="/document-flow">突然犯2了，整个页面只剩下百度统计</a></span>
-	<span class="page-new" title="下一篇"><a href="/make-your-github-pages-more-faster">让你的github pages跑得更快</a>&gt;&gt;</span>
-</div>
+
 
 [1]: http://schema.org 
 [2]: http://schema.org/docs/full.html

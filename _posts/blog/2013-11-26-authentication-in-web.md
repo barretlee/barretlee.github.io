@@ -62,7 +62,4 @@ tags: OAuth认证 HTTP Token
 使用token的弊端是需要额外发送一次请求，过程稍微复杂。有些公司VPN通道就是利用token做密码，为了保证高安全性，他们使用的是一个信息与服务器同步硬件设备，和银行发的动态口令一样，每次登陆都需要输入这个口令，那这个口令也就是token，不过他不是网络传输获取，所以安全性更高。
 
 
-<div class="page-ctrl">
-	<span class="page-old" title="上一篇">&lt;&lt;<a href="/white-screen-in-chrome">chrome浏览器渲染白屏问题剖析</a></span>
-	<span class="page-new" title="下一篇"><a href="/principle-of-javascript-template">javascript模板引擎原理，几行代码的事儿</a>&gt;&gt;</span>
-</div>
+

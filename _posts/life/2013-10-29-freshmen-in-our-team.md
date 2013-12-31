@@ -79,10 +79,7 @@ tags: team
 
 欢迎入群：摇篮曲之前端故事（320777272），请注明：学校（地区）-姓名
 
-<div class="page-ctrl">
-	<span class="page-old" title="上一篇"><a href="#"></a></span>
-	<span class="page-new" title="下一篇"><a href="/learning-in-front-end">前端学习的那些往事</a>&gt;&gt;</span>
-</div>
+
 
 [1]: http://www.hust.edu.cn/ 		"华中科技大学"
 [2]: http://nadc.org.cn/     		"网络应用研发中心"

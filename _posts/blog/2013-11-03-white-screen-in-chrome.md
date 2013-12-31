@@ -34,7 +34,3 @@ Render树构建好了之后，将会执行布局过程，它将确定每个节�
 关于浏览器的工作原理，有兴趣的可以上网[搜搜](https://www.google.com.hk/search?q=%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86)。
 
 
-<div class="page-ctrl">
-	<span class="page-old" title="上一篇">&lt;&lt;<a href="/make-your-github-pages-more-faster">让你的github pages跑得更快</a></span>
-	<span class="page-new" title="下一篇"><a href="/authentication-in-web">OAuth认证原理及HTTP下的密码安全传输</a>&gt;&gt;</span>
-</div>

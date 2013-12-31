@@ -278,10 +278,7 @@ tags: javascript require 模块化 CMD
 - <https://github.com/seajs/seajs/issues> seajs issues
 
 
-<div class="page-ctrl">
-	<span class="page-old" title="上一篇">&lt;&lt;<a href="/websocket-with-php">细说websocket - php篇</a></span>
-	<span class="page-new" title="下一篇"><a href="/websocket-with-php"></a></span>
-</div>
+
 
 [1]: https://github.com/seajs/seajs/issues/547 前端模块化开发的价值
 [2]: http://tangram.baidu.com/ tangram

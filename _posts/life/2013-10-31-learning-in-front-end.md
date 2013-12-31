@@ -152,10 +152,7 @@ tags: 前端学习
 
 本文就当是对自己的一个自我介绍吧，谈了下我对前端学习的一些感受，每次面试都会被问到是如何学习前端的，回答多了感觉也忒无聊的- -
 
-<div class="page-ctrl">
-	<span class="page-old" title="上一篇">&lt;&lt;<a href="/freshmen-in-our-team">如何培育新人</a></span>
-	<span class="page-new" title="下一篇"><a href="#"></a></span>
-</div>
+
 
 [1]: /freshmen-in-our-team "如何培育新人"
 [2]: http://www.cnblogs.com/Darren_code/  "聂微东"
