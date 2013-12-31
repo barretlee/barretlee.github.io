@@ -51,7 +51,7 @@ a.external {padding-right:13px;background:url(http://qianduannotes.duapp.com/git
 a.external:hover {background-position:right -15px;}
 .entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#333;border-bottom: 1px solid #CCC;padding-bottom: 10px;}
 .entry-title a:hover {text-decoration:none;color:#F00;}
-.entry-date {color:#999;margin-bottom:60px;font-size: 16px;line-height: 30px;}
+.entry-date {color:#999; font-size: 16px;line-height: 30px;}
 
 h2 {font-size:22px;font-weight:bold;margin-bottom:25px; margin-top: 25px;}
 h3 {font-size:18px;font-weight:bold;margin-bottom:25px;}
@@ -81,7 +81,7 @@ table td, table th {
 /************layout style*****************/
 .page-loc { font-size: 18px; border-bottom: 1px solid #CCC; padding-bottom: 10px; margin-bottom: 30px; }
 .page-rss { margin-left: 20px; }
-, #copyr {
+.page-top-nav, #copyr {
     overflow: hidden; 
     font-weight: bold;
     color: #333;
