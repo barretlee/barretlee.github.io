@@ -264,6 +264,19 @@ figure p { text-align: center}
     border:1px solid #636363;
     background-color:#929292;
 }
+/*内容样式*/
+pre::-webkit-scrollbar {width:10px;height:10px;background:#F6F6F6;border-top:1px solid #CCC;padding-top:1px;}
+pre::-webkit-scrollbar-thumb {background:#EEE;border-radius:5px;border:1px solid #CCC;border-bottom:0px;}
+pre::-webkit-scrollbar-thumb:hover {background:#DDD;}
+
+pre::-webkit-scrollbar {width:10px;height:10px;background:#CCC;}
+pre::-webkit-scrollbar-thumb {background:#999;border-radius:5px;}
+pre::-webkit-scrollbar-thumb:hover {background:#666;}
+pre::-webkit-scrollbar-corner {background:#CCC;}
+pre::-webkit-color-swatch {border:none;}
+
+/*RunatServer*/
+
 .ES6 {
     width: 70%;
     margin: 0 auto !important;
@@ -394,14 +407,6 @@ figure p { text-align: center}
 .categoryList strong {
     margin-right: -7px;
 }
-.entry .categoryList a:hover {
-    background: none;
-    padding:3px;
-    color: #000;
-    border-radius: 0;
-    box-shadow: none;
-}
-
 .aboutMe .bdsharebuttonbox  {
     display:none;
 }

@@ -3,6 +3,11 @@ layout: default
 title: about
 ---
 <div id="content" class="aboutMe">
+<div class="page-loc">
+	<span style="float:right"><a href="/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
+  
+  	李靖的博客 » 关于我
+</div>
 <dl class="aboutDl">
 	<dt><img src="{{ site.repo }}/images/mine.jpg" />关于作者：</dt>
 	<dd><strong>李靖，</strong>Barret Lee</dd>
