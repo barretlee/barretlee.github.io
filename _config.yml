@@ -1,15 +1,29 @@
-auto: true
+#
+# Blog Settings
+#
 
+
+# Jekyll Settings
 markdown: rdiscount
 pygments: true
 paginate: 6
 permalink: /:title
 baseurl: /
 
+# Disqus Comments
+disqus_short_name: barretlee
+disqus_show_comment_count: true
+
+# site
 title: BarretLee's Blog
 url: http://barretlee.com
 repo: http://qianduannotes.duapp.com/github/barretlee.github.com
 feed: /atom.xml
+
+# color scheme
 highlight: light
+
+# author
 author_name: Barret Lee
+author_email: barret.china@gmail.com
 author_info: <a href="http://barretlee.com">BarretLee</a>

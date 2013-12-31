@@ -1,3 +1,3 @@
-Sitemap: http://barretlee.github.io/sitemap.xml
+Sitemap: http://barretlee.com/sitemap.xml
 User-agent: *
 Allow: /

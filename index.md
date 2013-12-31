@@ -16,7 +16,12 @@ layout: home
         <ul class="artical-list">
         {% for post in site.categories.blog %}
             <li itemscope itemtype="http://schema.org/Article">
-                <h2><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+                <h2>
+                    <a href="{{ post.url }}" itemprop="url">{{ post.title }}</a>
+                    <span class="dis_comments">
+                        <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ disqus_identifier }}">comments</a>
+                    </span>
+                </h2>
                 <div class="title-desc" itemprop="description">{{ post.description }}</div>
             </li>
         {% endfor %}
