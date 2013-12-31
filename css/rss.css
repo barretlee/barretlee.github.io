@@ -1,5 +1,5 @@
 feed {font:14px/26px Consolas,微软雅黑;background:#F8F8F8;}
-feed>* {margin:8px 20px;}
+feed>* {margin:8px 20px;display:block;}
 channel>item {margin:16px 20px;}
 channel>title {
   font-size:26px;line-height:32px;
