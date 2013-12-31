@@ -331,6 +331,24 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
 .footer a {
     color: orange;
 }
+.aboutDl {
+    margin-bottom: 50px;
+}
+.aboutDl dd {
+    text-indent: 2em;
+    line-height: 30px;
+}
+.aboutDl dt {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-top: 20px;
+}
+.aboutDl strong {
+    margin-right: 8px;
+    width: 90px;
+    text-align: left;
+}
 /**************目录导航**************/
 #menuIndex {position:fixed;top:60px;right:20px;width:200px;overflow:auto; _position:absolute;}
 #menuIndex a {display:block; padding:2px 0; }

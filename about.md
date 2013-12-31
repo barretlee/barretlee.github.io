@@ -3,8 +3,21 @@ layout: default
 title: about
 ---
 <div id="content">
-	<div style="height:150px;">客官请稍后...</div>
+<dl style="aboutDl">
+	<dt>关于作者：</dt>
+	<dd><strong>李靖，</strong>Barret Lee</dd>
+	<dd><strong>weibo:</strong><a href="http://weibo.com/hustskyking" target="_blank">@BarretLee</a></dd>
+	<dd><strong>blog:</strong><a href="http://hustskyking.cnblogs.com" target="_blank">博客园-BarretLee</a>（本博客部分文章会同步至博客园）</dd>
+	<dd><strong>email:</strong><a href="mailto:barret.china@gmail.com">barret.china@gmail.com</a></dd>
 
-
+	<dt>关于博客</dt>
+	<dd>所有文章非特别说明皆为原创，遵循的协议为「<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" target="_blank">署名-非商业性使用-相同方式共享</a>」，转载请注明文章出处！谢谢合作 :）</dd>
+</dl>
 	{% include disqus.snippet %}
 </div>
+
+<script type="text/javascript">
+$(window).on("load", function(){
+	$('#disqus_container .comment').trigger('click');
+});
+</script>
