@@ -27,6 +27,12 @@ layout: home
                 </div>
             </li>
             <li itemtype="http://schema.org/Article">
+                <h2><a href="/node/" itemprop="url">ECMAScript 6系列</a><sup class="stick-top">TOP</sup></h2>
+                <div class="title-desc" itemprop="description">
+                    ECMAScript 6 是JavaScript的下一个标准，正处在快速开发之中，大部分已经完成了，预计将在2014年正式发布。
+                </div>
+            </li>
+            <li itemtype="http://schema.org/Article">
                 <h2><a href="/wiki.html" itemprop="url">Wiki - 知识库</a></h2>
                 <div class="title-desc" itemprop="description">
                     Javascript,HTML & CSS,HTML5 & CSS3,前端相关,Python,正则表达式,开发相关,版本控制,系统相关,设计相关,VIM,其他
