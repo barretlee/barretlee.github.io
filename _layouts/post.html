@@ -17,7 +17,7 @@ layout: page
 	        <a href="/?category={{ category }}" itemprop="url">{{ category }}</a> 
 	    {% endfor %}<br />
 	    <strong>标签：</strong>
-	    {% for tag in page.tags %}
+	    {% for tag in page.tags limit:3 %}
 	        <a href="/?tag={{ tag }}" itemprop="url">{{ tag }}</a> 
 	    {% endfor %}
 	</div>
@@ -29,7 +29,7 @@ layout: page
 		</span><br />
 		<span title="{{page.next.title}}">
 	        {% if page.next.url %} 
-			下一篇：<a href="{{page.next.url}}">{{page.next.title}}&gt;&gt;</a>
+			下一篇：<a href="{{page.next.url}}">{{page.next.title}}</a>
 	        {% endif %} 
 		</span>
 	</div>

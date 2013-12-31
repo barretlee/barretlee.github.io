@@ -105,9 +105,9 @@ table td, table th {
     margin: 0 0 1em 0;
     margin-bottom: 30px;
 }
-.page-top-nav .categoryList { float:left;line-height: 40px;margin-top: 0;margin-bottom: 0;}
+.page-top-nav .categoryList { float:left;line-height: 40px;margin-top: 0;margin-bottom: 0;max-width: 380px; white-space: nowrap;overflow:hidden;}
 .page-paginator{float:right;line-height: 40px;}
-.page-paginator span { display: inline-block; width: 250px; text-overflow: ellipsis;white-space: nowrap;}
+.page-paginator span { display: inline-block; width: 280px; text-overflow: ellipsis;white-space: nowrap;}
 
 
 
