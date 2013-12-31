@@ -354,6 +354,12 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
     margin-right: 5px;
     text-align: left;
 }
+.aboutDl img {
+    float: right;
+    width: 150px;
+    margin: 15px;
+    box-shadow: 3px 3px 5px #CCC;
+}
 
 /*==========
    category
@@ -427,6 +433,12 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
     .trash .aside,
     .life .aside,
     .opinion .aside {display:none;background-image:none;}
+
+    .aboutDl img {
+        float: none;
+        display:block;
+        width: 65%;
+    }
 }
 
 @media screen and (max-width: 450px){
@@ -439,6 +451,11 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
     .index-content .artical-cate li { display:block; width: auto;}
     .index-content .artical-cate li a { line-height: 30px; }
     .index-content .cate-bar {margin-bottom: 50px;}
+    .aboutDl img {
+        float: none;
+        display:block;
+        width: 75%;
+    }
 }
 
 @media (max-width: 1020px){
