@@ -1,20 +1,26 @@
+<!-- category list  -->
 <div class="categoryList">
-	分类：
+	<strong>分类：</strong>
 	{% for category in post.categories %}
         <a href="/{{ category }}" itemprop="url">{{ category }}</a> 
-    {% endfor %} | 标签：
+    {% endfor %}
+    <strong>标签：</strong>
     {% for tag in post.tags %}
         <a href="/{{ tag }}" itemprop="url">{{ tag }}</a> 
     {% endfor %}
-
 </div>
 
 
- {% for post in site.categories.opinion %}
-    <li itemscope itemtype="http://schema.org/Article">
-        <h2>
-            <a href="{{ post.url }}" itemprop="url">{{ post.title }}</a>
-        </h2>
-        <div class="title-desc" itemprop="description">{{ post.description }}</div>
-    </li>
-{% endfor %}
+<!-- pages -->
+<div class="page-ctrl">
+	<span class="page-old" title="上一篇">
+	{% if page.previous.url %} 
+		&lt;&lt;<a href="{{page.previous.url}}">{{page.previous.title}}</a>
+    {% endif %} 
+	</span>
+	<span class="page-new" title="下一篇">
+        {% if page.next.url %} 
+		<a href="{{page.next.url}}">{{page.next.title}}&gt;&gt;</a>
+        {% endif %} 
+	</span>
+</div>

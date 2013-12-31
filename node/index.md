@@ -12,7 +12,7 @@ layout: default
         </li>
     {% endfor %}
     </ul>
-    <p style="margin-top:40px;color:red;">持续更新中...</p>
+    <p style="margin-top:40px;color:red;">等待开工...</p>
 </div>
 
 <script type="text/javascript">

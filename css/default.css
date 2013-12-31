@@ -279,9 +279,11 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
 }
 .page-ctrl {
     overflow: hidden;
-    margin-top: 60px;
+    margin-top: 20px;
+    padding-top: 20px;
     font-family: 宋体;
     color: #202020;
+    border-top: 3px solid #F3F3F3;
     font-weight: bold;
     zoom: 1;
 }
@@ -331,6 +333,10 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
 .footer a {
     color: orange;
 }
+
+/*==========
+   about me
+============*/
 .aboutDl {
     margin-bottom: 50px;
 }
@@ -345,9 +351,33 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
     margin-top: 20px;
 }
 .aboutDl strong {
-    margin-right: 8px;
     width: 90px;
     text-align: left;
+}
+
+/*==========
+   category
+============*/
+.categoryList {
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+.categoryList a {
+    display: inline-block;
+    padding: 3px 5px;
+    height: 20px;
+    line-height: 20px;
+    background: #FFA500;
+    color: #FFF;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px #CCC;
+    font-size: 14px;
+    margin: 0 3px;
+}
+.categoryList a:hover {
+background: #CCC;
+color: #333;
+text-decoration: none;
 }
 /**************目录导航**************/
 #menuIndex {position:fixed;top:60px;right:20px;width:200px;overflow:auto; _position:absolute;}

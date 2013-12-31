@@ -3,7 +3,7 @@ layout: default
 title: about
 ---
 <div id="content">
-<dl style="aboutDl">
+<dl class="aboutDl">
 	<dt>关于作者：</dt>
 	<dd><strong>李靖，</strong>Barret Lee</dd>
 	<dd><strong>weibo:</strong><a href="http://weibo.com/hustskyking" target="_blank">@BarretLee</a></dd>
