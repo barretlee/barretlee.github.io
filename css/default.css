@@ -171,7 +171,7 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 
 /**************功能按钮样式**************/
 #page-leader {
-    position: fixed;left:50%;margin-left:350px;top: 218px;z-index: 100;; _position:absolute;
+    position: fixed;left:50%;margin-left:350px;top: 35%;z-index: 100;; _position:absolute;
     opacity: .4; filter:alpha(opacity=40); -moz-opacoty: .4;
 }
 #page-leader:hover {
@@ -351,7 +351,7 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
     margin-top: 20px;
 }
 .aboutDl strong {
-    width: 90px;
+    margin-right: 5px;
     text-align: left;
 }
 
@@ -383,7 +383,7 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
     margin-right: -7px;
 }
 /**************目录导航**************/
-#menuIndex {position:fixed;top:60px;right:20px;width:200px;overflow:auto; _position:absolute;}
+#menuIndex {position:fixed;top:90px;left:20px;width:200px;overflow:auto; _position:absolute;}
 #menuIndex a {display:block; padding:2px 0; }
 #menuIndex a:hover {text-decoration:none;}
 #menuIndex ul li{font-size:12px;margin-bottom:5px;word-wrap:break-word;padding-left:10px;}

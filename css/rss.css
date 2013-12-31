@@ -1,0 +1,21 @@
+feed {font:14px/26px Consolas,微软雅黑;background:#F8F8F8;}
+feed>* {margin:8px 20px;}
+channel>item {margin:16px 20px;}
+channel>title {
+  font-size:26px;line-height:32px;
+  display:inline-block;margin-bottom:0px;color:#333;
+}
+channel>description {display:block;}
+channel>author {display:block;}
+author>name {font-size: 18px; font-weight: bold;}
+entry {
+  border:1px solid #CCC;padding:10px;display:block;
+  background:linear-gradient(#F6F6F6,#F2F2F2);
+  box-shadow:0px 0px 10px #CCC;
+}
+entry>updated {float:right;color:#666;}
+entry>description {display:block;color:#666;clear:both;}
+entry>title {font-weight:bold;color:#333;font-size:16px;}
+title {cursor:pointer;}
+title:hover {color:#E63;}
+link {display:none;}

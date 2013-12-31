@@ -3,24 +3,20 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
    <title>{{ site.title }}</title>
-   <link href="{{ site.url }}{{ site.feed }}" rel="self" type="application/atom+xml"/>
-   <link href="{{ site.url }}" rel="alternate" type="text/html" />
-   <updated>{{ site.time | date_to_xmlschema }}</updated>
-   <id>{{ site.url }}</id>
+   <link>{{ site.url }}</link>
+   <description>BarretLee's Blog—关注互联网，热爱生活!</description>
    <author>
      <name>Barret Lee</name>
      <email>barret.china@gmail.com</email>
    </author>
 
-   {% for post in site.posts limit:10 %}
+   {% for post in site.posts limit:15 %}
    <entry>
      <title>{{ post.title }}</title>
-     <link href="http://barretlee.github.com{{ post.url }}"/>
+     <link>http://barretlee.github.com{{ post.url }}"/>
      <updated>{{ post.date | date_to_xmlschema }}</updated>
-     <id>http://barretlee.github.com{{ post.id }}</id>
-     <content type="html">{{ post.content | xml_escape }}</content>
+     <description>{{ post.description }}</content>
    </entry>
    {% endfor %}
  
