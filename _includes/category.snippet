@@ -2,11 +2,11 @@
 <div class="categoryList">
 	<strong>分类：</strong>
 	{% for category in page.categories %}
-        <a href="/{{ category }}" itemprop="url">{{ category }}</a> 
+        <a href="/?category={{ category }}" itemprop="url">{{ category }}</a> 
     {% endfor %}
-    <strong>标签：</strong>
+    <strong style="margin-left:20px;">标签：</strong>
     {% for tag in page.tags %}
-        <a href="/{{ tag }}" itemprop="url">{{ tag }}</a> 
+        <a href="/?tag={{ tag }}" itemprop="url">{{ tag }}</a> 
     {% endfor %}
 </div>
 

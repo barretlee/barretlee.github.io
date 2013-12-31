@@ -7,9 +7,9 @@ permalink: /:title
 baseurl: /
 
 title: BarretLee's Blog
-url: http://barretlee.github.io
+url: http://barretlee.com
 repo: http://qianduannotes.duapp.com/github/barretlee.github.com
 feed: /atom.xml
 highlight: light
 author_name: Barret Lee
-author_info: <a href="http://barretlee.github.io">BarretLee</a>
+author_info: <a href="http://barretlee.com">BarretLee</a>

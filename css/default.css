@@ -285,7 +285,7 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
     color: #202020;
     border-top: 3px solid #F3F3F3;
     font-weight: bold;
-    zoom: 1;
+    zoom: 1;color: #4A75B5;
 }
 .page-ctrl a {
     display: inline-block;
@@ -364,20 +364,23 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
 }
 .categoryList a {
     display: inline-block;
-    padding: 3px 5px;
+    padding: 3px 8px;
     height: 20px;
     line-height: 20px;
-    background: #FFA500;
-    color: #FFF;
+    background: #eee;
+    color: #FF7406;
     border-radius: 4px;
     box-shadow: 3px 3px 3px #CCC;
     font-size: 14px;
     margin: 0 3px;
 }
 .categoryList a:hover {
-background: #CCC;
-color: #333;
-text-decoration: none;
+    background: #CCC;
+    color: #333;
+    text-decoration: none;
+}
+.categoryList strong {
+    margin-right: -7px;
 }
 /**************目录导航**************/
 #menuIndex {position:fixed;top:60px;right:20px;width:200px;overflow:auto; _position:absolute;}
