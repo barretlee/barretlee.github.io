@@ -21,15 +21,15 @@ layout: page
 	        <a href="/?tag={{ tag }}" itemprop="url">{{ tag }}</a> 
 	    {% endfor %}
 	</div>
-	<div class="page-paginator" style="float:right;line-height: 40px;">
-		<span class="page-old" title="上一篇">
+	<div class="page-paginator">
+		<span title="{{page.previous.title}}">
 		{% if page.previous.url %} 
-			&lt;&lt;<a href="{{page.previous.url}}">{{page.previous.title}}</a>
+			上一篇：<a href="{{page.previous.url}}">{{page.previous.title}}</a>
 	    {% endif %} 
 		</span>
-		<span class="page-new" title="下一篇">
+		<span title="{{page.next.title}}">
 	        {% if page.next.url %} 
-			<a href="{{page.next.url}}">{{page.next.title}}&gt;&gt;</a>
+			下一篇：<a href="{{page.next.url}}">{{page.next.title}}&gt;&gt;</a>
 	        {% endif %} 
 		</span>
 	</div>

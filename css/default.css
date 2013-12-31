@@ -81,13 +81,10 @@ table td, table th {
 /************layout style*****************/
 .page-loc { font-size: 18px; border-bottom: 1px solid #CCC; padding-bottom: 10px; margin-bottom: 30px; }
 .page-rss { margin-left: 20px; }
-.page-top-nav, #copyr {
+, #copyr {
     overflow: hidden; 
     font-weight: bold;
     color: #333;
-    padding: 0.3em 0.5em;
-    margin: 0 0 1em 0;
-    margin-bottom: 30px;
     border-bottom: none;
     background-color: #AAD2F0;
     -moz-border-radius: 10px;
@@ -103,14 +100,19 @@ table td, table th {
     border: 1px solid #DCDCDC;
     text-shadow: 1px 1px 0px #EEE;
 }
-.page-top-nav .categoryList { float:left;}
+.page-top-nav {
+    padding: 0.3em 0.5em;
+    margin: 0 0 1em 0;
+    margin-bottom: 30px;
+}
+.page-top-nav .categoryList { float:left;line-height: 40px;}
 .page-paginator{float:right;line-height: 40px;}
 .page-paginator span { display: inline-block; width: 220px; text-overflow: ellipsis;white-space: nowrap;}
 
 
 
 
-#content {width:680px;margin:90px auto 20px;*padding-top:90px;min-height:400px;height:auto !important;height:400px;}
+#content {width:680px;margin:40px auto 20px;*padding-top:90px;min-height:400px;height:auto !important;height:400px;}
 
 /****************entry style**************/
 #content .entry{margin-bottom:55px;}
@@ -400,7 +402,7 @@ figure p { text-align: center}
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 60px;
-    border: #E0E0E0 1px dashed;
+    margin-top: 50px;
     background-image: url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/warn.png);
     background-repeat: no-repeat;
     background-position: 15px;
