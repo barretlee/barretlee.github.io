@@ -7,10 +7,6 @@ layout: nil
    <title>{{ site.title }}</title>
    <link>{{ site.url }}</link>
    <description>BarretLee's Blog—关注互联网，热爱生活!</description>
-   <author>
-     <name>Barret Lee</name>
-     <email>barret.china@gmail.com</email>
-   </author>
    <script xmlns="http://www.w3.org/1999/xhtml" src="./js/rss.js"></script>
 
    {% for post in site.posts limit:15 %}
@@ -18,7 +14,7 @@ layout: nil
      <title>{{ post.title }}</title>
      <link>http://barretlee.github.com{{ post.url }}"></link>
      <updated>{{ post.date | date_to_xmlschema }}</updated>
-     <description>{{ post.description }}</content>
+     <description>{{ post.description | xml_escape }}</content>
    </entry>
    {% endfor %}
  

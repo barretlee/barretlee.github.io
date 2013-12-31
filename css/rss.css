@@ -6,8 +6,6 @@ feed>title {
   display:inline-block;margin-bottom:0px;color:#333;
 }
 feed>description {display:block;}
-feed>author {display:block;}
-author>name {font-size: 18px; font-weight: bold;display:block;}
 entry {
   border:1px solid #CCC;padding:10px;display:block;
   background:linear-gradient(#F6F6F6,#F2F2F2);
