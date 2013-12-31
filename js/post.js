@@ -1,3 +1,7 @@
+if(!/barret/i.test(window.location.href)){
+    window.location.href = "http://barretlee.com";
+}
+
 $(document).ready(function(){
     var isMobile = {
         Android: function() {
@@ -283,5 +287,5 @@ $(document).ready(function(){
         // 添加百度分享
         $("head").append($('<script/>').attr("src", 
             "http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion=" + ~(-new Date()/36e5)))    });
-    
+        
 });

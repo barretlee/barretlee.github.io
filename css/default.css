@@ -64,13 +64,6 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 pre.prettyprint  ol li, pre.prettyprint  ul li {
     margin-bottom: 0;
 }
-/*pre.prettyprint:hover {
-    float: left;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-}*/
 table{
     border: 1px solid #CCC;
     margin: 15px 0;
@@ -219,45 +212,24 @@ figure p { text-align: center}
     background: #F00;
     color: #FFF;
 }
-/*
+::-webkit-scrollbar-track-piece {
+    background-color:#f5f5f5;
+    border-left:1px solid #d2d2d2;
+}
 ::-webkit-scrollbar {
-    height: 16px;
-    overflow: visible;
-    width: 16px;
+    width:13px;
+    height:13px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    background-clip: padding-box;
-    border: solid rgba(0, 0, 0, 0);
-    min-height: 28px;
-    padding: 100px 0 0;
-    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+    background-color:#c2c2c2;
+    background-clip:padding-box;
+    border:1px solid #979797;
+    min-height:28px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(163, 163, 163, 0.2);
-    box-shadow: inset 1px 1px 0 rgba(179, 179, 179, 0.1),inset 0 -1px 0 rgba(143, 143, 143, 0.07);
+    border:1px solid #636363;
+    background-color:#929292;
 }
-::-webkit-scrollbar-button {
-    height: 0;
-    width: 0;
-}
-::-webkit-scrollbar-track {
-    background-clip: padding-box;
-    border: solid rgba(0, 0, 0, 0);
-    border-width: 0 0 0 4px;
-}
-::-webkit-scrollbar-corner {
-    background: rgba(0, 0, 0, 0);
-}*/
-::-webkit-scrollbar {width:10px;height:10px;background:#CCC;}
-::-webkit-scrollbar-thumb {background:#999;border-radius:5px;}
-::-webkit-scrollbar-thumb:hover {background:#666;}
-::-webkit-scrollbar-corner {background:#CCC;}
-::-webkit-color-swatch {border:none;}
-code::-webkit-scrollbar {width:10px;height:10px;background:#F6F6F6;border-top:1px solid #CCC;padding-top:1px;}
-code::-webkit-scrollbar-thumb {background:#EEE;border-radius:5px;border:1px solid #CCC;border-bottom:0px;}
-code::-webkit-scrollbar-thumb:hover {background:#DDD;}
-
 .ES6 {
     width: 70%;
     margin: 0 auto !important;
@@ -387,6 +359,10 @@ code::-webkit-scrollbar-thumb:hover {background:#DDD;}
 }
 .categoryList strong {
     margin-right: -7px;
+}
+
+.aboutMe .bdsharebuttonbox  {
+    display:none;
 }
 /**************目录导航**************/
 #menuIndex {position:fixed;top:90px;left:20px;width:200px;overflow:auto; _position:absolute;}

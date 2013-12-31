@@ -2,7 +2,7 @@
 layout: default
 title: about
 ---
-<div id="content">
+<div id="content" class="aboutMe">
 <dl class="aboutDl">
 	<dt><img src="{{ site.repo }}/images/mine.jpg" />关于作者：</dt>
 	<dd><strong>李靖，</strong>Barret Lee</dd>
