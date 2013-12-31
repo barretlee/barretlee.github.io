@@ -14,7 +14,7 @@ layout: nil
      <title>{{ post.title }}</title>
      <link>http://barretlee.github.com{{ post.url }}</link>
      <updated>{{ post.date | date_to_xmlschema }}</updated>
-     <description>{{ post.description | xml_escape }}</content>
+     <description>{{ post.description | xml_escape }}</description>
    </entry>
    {% endfor %}
  
