@@ -32,7 +32,7 @@ body .hide{display:none;}
 
 
 /***********default settings**********/
-body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;overflow-x:hidden;_height:100%;}
+body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;overflow-x:hidden;_height:100%;background-color: #FFFFE7;}
 a {color:#4A75B5;text-decoration:none;outline:none;
     -webkit-transition: all .4s ease;
     -moz-transition: all .4s ease;
@@ -49,9 +49,9 @@ a:hover {
 }
 a.external {padding-right:13px;background:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/icons.gif) no-repeat right 1px;}
 a.external:hover {background-position:right -15px;}
-.entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#000;text-align:center;}
+.entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#333;border-bottom: 1px solid #CCC;padding-bottom: 10px;}
 .entry-title a:hover {text-decoration:none;color:#F00;}
-.entry-date {text-align:center;color:#999;margin-bottom:60px;font-size:14px;}
+.entry-date {color:#999;margin-bottom:60px;font-size: 16px;line-height: 30px;}
 
 h2 {font-size:22px;font-weight:bold;margin-bottom:25px; margin-top: 25px;}
 h3 {font-size:18px;font-weight:bold;margin-bottom:25px;}
@@ -79,6 +79,37 @@ table td, table th {
     border: 1px solid #CCC;
 }
 /************layout style*****************/
+.page-loc { font-size: 18px; border-bottom: 1px solid #CCC; padding-bottom: 10px; margin-bottom: 30px; }
+.page-rss { margin-left: 20px; }
+.page-top-nav, #copyr {
+    overflow: hidden; 
+    font-weight: bold;
+    color: #333;
+    padding: 0.3em 0.5em;
+    margin: 0 0 1em 0;
+    margin-bottom: 30px;
+    border-bottom: none;
+    background-color: #AAD2F0;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: inset 0px 1px 0px 0px #eeeeee;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #EEE;
+    box-shadow: inset 0px 1px 0px 0px #EEE;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #AAD2F0), color-stop(1, #8BC1ED) );
+    background: -moz-linear-gradient( center top, #aad2f0 5%, #8bc1ed 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aad2f0', endColorstr='#8bc1ed');
+    background-color: #AAD2F0;
+    border: 1px solid #DCDCDC;
+    text-shadow: 1px 1px 0px #EEE;
+}
+.page-top-nav .categoryList { float:left;}
+.page-paginator{float:right;line-height: 40px;}
+.page-paginator span { display: inline-block; width: 220px; text-overflow: ellipsis;white-space: nowrap;}
+
+
+
+
 #content {width:680px;margin:90px auto 20px;*padding-top:90px;min-height:400px;height:auto !important;height:400px;}
 
 /****************entry style**************/
@@ -209,8 +240,9 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 figure p { text-align: center}
 
 ::selection {
-    background: #F00;
-    color: #FFF;
+    background: #FDE6BA;
+    color: #000;
+    text-shadow: 3px 3px 3px #CCC;
 }
 ::-webkit-scrollbar-track-piece {
     background-color:#f5f5f5;
@@ -251,11 +283,9 @@ figure p { text-align: center}
 }
 .page-ctrl {
     overflow: hidden;
-    margin-top: 20px;
     padding-top: 20px;
     font-family: 宋体;
     color: #202020;
-    border-top: 3px solid #F3F3F3;
     font-weight: bold;
     zoom: 1;color: #4A75B5;
 }
@@ -363,6 +393,18 @@ figure p { text-align: center}
 
 .aboutMe .bdsharebuttonbox  {
     display:none;
+}
+#copyr {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    border: #E0E0E0 1px dashed;
+    background-image: url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/warn.png);
+    background-repeat: no-repeat;
+    background-position: 15px;
+    font-size: 12px; 
 }
 /**************目录导航**************/
 #menuIndex {position:fixed;top:90px;left:20px;width:200px;overflow:auto; _position:absolute;}
