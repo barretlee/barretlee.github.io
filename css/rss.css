@@ -1,4 +1,4 @@
-feed {font:14px/26px Consolas,微软雅黑;background:#F8F8F8;}
+feed {font:14px/26px Consolas,微软雅黑;background:#FFFFFA;}
 feed>* {margin:8px 20px;display:block;}
 feed>item {margin:16px 20px;}
 feed>title {
@@ -8,7 +8,10 @@ feed>title {
 feed>description {display:block;}
 entry {
   border:1px solid #CCC;padding:10px;display:block;
-  background:linear-gradient(#F6F6F6,#F2F2F2);
+  background:linear-gradient(#FFFFE7,#FFFEF9); 
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #FFFFE7), color-stop(1, #FFFEF9) );
+  background: -moz-linear-gradient( center top,#FFFFE7 5%, #FFFEF9 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFE7', endColorstr='#FFFEF9');
   box-shadow:0px 0px 10px #CCC;
 }
 entry>updated {float:right;color:#666;}

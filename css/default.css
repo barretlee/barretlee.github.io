@@ -32,7 +32,7 @@ body .hide{display:none;}
 
 
 /***********default settings**********/
-body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;overflow-x:hidden;_height:100%;background-color: #FFFFE7;}
+body {font-family: "微软雅黑","Arial","Helvetica","sans-serif";font-size:16px;overflow-x:hidden;_height:100%;background-color: #FFFFFA;}
 a {color:#4A75B5;text-decoration:none;outline:none;
     -webkit-transition: all .4s ease;
     -moz-transition: all .4s ease;
@@ -105,9 +105,9 @@ table td, table th {
     margin: 0 0 1em 0;
     margin-bottom: 30px;
 }
-.page-top-nav .categoryList { float:left;line-height: 40px;}
+.page-top-nav .categoryList { float:left;line-height: 40px;margin-top: 0;margin-bottom: 0;}
 .page-paginator{float:right;line-height: 40px;}
-.page-paginator span { display: inline-block; width: 220px; text-overflow: ellipsis;white-space: nowrap;}
+.page-paginator span { display: inline-block; width: 250px; text-overflow: ellipsis;white-space: nowrap;}
 
 
 
