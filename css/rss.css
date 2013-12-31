@@ -1,13 +1,13 @@
 feed {font:14px/26px Consolas,微软雅黑;background:#F8F8F8;}
 feed>* {margin:8px 20px;display:block;}
-channel>item {margin:16px 20px;}
-channel>title {
+feed>item {margin:16px 20px;}
+feed>title {
   font-size:26px;line-height:32px;
   display:inline-block;margin-bottom:0px;color:#333;
 }
-channel>description {display:block;}
-channel>author {display:block;}
-author>name {font-size: 18px; font-weight: bold;}
+feed>description {display:block;}
+feed>author {display:block;}
+author>name {font-size: 18px; font-weight: bold;display:block;}
 entry {
   border:1px solid #CCC;padding:10px;display:block;
   background:linear-gradient(#F6F6F6,#F2F2F2);
