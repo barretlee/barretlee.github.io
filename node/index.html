@@ -5,20 +5,20 @@ layout: default
     <div class="page-loc" style="margin:0;margin-top:40px;">
         <span style="float:right"><a href="/about.html">关于</a><a href="/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
       
-        李靖的博客 » <a href="/">技术</a> » ES6 系列
+        李靖的博客 » <a href="/">技术</a> » NodeJS 系列
     </div>
 
     <ul class="artical-list">
     <li itemscope itemtype="http://schema.org/Article">
-        <h1 class="title">ECMAScript 6系列</h1>
+        <h1 class="title">NodeJS 系列</h1>
     </li>
-    {% for post in site.categories.ecmascript %}
+    {% for post in site.categories.node %}
         <li itemscope itemtype="http://schema.org/Article">
             <h2><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
         </li>
     {% endfor %}
     </ul>
-    <p style="margin-top:40px;color:red;">持续更新中...</p>
+    <p style="margin-top:40px;color:red;">等待开工...</p>
 
     {% include disqus.snippet %}
 
@@ -28,7 +28,7 @@ layout: default
 </div>
 
 <script type="text/javascript">
-    $(function(){
+	$(function(){
         var isMobile = {
             Android: function() {
                 return navigator.userAgent.match(/Android/i);
@@ -50,9 +50,9 @@ layout: default
             }
         };
         
-        var a = $(".artical-list li:gt(0)");
-        a.remove();
-        $(a.get().reverse()).appendTo($(".artical-list"));
+		var a = $(".artical-list li:gt(0)");
+		a.remove();
+		$(a.get().reverse()).appendTo($(".artical-list"));
 
        //评论自动展开  by barret lee
         isMobile.any() || $(".comment").trigger("click");
@@ -60,5 +60,5 @@ layout: default
         // 添加百度分享
         $("head").append($('<script/>').attr("src", 
             "http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion=" + ~(-new Date()/36e5)));
-    });
+	});
 </script>
