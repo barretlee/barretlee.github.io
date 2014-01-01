@@ -28,37 +28,37 @@ layout: default
 </div>
 
 <script type="text/javascript">
-	$(function(){
-        var isMobile = {
-            Android: function() {
-                return navigator.userAgent.match(/Android/i);
-            }
-            ,BlackBerry: function() {
-                return navigator.userAgent.match(/BlackBerry/i);
-            }
-            ,iOS: function() {
-                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-            }
-            ,Opera: function() {
-                return navigator.userAgent.match(/Opera Mini/i);
-            }
-            ,Windows: function() {
-                return navigator.userAgent.match(/IEMobile/i);
-            }
-            ,any: function() {
-                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-            }
-        };
-        
-		var a = $(".artical-list li:gt(0)");
-		a.remove();
-		$(a.get().reverse()).appendTo($(".artical-list"));
+$(function(){
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        }
+        ,BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        }
+        ,iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        }
+        ,Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        }
+        ,Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        }
+        ,any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+    
+	var a = $(".artical-list li:gt(0)");
+	a.remove();
+	$(a.get().reverse()).appendTo($(".artical-list"));
 
-       //评论自动展开  by barret lee
-        isMobile.any() || $(".comment").trigger("click");
+   //评论自动展开  by barret lee
+    isMobile.any() || $(".comment").trigger("click");
 
-        // 添加百度分享
-        $("head").append($('<script/>').attr("src", 
-            "http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion=" + ~(-new Date()/36e5)));
-	});
+    // 添加百度分享
+    $("head").append($('<script/>').attr("src", 
+        "http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion=" + ~(-new Date()/36e5)));
+});
 </script>
