@@ -112,7 +112,7 @@ table td, table th {
 
 
 
-#content {width:680px;margin:40px auto 20px;*padding-top:90px;min-height:400px;height:auto !important;height:400px;}
+#content {width:680px;margin:40px auto 20px;*padding-top:40px;min-height:400px;height:auto !important;height:400px;}
 
 /****************entry style**************/
 #content .entry{margin-bottom:55px;}

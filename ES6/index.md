@@ -2,6 +2,12 @@
 layout: default
 ---
 <div class="index-content ES6">
+    <div class="page-loc" style="margin:0;margin-top:40px;">
+        <span style="float:right"><a href="/about.html">关于</a><a href="/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
+      
+        李靖的博客 » <a href="/">技术</a> » ES6 系列
+    </div>
+
     <ul class="artical-list">
     <li itemscope itemtype="http://schema.org/Article">
         <h1 class="title">ECMAScript 6系列</h1>
@@ -13,6 +19,12 @@ layout: default
     {% endfor %}
     </ul>
     <p style="margin-top:40px;color:red;">持续更新中...</p>
+    
+    {% include disqus.snippet %}
+
+    <div class="footer">
+        <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2013 - 2023 Designed by <a href="http://barretlee.com/about.html">Barret Lee</a> | <span class="label label-info">{{site.time | date:"%Y-%m-%d %H:%M:%S %Z"}}</span></small></p>
+    </div>
 </div>
 
 <script type="text/javascript">
