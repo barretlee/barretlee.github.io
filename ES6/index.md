@@ -19,7 +19,7 @@ layout: default
     {% endfor %}
     </ul>
     <p style="margin-top:40px;color:red;">持续更新中...</p>
-    
+
     {% include disqus.snippet %}
 
     <div class="footer">
@@ -32,5 +32,12 @@ layout: default
 		var a = $(".artical-list li:gt(0)");
 		a.remove();
 		$(a.get().reverse()).appendTo($(".artical-list"));
+
+        //评论自动展开  by barret lee
+        isMobile.any() || $(".comment").trigger("click");
+
+        // 添加百度分享
+        $("head").append($('<script/>').attr("src", 
+            "http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion=" + ~(-new Date()/36e5)));
 	});
 </script>
