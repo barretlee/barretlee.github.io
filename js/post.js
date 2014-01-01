@@ -1,7 +1,12 @@
 if(!/barret/i.test(window.location.href)){
     window.location.href = "http://barretlee.com";
 }
-
+(function(){
+    var control = navigator.control || {};
+    if(control.gesture){
+        control.gesture(false);
+    }
+});
 $(document).ready(function(){
     var isMobile = {
         Android: function() {
