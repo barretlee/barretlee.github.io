@@ -1,21 +1,21 @@
 ---
 layout: nil
 ---
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <?xml-stylesheet type="text/css" href="./css/rss.css" ?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-   <title>{{ site.title }}</title>
-   <link>{{ site.url }}</link>
-   <description>BarretLee's Blog—关注互联网，热爱生活!</description>
-   <script xmlns="http://www.w3.org/1999/xhtml" src="./js/rss.js"></script>
-
-   {% for post in site.posts limit:15 %}
-   <entry>
-     <title>{{ post.title }}</title>
-     <link>http://barretlee.github.com{{ post.url }}</link>
-     <updated>{{ post.date | date_to_xmlschema }}</updated>
-     <description>{{ post.description | xml_escape }}</description>
-   </entry>
-   {% endfor %}
- 
-</feed>
+<rss version="2.0">
+  <feed xmlns="http://www.w3.org/2005/Atom">
+     <title>{{ site.title }}</title>
+     <link>{{ site.url }}</link>
+     <description>BarretLee's Blog—关注互联网，热爱生活!</description>
+     <script xmlns="http://www.w3.org/1999/xhtml" src="./js/rss.js"></script>
+     {% for post in site.posts limit:15 %}
+     <entry>
+       <title>{{ post.title }}</title>
+       <link>http://barretlee.github.com{{ post.url }}</link>
+       <updated>{{ post.date | date_to_xmlschema }}</updated>
+       <description>{{ post.description | xml_escape }}</description>
+     </entry>
+     {% endfor %}
+  </feed>
+</rss>
