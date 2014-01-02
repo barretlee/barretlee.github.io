@@ -4,6 +4,7 @@ title: [nodejs]
 description: ECMAScript 6 是JavaScript的下一个标准，正处在快速开发之中，大部分已经完成了，预计将在2014年正式发布。
 category: ecmascript
 tags: ES6 let const
+published: false
 ---
 
 ECMAScript 6中多了两个定义变量的关键词，一个是[let][1]，另一个是[const][2]，后者顾名思义就是常量定义，前者的作用域范围是块级的。
