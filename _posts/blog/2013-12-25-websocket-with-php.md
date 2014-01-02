@@ -257,18 +257,15 @@ WebSocket 连接是由客户端主动发起的，所以一切要从客户端出�
         //Get the numbers
         preg_match_all('/([\d]+)/', $key1, $key1_num);
         preg_match_all('/([\d]+)/', $key2, $key2_num);
-
         $key1_num = implode($key1_num[0]);
         $key2_num = implode($key2_num[0]);
         //Count spaces
         preg_match_all('/([ ]+)/', $key1, $key1_spc);
         preg_match_all('/([ ]+)/', $key2, $key2_spc);
-
         if($key1_spc==0|$key2_spc==0){ $this->log("Invalid key");return; }
         //Some math
         $key1_sec = pack("N",$key1_num / $key1_spc);
         $key2_sec = pack("N",$key2_num / $key2_spc);
-
         return md5($key1_sec.$key2_sec.$l8b,1);
   }
   
