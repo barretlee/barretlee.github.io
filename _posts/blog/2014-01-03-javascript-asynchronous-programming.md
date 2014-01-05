@@ -233,11 +233,11 @@ JS 和 浏览器提供的原生方法基本都是基于事件触发机制的，�
 
 	E.subscribe("evt", g);
 	function f(){
-	setTimeout(function () {
-	　　// f的任务代码
-	　　E.publish("evt");
-	}, 1000);
-　　}
+		setTimeout(function () {
+		　　// f的任务代码
+		　　E.publish("evt");
+		}, 1000);
+	}
 
 把事件全部交给 E 这个控制器管理，可以完全掌握事件被订阅的次数，以及订阅者的信息，管理起来特别方便。
 
