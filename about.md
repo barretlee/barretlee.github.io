@@ -9,7 +9,7 @@ title: about
   	李靖的博客 » 关于我
 </div>
 <dl class="aboutDl">
-	<dt><img src="{{ site.repo }}/images/mine.jpg" />关于作者：</dt>
+	<dt><img src="{{ site.repo }}/images/mine.jpg" />关于作者</dt>
 	<dd><strong>李靖，</strong>Barret Lee</dd>
 	<dd><strong>weibo:</strong><a href="http://weibo.com/hustskyking" target="_blank">@BarretLee</a></dd>
 	<dd><strong>blog:</strong><a href="http://hustskyking.cnblogs.com" target="_blank">博客园-BarretLee</a>（本博客部分文章会同步至博客园）</dd>

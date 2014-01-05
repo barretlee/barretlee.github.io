@@ -38,7 +38,7 @@ layout: page
 <div class="entry" itemscope itemtype="http://schema.org/Article">
     <h1 class="entry-title"><a href="{{ page.url }}" itemprop="url">{{ page.title }}</a></h1>
     <p class="entry-date">
-  		作者：<span itemprop="author">{{ site.author_name }}</span><br />
+  		作者：<span itemprop="author"><a href="/about.html" target="_blank">{{ site.author_name }}</a></span><br />
   		日期：<time datatime="{{ page.date|date:"%Y-%m-%d" }}">{{ page.date|date:"%Y-%m-%d" }}</time>
   	</p>
 
