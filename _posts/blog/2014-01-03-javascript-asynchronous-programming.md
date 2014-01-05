@@ -124,7 +124,7 @@ tags: javascript 异步编程 多线程 promise Generator
 
 这些东西下次有空再细谈。之前研究[司徒正美](http://www.cnblogs.com/rubylouvre)的 avalon 源码的时候，看到了相关的内容，有兴趣的可以看看：
 
-   //视浏览器情况采用最快的异步回调
+	//视浏览器情况采用最快的异步回调
 	var BrowserMutationObserver = window.MutationObserver || window.WebKitMutationObserver
 	if (BrowserMutationObserver) { //chrome18+, safari6+, firefox14+,ie11+,opera15
 		avalon.nextTick = function(callback) { //2-3ms
