@@ -1,12 +1,7 @@
 if(!/barret/i.test(window.location.href)){
     window.location.href = "http://barretlee.com";
 }
-(function(){
-    var control = navigator.control || {};
-    if(control.gesture){
-        control.gesture(false);
-    }
-});
+
 $(document).ready(function(){
     var isMobile = {
         Android: function() {
@@ -32,6 +27,25 @@ $(document).ready(function(){
     $('pre').addClass('prettyprint linenums') //添加Google code Hight需要的class
 
 
+    var $sidebar = $(".sidebar"), fix = $sidebar.offset().top + $sidebar.height();
+    $(window).on("scroll", function(){
+        setTimeout(function(){
+            var nowTop = $(window).scrollTop();
+            if(nowTop >= fix) {
+                if($("#relative-page").size() == 0){
+                    $sidebar.find(".relative-page")
+                        .clone()
+                        .css({"position":"fixed", "top":20})
+                        .attr("id","relative-page")
+                        .appendTo($sidebar);
+                } else {
+                    $("#relative-page").show();    
+                }
+            } else {
+                $("#relative-page").hide();
+            }
+        }, 100);
+    });
 
     $('.entry a').each(function(index,element){
         var href = $(this).attr('href');
@@ -291,6 +305,7 @@ $(document).ready(function(){
 
         // 添加百度分享
         $("head").append($('<script/>').attr("src", 
-            "http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion=" + ~(-new Date()/36e5)))    });
+            "http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion=" + ~(-new Date()/36e5)))    
+    });
         
 });

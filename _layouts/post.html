@@ -3,13 +3,11 @@ layout: page
 ---
 <link rel="stylesheet" href="{{ site.repo }}/js/prettify/prettify{% if site.highlight %}-{{ site.highlight }}{% endif %}.css" />
 
-
 <div class="page-loc">
 	<span style="float:right"><a href="/about.html">关于</a><a href="/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
   
   	李靖的博客 » <a href="/?categories={{ page.category }}">技术</a> » {{ page.category }}
 </div>
-
 <div class="page-top-nav clearfix">
 	<div class="categoryList">
 		<strong>分类：</strong>
@@ -34,7 +32,6 @@ layout: page
 		</span>
 	</div>
 </div>
-
 <div class="entry" itemscope itemtype="http://schema.org/Article">
     <h1 class="entry-title"><a href="{{ page.url }}" itemprop="url">{{ page.title }}</a></h1>
     <p class="entry-date">
@@ -47,11 +44,13 @@ layout: page
     {% include statement.snippet %}
     {% include category.snippet %}
 </div>
+    
+    {% include sidebar.snippet %}
 
 <script src="{{ site.repo }}/js/post.js" type="text/javascript"></script>
 
 {% include disqus.snippet %}
 
 <div class="footer">
-    <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2013 - 2023 Designed by <a href="http://barretlee.com/about.html">Barret Lee</a> | <span class="label label-info">{{site.time | date:"%Y-%m-%d %H:%M:%S %Z"}}</span></small></p>
+    <small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2013 - 2023 Designed by <a href="http://barretlee.com/about.html">Barret Lee</a> | <span class="label label-info">{{site.time | date:"%Y-%m-%d %H:%M:%S %Z"}}</span></small>
 </div>

@@ -51,17 +51,17 @@ a.external {padding-right:13px;background:url(http://qianduannotes.duapp.com/git
 a.external:hover {background-position:right -15px;}
 .entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#333;border-bottom: 1px solid #CCC;padding-bottom: 10px;}
 .entry-title a:hover {text-decoration:none;color:#F00;}
-.entry-date {color:#999; font-size: 16px;line-height: 30px;}
+.entry-date {color:#999; font-size: 16px;line-height: 30px;text-indent: 0em !important;}
 
 h2 {font-size:22px;font-weight:bold;margin-bottom:25px; margin-top: 25px;}
 h3 {font-size:18px;font-weight:bold;margin-bottom:25px;}
 h4,h5,h6 {font-weight:bold;margin-bottom:15px;}
-p {margin-bottom:30px;line-height:1.8em;}
+p {margin-bottom:30px;line-height:1.8em; }
 code {background:#EEE;border:1px solid #ccc;padding:0 5px;font-family:"Courier";line-height:14px;font-size:14px;word-wrap:break-word;border-radius: 4px;margin:0 3px;}
 pre {background-color:#000;padding:15px;overflow:auto;_overflow:hidden;_width:650px;margin-bottom:20px;font-size:14px;border: 1px solid #eee;-webkit-border-radius: 4px 4px 4px 4px;-moz-border-radius: 4px 4px 4px 4px;border-radius: 4px 4px 4px 4px;color:#b9bdb6}
 pre code{background-color:transparent;border:none;padding:0;word-wrap:normal;}
-pre ol{margin-left:25px;list-style-type:decimal;}
-pre.prettyprint  ol li, pre.prettyprint  ul li {
+pre.prettyprint  ol{margin:0; margin-left:25px;list-style-type:decimal;}
+pre.prettyprint ol li, pre.prettyprint ul li {
     margin-bottom: 0;
 }
 table{
@@ -112,10 +112,11 @@ table td, table th {
 
 
 
-#content {width:680px;margin:40px auto 20px;*padding-top:40px;min-height:400px;height:auto !important;height:400px;}
+#content {width:680px;margin:60px auto 20px;*padding-top:40px;min-height:400px;height:auto !important;height:400px;position:relative;}
 
 /****************entry style**************/
 #content .entry{margin-bottom:55px;}
+.entry p { text-indent: 2em;}
 .entry ul, .entry ol {margin: 25px 0 25px 35px;}
 .entry ul li,.entry ol li{margin-bottom:5px;list-style:circle;line-height:24px;font-size: 14px;}
 .entry ol li{list-style:decimal;}
@@ -356,6 +357,9 @@ pre::-webkit-color-swatch {border:none;}
 /*==========
    about me
 ============*/
+.aboutMe {
+    width: 70% !important;
+}
 .aboutDl {
     margin-bottom: 50px;
 }
@@ -375,10 +379,22 @@ pre::-webkit-color-swatch {border:none;}
 }
 .aboutDl img {
     float: right;
-    width: 150px;
+    width: 200px;
     margin: 15px;
     box-shadow: 3px 3px 5px #CCC;
 }
+
+/*==========
+   sidebar
+============*/
+.sidebar {width: 260px; position:absolute; right: -285px;top: 66px; overflow:hidden;}
+.sidebar .recent {width:230px; float:left; padding: 10px;background: #F4F4F4;box-shadow: 2px 2px #FFF,4px 5px #E2E2E2; margin-bottom: 30px;}
+.sidebar .recent b {display: block; border-bottom: 1px solid orange; padding-bottom: 8px; color: orange;}
+.side-list { padding:10px;}
+.side-list li { height:24px;}
+.side-list a {color:#2C383B; white-space: nowrap; font-size: 14px; line-height: 24px; text-overflow: ellipsis; overflow:hidden;display:block;}
+.friend-link { padding:10px }
+.friend-link a {margin-right: 10px; white-space: nowrap; font-size: 15px; color: #2C282B; line-height: 24px;}
 
 /*==========
    category
@@ -398,6 +414,7 @@ pre::-webkit-color-swatch {border:none;}
     box-shadow: 3px 3px 3px #CCC;
     font-size: 14px;
     margin: 0 3px;
+    margin-bottom: 8px;
 }
 .categoryList a:hover {
     background: #CCC;
@@ -472,6 +489,13 @@ pre::-webkit-color-swatch {border:none;}
         display:block;
         width: 65%;
     }
+    .sidebar {position:static; width:auto;}
+    .sidebar .recent { width:auto;float:none;}
+    #relative-page { display:none !important;}
+    #page-leader {
+        right: 3% !important;
+        left: auto !important;
+    }
 }
 
 @media screen and (max-width: 450px){
@@ -497,4 +521,8 @@ pre::-webkit-color-swatch {border:none;}
     .index-content .cate-bar ,
     .index-content .artical-list,
     .index-content .artical-cate { width:85%; }
+    #content {margin-left: 30px;}
+    #page-leader {
+        left: 370px;
+    }
 }

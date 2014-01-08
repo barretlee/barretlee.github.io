@@ -1,0 +1,26 @@
+<div class="sidebar clearfix">
+    <div class="recent">
+        <b>近期文章</b>
+        <ul class="side-list">
+        {% for post in site.categories.blog limit:8 %}
+            <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="recent relative-page">
+        <b>相关文章</b>
+        <ul class="side-list">
+        {% for post in site.related_posts limit:5 %}
+            <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="recent">
+        <b>友情链接</b>
+        <div class="friend-link">
+            <a href="http://www.web-tinker.com" title="http://www.web-tinker.com" target="_blank">次碳酸钴</a>
+            <a href="http://hustskyking.cnblogs.com" title="http://hustskyking.cnblogs.com" target="_blank">Barret Lee</a>
+            <a href="http://www.imququ.com" title="http://www.imququ.com" target="_blank">屈屈</a>
+        </div>
+    </div>
+</div>
