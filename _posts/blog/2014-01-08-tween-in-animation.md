@@ -25,6 +25,8 @@ tags: JavaScript 缓动函数 Tween Animation
 
 上面这个例子是用 jquery 写的，jquery 对运动的封装十分给力，不过我们很难从他的代码中把动画部分剥离出来。漂亮的接口后面总会有一个龌龊的实现，jquery 代码耦合度太高，除了 John Resig 等几个 JQ 的作者可以对代码的理解游刃有余，其他人只能望而却步。但是动画的实现并不复杂，我们完全可以用几行代码写出自己的动画类。
 
+(未完待续)
+
 
 
 <script type="text/javascript">
