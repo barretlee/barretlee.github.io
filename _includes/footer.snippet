@@ -26,11 +26,7 @@
                 });
             }).on("keydown", function(evt){
                 if(evt.which == "13") {
-                    if(window.location.pathname.indexOf("search") > -1){
-                        window.location.href = "/search?q=" + $s.val();
-                        return;
-                    }
-                    window.open("/search?q=" + $s.val());
+                    $s.parents("form").submit();
                 }
             });
         });

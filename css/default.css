@@ -154,7 +154,8 @@ table td, table th {
     background-image:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/life.jpg)
 }
 .trash .aside{
-    background-image:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/trash.jpg)
+    background-image:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/trash.jpg);
+    *background-image:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/blog.jpg);
 }
 .index-content .section { margin-left:30%;_margin-left:200px; padding-top:80px; padding-right:15%;_overflow:hidden;}
 
@@ -189,8 +190,8 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 .about-link a {margin-right:10px;font-weight:bold;font-style:italic;font-size:13px;color:#E50053}
 
 /**************翻页样式**************/
-.pagination { margin-left: 130px; margin-bottom: 100px}
-.pagination .previous, .pagination .pages, .pagination .next { display: inline-block; line-height: 24px;}
+.pagination { margin-left: 130px; margin-bottom: 100px; *overflow:hidden;}
+.pagination .previous, .pagination .pages, .pagination .next { display: inline-block; line-height: 24px; *float:left;}
 .pagination .previous *, .pagination .next * { line-height: 24px; vertical-align: super;}
 
 .pagination .disabled { color: #CCC;}
@@ -430,6 +431,7 @@ pre::-webkit-color-swatch {border:none;}
     font-size: 14px;
     margin: 0 3px;
     margin-bottom: 8px;
+    *vertical-align: middle;
 }
 .categoryList a:hover {
     background: #CCC;
@@ -453,7 +455,7 @@ pre::-webkit-color-swatch {border:none;}
     background-position: 15px;
     font-size: 12px; 
 }
-.web-search {width: 120px; margin-right: 20px; height: 20px; font-size: 14px; text-indent: 3px; border-bottom: 1px solid #CCC;color: #999;}
+.web-search {width: 120px; margin-right: 20px; height: 20px; line-height: 20px; font-size: 14px; text-indent: 3px; border-bottom: 1px solid #CCC;color: #999;}
 .web-search:focus {color:#333;}
 
 /**************目录导航**************/
