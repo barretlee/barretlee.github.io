@@ -4,7 +4,7 @@ title: about
 ---
 <div id="content" class="aboutMe">
 <div class="page-loc">
-	<span style="float:right"><a href="/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
+	<span style="float:right"><input type="text" class="web-search" value="站内搜索" /><a href="/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
   	李靖的博客 » 关于我
 </div>
 <dl class="aboutDl">

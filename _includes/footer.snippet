@@ -18,6 +18,22 @@
                     $('.home-contact').slideDown(100);
                 }
             });
+
+            //站内搜索
+            var $s = $(".web-search");
+            $s.on("focus", function(){
+                setTimeout(function(){
+                    $s.select();
+                });
+            }).on("keydown", function(evt){
+                if(evt.which == "13") {
+                    if(window.location.pathname.indexOf("search") > -1){
+                        window.location.href = "/search?q=" + $s.val();
+                        return;
+                    }
+                    window.open("/search?q=" + $s.val());
+                }
+            });
         });
 
         ~function(){

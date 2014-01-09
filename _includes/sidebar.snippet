@@ -7,6 +7,14 @@
         {% endfor %}
         </ul>
     </div>
+    <div class="recent">
+        <b>文章分类</b>
+        <ul class="side-list">
+        {% for cat in site.categories %}
+            <li><a href="/categories/#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] | capitalize }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
     <div class="recent relative-page">
         <b>相关文章</b>
         <ul class="side-list">

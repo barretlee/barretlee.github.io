@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<div class="index-content ES6">
+
+    {{ content }}
+
+{% if page.NotLoadComment != true %}
+    {% include disqus.snippet %}
+{% endif %}
+    <div class="footer">
+        <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2013 - 2023 Designed by <a href="http://barretlee.com/about.html">Barret Lee</a> | <span class="label label-info">{{site.time | date:"%Y-%m-%d %H:%M:%S %Z"}}</span></small></p>
+    </div>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+        var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            }
+            ,BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            }
+            ,iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            }
+            ,Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            }
+            ,Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            }
+            ,any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            }
+        };
+        
+		var a = $(".artical-list li:gt(0)");
+		a.remove();
+		$(a.get().reverse()).appendTo($(".artical-list"));
+
+       //评论自动展开  by barret lee
+        isMobile.any() || $(".comment").trigger("click");
+
+        // 添加百度分享
+        $("head").append($('<script/>').attr("src", 
+            "http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion=" + ~(-new Date()/36e5)));
+	});
+</script>

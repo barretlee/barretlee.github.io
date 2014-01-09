@@ -353,6 +353,18 @@ pre::-webkit-color-swatch {border:none;}
 .footer a {
     color: orange;
 }
+/*==========
+  categories
+============*/
+.categories { padding:25px 15px;}
+.cate-title { padding:10px 0;}
+.cate-title a { font-weight: bold; color:orange; display:inline-block; padding: 3px 8px; margin:5px 8px 5px 0; background:#F4F4F4; box-shadow: 3px 3px 5px #CCC;}
+.cate-title a:hover sup { color:#000;}
+.cate-list {}
+.cate-list h3 {margin-bottom: 0; margin-top: 15px; line-height: 50px; font-size: 22px;}
+.cate-list li { padding-left: 8px; line-height: 24px; }
+.cate-list a {}
+.cate-list time {color: #AAA; font-family: Monaco, "Courier New", monospace;}
 
 /*==========
    about me
@@ -438,6 +450,9 @@ pre::-webkit-color-swatch {border:none;}
     background-position: 15px;
     font-size: 12px; 
 }
+.web-search {width: 120px; margin-right: 20px; height: 20px; font-size: 14px; text-indent: 3px; border-bottom: 1px solid #CCC;color: #999;}
+.web-search:focus {color:#333;}
+
 /**************目录导航**************/
 #menuIndex {position:fixed;top:90px;left:20px;width:200px;overflow:auto; _position:absolute;}
 #menuIndex a {display:block; padding:2px 0; }
