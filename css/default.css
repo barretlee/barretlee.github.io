@@ -117,6 +117,7 @@ table td, table th {
 /****************entry style**************/
 #content .entry{margin-bottom:55px;}
 .entry p { text-indent: 2em;}
+.entry blockquote p { text-indent: 0;}
 .entry ul, .entry ol {margin: 25px 0 25px 35px;}
 .entry ul li,.entry ol li{margin-bottom:5px;list-style:circle;line-height:24px;font-size: 14px;}
 .entry ol li{list-style:decimal;}
@@ -188,13 +189,15 @@ h3.about {color:#777;margin-top:20px;font-size:22px;margin-bottom:10px}
 .about-link a {margin-right:10px;font-weight:bold;font-style:italic;font-size:13px;color:#E50053}
 
 /**************翻页样式**************/
-.pagination {}
-.pagination .previous, .pagination .pages, .pagination .next { display: inline-block;}
+.pagination { margin-left: 130px; margin-bottom: 100px}
+.pagination .previous, .pagination .pages, .pagination .next { display: inline-block; line-height: 24px;}
+.pagination .previous *, .pagination .next * { line-height: 24px; vertical-align: super;}
+
 .pagination .disabled { color: #CCC;}
 .pagination ul.pages { margin-left: 0;padding:0 8px;}
-.pagination ul.pages li { list-style: none;}
-.pagination ul.pages li a { display: inline-block; border: 1px solid #ccc; color:#13964C; width: 24px; text-align: center; margin: 0 8px;text-decoration: none}
-.pagination ul.pages li a:hover { background:#F8F8F8; font-weight: bold;}
+.pagination li { list-style: none;float:left; width:24px; margin: 0 8px; text-align: center;}
+.pagination li a {height: 24px; display: inline-block; border: 1px solid #ccc; color:#13964C; width: 24px; text-align: center;text-decoration: none}
+.pagination li a:hover { background:#F8F8F8; font-weight: bold;}
 
 /**************功能按钮样式**************/
 #page-leader {

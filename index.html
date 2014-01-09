@@ -1,0 +1,73 @@
+---
+layout: home
+---
+
+<div class="index-content blog">
+	<div class="section">
+		<ul class="artical-cate">
+			<li class="on"><a href="/"><span>技术积淀</span></a></li>
+			<li><a href="/opinion"><span>交互分析</span></a></li>
+			<li><a href="/life"><span>生活杂记</span></a></li>
+			<li><a href="/trash"><span>回收站</span></a></li>
+		</ul>
+
+		<div class="cate-bar"><span id="cateBar"></span></div>
+
+			<ul class="artical-list">   
+			{% for post in paginator.posts %}
+				<li itemscope itemtype="http://schema.org/Article">
+					<h2><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+					<div class="title-desc" itemprop="description">{{ post.description }}</div>
+				</li>
+			{% endfor %}
+			</ul>
+
+		<div id="post-pagination" class="pagination">
+		{% if paginator.previous_page %}
+			<span class="previous">
+			{% if paginator.previous_page == 1 %}
+				<a href="/">Previous</a>
+			{% else %}
+				<a href="{{ paginator.previous_page_path }}">Previous</a>
+			{% endif %}
+			</span>
+		{% else %}
+			<span class="previous disabled">
+				<span>Previous</span>
+			</span>
+		{% endif %}
+
+			<ul class="pages">
+				<li>
+				{% if paginator.page == 1 %}
+					<span class="current-page">1</span>
+				{% else %}
+					<a href="/">1</a>
+				{% endif %}
+				</li>
+
+				{% for count in (2..paginator.total_pages) %}
+					<li>
+					{% if count == paginator.page %}
+						<span class="current-page">{{ count }}</span>
+					{% else %}
+						<a href="/page{{ count }}">{{ count }}</a>
+					{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+
+		{% if paginator.next_page %}
+			<span class="next">
+				<a href="{{ paginator.next_page_path }}">Next</a>
+			</span>
+		{% else %}
+			<span class="next disabled">
+				<span>Next</span>
+			</span>
+		{% endif %}
+		</div>
+	</div>
+
+	<div class="aside"></div>
+</div>

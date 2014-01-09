@@ -7,8 +7,10 @@
 markdown: rdiscount
 pygments: true
 paginate: 6
+paginate_path: /page:num
 permalink: /:title
 baseurl: /
+lsi: true
 
 # Disqus Comments
 disqus_short_name: barretlee
