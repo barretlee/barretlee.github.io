@@ -33,7 +33,7 @@ layout: home
                 </div>
             </li>
             <li itemtype="http://schema.org/Article">
-                <h2><a href="/node/" itemprop="url">技术文档</a></h2>
+                <h2><a href="/ST/" itemprop="url">技术文档</a></h2>
                 <div class="title-desc" itemprop="description">
                     技术规范文档清单
                 </div>
