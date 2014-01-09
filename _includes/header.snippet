@@ -5,6 +5,7 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}—关注互联网，热爱生活!</title>
     <meta name="author" content="BarretLee" />
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}BarretLee's Blog，前端开发，HTML，CSS，JavaScript，交互设计，行为分析{% endif %}" />
+    <meta name="keywords" content="关注互联网{% for tag in page.tags %},{{tag}}{% endfor %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="{{ site.repo }}/css/default.css" type="text/css" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
