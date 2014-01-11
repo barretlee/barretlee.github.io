@@ -3,12 +3,12 @@ layout: page
 ---
 <link rel="stylesheet" href="{{ site.repo }}/js/prettify/prettify{% if site.highlight %}-{{ site.highlight }}{% endif %}.css" />
 
-<div class="page-loc">
+<form class="page-loc">
 	<span style="float:right"><input type="text" class="web-search" value="站内搜索" /><a href="/about.html">关于</a><a href="/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
  	
  	{% capture s %}{{ page.category }}{% endcapture %}
   	李靖的博客 » <a href="/categories/#{{ s }}">{% if s == 'life' %}生活{% elsif s == 'opinion' %}交互{% else %}技术{% endif %}</a> » {{ page.category }}
-</div>
+</form>
 <div class="page-top-nav clearfix">
 	<div class="categoryList">
 		<strong>分类：</strong>
