@@ -32,17 +32,17 @@ $(document).ready(function(){
         setTimeout(function(){
             var nowTop = $(window).scrollTop();
             if(nowTop >= fix) {
-                if($("#relative-page").size() == 0){
-                    $sidebar.find(".relative-page")
+                if($("#recent-page").size() == 0){
+                    $sidebar.find(".recent-page")
                         .clone()
                         .css({"position":"fixed", "top":20})
-                        .attr("id","relative-page")
+                        .attr("id","recent-page")
                         .appendTo($sidebar);
                 } else {
-                    $("#relative-page").show();    
+                    $("#recent-page").show();    
                 }
             } else {
-                $("#relative-page").hide();
+                $("#recent-page").hide();
             }
         }, 100);
     });
