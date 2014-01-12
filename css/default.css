@@ -178,7 +178,14 @@ table td, table th {
 .index-content #cateBar { display:inline-block; zoom:1; height:3px; background:red; position:relative; width:0;_line-height:0;_font-size:0; }
 
 /***************Wiki Style*****************/
+.wiki * {
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
 .wiki h2{cursor:pointer;}
+.wiki h2:hover{color:red;}
 .wiki ul{margin-left:30px;margin-bottom:20px;list-style:disc}
 .wiki ul li{margin-bottom:5px;}
 .wiki ul ul{list-style:circle;margin-top:10px;margin-bottom:10px;}
