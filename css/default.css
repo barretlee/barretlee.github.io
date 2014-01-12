@@ -403,14 +403,14 @@ pre::-webkit-color-swatch {border:none;}
 /*==========
    sidebar
 ============*/
-.sidebar {width: 260px; position:absolute; right: -285px;top: 66px; overflow:hidden;}
-.sidebar .recent {width:230px; float:left; padding: 10px;background: #F4F4F4;box-shadow: 2px 2px #FFF,4px 5px #E2E2E2; margin-bottom: 30px;}
-.sidebar .recent b {display: block; border-bottom: 1px solid orange; padding-bottom: 8px; color: orange;}
+.sidebar {/*width: 260px; position:absolute; right: -285px;top: 66px; overflow:hidden;*/}
+.sidebar .recent {/*width:230px; float:left; padding: 10px;background: #F4F4F4;box-shadow: 2px 2px #FFF,4px 5px #E2E2E2;*/ margin-bottom: 30px;}
+.sidebar .recent b {display: block; border-bottom: 1px solid #CCC; padding-bottom: 8px; font-size: 18px; }
 .side-list { padding:10px;}
 .side-list li { height:24px;}
 .side-list a {color:#2C383B; white-space: nowrap; font-size: 14px; line-height: 24px; text-overflow: ellipsis; overflow:hidden;display:block;}
-.friend-link { padding:10px }
-.friend-link a {margin-right: 10px; white-space: nowrap; font-size: 15px; color: #2C282B; line-height: 24px;}
+.friend-link {/* padding:10px */}
+.friend-link a {margin-right: 10px; white-space: nowrap;}
 
 /*==========
    category
@@ -457,9 +457,13 @@ pre::-webkit-color-swatch {border:none;}
 }
 .web-search {width: 120px; margin-right: 20px; height: 20px; line-height: 20px; font-size: 14px; text-indent: 3px; border-bottom: 1px solid #CCC;color: #999;}
 .web-search:focus {color:#333;}
+.recent .web-search {margin-top: 20px; width: 150px;　height: 30px; line-height: 30px; text-indent: 0.7em;}
+.f-submit {border: 1px solid #CCC; height: 30px; line-height: 30px; padding: 0 10px; cursor: pointer; background:#EEE;}
+.f-submit:hover { background:;}
+
 
 /**************目录导航**************/
-#menuIndex {position:fixed;top:90px;left:20px;width:200px;overflow:auto; _position:absolute;}
+#menuIndex {position:fixed;top:80px;left:15px;/*top:40px; margin-left:300px; left:50%;*/ width:200px;overflow:auto; _position:absolute;}
 #menuIndex a {display:block; padding:2px 0; }
 #menuIndex a:hover {text-decoration:none;}
 #menuIndex ul li{font-size:12px;margin-bottom:5px;word-wrap:break-word;padding-left:10px;}
@@ -509,13 +513,13 @@ pre::-webkit-color-swatch {border:none;}
         display:block;
         width: 65%;
     }
-    .sidebar {position:static; width:auto;}
+    /*.sidebar {position:static; width:auto;}
     .sidebar .recent { width:auto;float:none;}
     #relative-page { display:none !important;}
     #page-leader {
         right: 3% !important;
         left: auto !important;
-    }
+    }*/
 }
 
 @media screen and (max-width: 450px){
@@ -541,8 +545,8 @@ pre::-webkit-color-swatch {border:none;}
     .index-content .cate-bar ,
     .index-content .artical-list,
     .index-content .artical-cate { width:85%; }
-    #content {margin-left: 30px;}
+    /*#content {margin-left: 30px;}
     #page-leader {
         left: 370px;
-    }
+    }*/
 }

@@ -428,14 +428,3 @@ title: Wiki
         });
     });
 </script>
-
-{% include disqus.snippet %}
-
-<script src="/js/post.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(function(){
-        setTimeout(function(){
-            $("#menuIndex").remove();
-        }, 20);
-    })
-</script>

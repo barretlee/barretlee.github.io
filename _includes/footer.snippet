@@ -21,12 +21,13 @@
             //站内搜索
             var $s = $(".web-search");
             $s.on("focus", function(){
+                var $this = $(this);
                 setTimeout(function(){
-                    $s.select();
+                    $this.select();
                 });
             }).on("keydown", function(evt){
                 if(evt.which == "13") {
-                    $s.parents("form").submit();
+                    $(this).parents("form").submit();
                 }
             });
         });

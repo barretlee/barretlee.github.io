@@ -1,6 +1,6 @@
 <div class="sidebar clearfix">
     <div class="recent recent-page">
-        <b>近期文章</b>
+        <b>1. 近期文章</b>
         <ul class="side-list">
         {% for post in site.categories.blog limit:8 %}
             <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
@@ -8,6 +8,13 @@
         </ul>
     </div>
     <div class="recent">
+        <b>2. 站内搜索</b>
+        <form method="GET" action="/search">
+            <input type="text" class="web-search" style="height:30px;" name ="q" value="{{ page.category }}" />
+            <input type="submit" value="GO" class="f-submit" />
+        </form>
+    </div>
+    <!--<div class="recent">
         <a href="/categories"><b>文章分类</b></a>
         <ul class="side-list">
         {% for cat in site.categories %}
@@ -30,5 +37,5 @@
             <a href="http://hustskyking.cnblogs.com" title="http://hustskyking.cnblogs.com" target="_blank">Barret Lee</a>
             <a href="http://www.imququ.com" title="http://www.imququ.com" target="_blank">屈屈</a>
         </div>
-    </div>
+    </div>-->
 </div>

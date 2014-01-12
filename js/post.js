@@ -26,7 +26,7 @@ $(document).ready(function(){
 
     $('pre').addClass('prettyprint linenums') //添加Google code Hight需要的class
 
-
+/*
     var $sidebar = $(".sidebar"), fix = $sidebar.offset().top + $sidebar.height();
     $(window).on("scroll", function(){
         setTimeout(function(){
@@ -39,14 +39,14 @@ $(document).ready(function(){
                         .attr("id","recent-page")
                         .appendTo($sidebar);
                 } else {
-                    $("#recent-page").show();    
+                    $("#recent-page").show();
                 }
             } else {
                 $("#recent-page").hide();
             }
         }, 100);
     });
-
+*/
     $('.entry a').each(function(index,element){
         var href = $(this).attr('href');
         if(href){

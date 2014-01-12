@@ -16,6 +16,15 @@ title: about
 
 	<dt>关于博客</dt>
 	<dd>所有文章非特别说明皆为原创，遵循的协议为「<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" target="_blank">署名-非商业性使用-相同方式共享</a>」，转载请注明文章出处！谢谢合作 :）</dd>
+
+	<dt>好友链接</dt>
+	<dd>
+        <div class="friend-link">
+            <a href="http://www.web-tinker.com" title="http://www.web-tinker.com" target="_blank">次碳酸钴</a>
+            <a href="http://hustskyking.cnblogs.com" title="http://hustskyking.cnblogs.com" target="_blank">Barret Lee</a>
+            <a href="http://www.imququ.com" title="http://www.imququ.com" target="_blank">屈屈</a>
+        </div>
+   </dd>
 </dl>
 {% include disqus.snippet %}
 <div class="footer">
@@ -23,7 +32,7 @@ title: about
 </div>
 </div>
 <script type="text/javascript">
-$(window).on("load", function(){
+$(function(){
 	$('#disqus_container .comment').trigger('click');
 });
 </script>

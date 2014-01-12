@@ -10,7 +10,7 @@ paginate: 6
 paginate_path: /page:num
 permalink: /:title
 baseurl: /
-lsi: true
+#lsi: true
 
 # Disqus Comments
 disqus_short_name: barretlee
