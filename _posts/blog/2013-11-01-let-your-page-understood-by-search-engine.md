@@ -27,7 +27,7 @@ tags: SEO translation
 	<h1>阿凡达</h1>
 	<span>导演: James Cameron (生于16-08-1954)</span>
 	<span>科幻电影</span>
-	<a href="/path/to/obj.html">Trailer</a>
+	<a href="http://barretlee.com/path/to/obj.html">Trailer</a>
 </div>
 {% endhighlight %}
 
@@ -38,7 +38,7 @@ tags: SEO translation
 	<h1>阿凡达</h1>
 	<span>导演: James Cameron (生于16-08-1954)</span>
 	<span>科幻电影</span>
-	<a href="/path/to/obj.html">Trailer</a>
+	<a href="http://barretlee.com/path/to/obj.html">Trailer</a>
 </div>
 {% endhighlight %}
 
@@ -49,7 +49,7 @@ tags: SEO translation
 	<h1>阿凡达</h1>
 	<span>导演: James Cameron (生于16-08-1954)</span>
 	<span>科幻电影</span>
-	<a href="/path/to/obj.html">Trailer</a>
+	<a href="http://barretlee.com/path/to/obj.html">Trailer</a>
 </div>
 {% endhighlight %}
 
@@ -65,7 +65,7 @@ tags: SEO translation
 	<h1 itemprop="name">阿凡达</h1>
 	<span>导演: <span itemprop="director">James Cameron</span> (生于16-08-1954)</span>
 	<span itemprop="genre">科幻电影</span>
-	<a href="/path/to/obj.html" itemprop="trailer">Trailer</a>
+	<a href="http://barretlee.com/path/to/obj.html" itemprop="trailer">Trailer</a>
 </div>
 {% endhighlight %}
 
@@ -80,7 +80,7 @@ tags: SEO translation
 		导演: <span itemprop="name">James Cameron</span> (生于 <span itemprop="birthDate">16-08-1954</span>
 	</div>
 	<span itemprop="genre">科幻电影</span>
-	<a href="/path/to/obj.html" itemprop="trailer">Trailer</a>
+	<a href="http://barretlee.com/path/to/obj.html" itemprop="trailer">Trailer</a>
 </div>
 {% endhighlight %}
 
