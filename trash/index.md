@@ -17,7 +17,7 @@ layout: home
             <li itemscope itemtype="http://schema.org/Article">
                 <h2><a href="/about.html" itemprop="url">关于我</a></h2>
                 <div class="title-desc" itemprop="description">
-                    Barret Lee，华中科技大学，电信10级，本科，就职于阿里巴巴支付宝
+                    李靖，Barret Lee，华中科技大学，本科，就职于阿里巴巴淘宝UED
                 </div>
             </li>
             <li itemtype="http://schema.org/Article">
