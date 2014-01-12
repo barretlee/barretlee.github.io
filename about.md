@@ -15,7 +15,7 @@ title: about
 	<dd><strong>email:</strong><a href="mailto:barret.china@gmail.com">barret.china@gmail.com</a></dd>
 
 	<dt>关于博客</dt>
-	<dd>所有文章非特别说明皆为原创，遵循的协议为「<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" target="_blank">署名-非商业性使用-相同方式共享</a>」，转载请注明文章出处！谢谢合作 :）</dd>
+	<dd>所有文章非特别说明皆为原创，遵循的协议为「<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" target="_blank">署名-非商业性使用-相同方式共享</a>」，由于文章表述或者内容可能存在诸多错误，所以部分内容会作修改，为保证转载信息与源保持同步，转载请注明文章出处！谢谢合作 :）</dd>
 
 	<dt>好友链接</dt>
 	<dd>
