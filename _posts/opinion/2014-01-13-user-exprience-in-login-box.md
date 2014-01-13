@@ -37,6 +37,10 @@ iPad        |768*1024
 照顾用户的响应式布局除了要考虑这些屏幕的横屏，还得把竖屏考虑进去。我简单的做了一个登陆页面：
 [![login-page]({{ site.repo }}/images/blog-article-images/blog/login-page.jpg)]({{ site.repo }}/images/blog-article-images/blog/login-page.jpg)
 
+正确的账号是：barret，密码是：123，你可以用错误的信息先去测试下~
+可以戳这个DEMO：<http://qianduannotes.duapp.com/demo/login/login.html>
+
+
 ### 2. 交互
 
 前面那种方式，点击提交按钮，送到后台去验证，验证没有通过则回到登录页面，这也算是一种交互，不过这种交互的体验是特别不好的，每次都得重新刷新页面，应该利用 ajax 异步去验证表单。为了省去用户的聚焦点击，可以按照下面的思路来做：
