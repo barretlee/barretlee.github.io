@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 从登陆框看前端
+title: 从登录框看前端
 description: 我们会骂 12306 的网站界面挫，效果差，回头看看自己写的代码，是不是也一样的狗血！
 category: opinion
 tags: ajax javascript UE
