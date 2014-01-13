@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+	<title>login By BarretLee</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+
+<body>
+<div class="acenter">
+	<h1>登录页</h1>
+	<fieldset class="login">
+		<legend>登录</legend>
+		<form method="POST" action="./pages/login.php" enctype="multipart/form-data">
+			<p><label for="user">用户名：</label> <input type="text" name="user" id="user" /></p>
+			<p><label for="pwd">密&nbsp;&nbsp;码：</label> <input type="password" name="pwd" id="pwd" /><a href="#" class="forget-pwd">忘记密码？</a></p>
+			<p><input type="checkbox" checked="checked" name="rem" id="rem" /><label class="rem-pwd" for="rem">记住密码</label></p>
+			<p><input type="reset" value="重置" /><input type="submit" value="提交" /></p>
+		</form>
+	</fieldset>
+</div>
+
+<div class="loading-bar hide"><div></div></div>
+<div class="info-bar hide"><div>Error</div><sup>×</sup></div>
+
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/tools.js"></script>
+<script type="text/javascript">
+function submitForm() {
+	var xhr
+	  , url = "./pages/login.php"
+	  , delta = .25;
+
+	if(window.addEventListener) xhr = new XMLHttpRequest;
+	else xhr = new ActiveXObject("Msxml2.XMLHTTP");
+
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhr.onreadystatechange = function(){
+		var res , errno , msg , noop = function(){};
+
+		if(xhr.readyState == 4 && xhr.status == 200) {
+			res = eval('(' + xhr.responseText + ')');
+			errno = res.errno;
+			msg = res.msg;
+
+			switch(+errno) {
+				case 0:
+					window.location.href = "./index.php";
+					break;
+				case 1:
+					noop = function(){
+						$("#pwd").val(""),
+						$("#user").focus().select();
+					};
+					break;
+				case 2:
+					noop = function(){
+						$("#pwd").val("").focus();
+					};
+					break;
+			}
+		}
+		Tool.load(delta * xhr.readyState, function(){
+			Tool.info.show(msg, noop);
+		});
+	};
+	xhr.send($.param({"user":$("#user").val(),"pwd":$("#pwd").val(), "t": new Date*1}));
+}
+
+$(function(){
+	$("input[type=submit]").on("click", function(evt){
+		evt.preventDefault();
+		if($("#user").val() == "") {
+			Tool.info.show("用户名不能为空！", function(){
+				$("#pwd").val(""),
+				$("#user").focus().select();
+			});
+			return;
+		}
+		submitForm();
+	})
+});
+</script>
+</body>
+</html>
