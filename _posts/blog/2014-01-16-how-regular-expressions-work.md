@@ -155,7 +155,8 @@ $$	             |直接量符号。
 
 而在正则表达中，主要就是 \1, \2 之类的数字引用。前瞻和反向引用使用恰当可以大大的减少正则对资源的消耗。举个例子来简单说明下这几个东西：
 
-	问题：使用正则匹配过滤后缀名为 .css 和 .js 的文件。如：test.wow.js test.wow.css test.js.js等等。
+	问题：使用正则匹配过滤后缀名为 .css 和 .js 的文件。
+		  如：test.wow.js test.wow.css test.js.js等等。
 
 有人会立马想到使用负向前瞻，即：
 
@@ -303,7 +304,7 @@ function aniStr(len){
 }
 
 function resetAniBox(){
-	$info.html("逻辑太复杂，就不继续了~<a href='#' style='color:blue;' onclick='runAni();'>重新演示</a>");
+	$info.html("逻辑太复杂，就不继续了~<a href='#' style='color:blue;' onclick='runAni();return false;'>重新演示</a>");
 	return;
 	var $aniBox = $(".aniBox"),
 		l = $aniBox.text().length;
