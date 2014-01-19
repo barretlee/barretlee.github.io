@@ -13,7 +13,7 @@ title: about
 	<dd><strong>weibo:</strong><a href="http://weibo.com/hustskyking" target="_blank">@BarretLee</a></dd>
 	<dd><strong>blog:</strong><a href="http://hustskyking.cnblogs.com" target="_blank">博客园-BarretLee</a>（本博客部分文章会同步至博客园）</dd>
 	<dd><strong>email:</strong><a href="mailto:barret.china@gmail.com">barret.china@gmail.com</a></dd>
-	<dd><strong>自述:</strong>华中科技大学本科 10 级，13 年于百度地图 LBS 搜索部 Place 团队实习了三个多月，后被阿里巴巴淘宝 UED 团队收编，擅长前端各项技能，近期目标是成为全栈工程师。特别喜欢钻研新技术，对 JavaScript 相关的客户端、服务端 (NodeJS) 以及数据库 (MongoDB) 很感兴趣。行动方式是底层再底层思考，创新再创新实践。</dd>
+	<dd><strong>自述:</strong>华中科技大学本科 10 级，13 年于百度地图 LBS 搜索部 Place 团队实习了三个多月，后被阿里巴巴淘宝 UED 团队收编，擅长前端各项技能，近期目标是成为全栈工程师。特别喜欢钻研新技术，对 JavaScript 相关的客户端、服务端 (NodeJS) 以及数据库 (MongoDB) 知识很感兴趣。行动方式是底层再底层思考，创新再创新实践。</dd>
 
 	<dt>关于博客</dt>
 	<dd>所有文章非特别说明皆为原创，遵循的协议为「<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" target="_blank">署名-非商业性使用-相同方式共享</a>」，由于文章表述或者内容可能存在诸多错误，所以部分内容会作修改，为保证转载信息与源保持同步，转载请注明文章出处！谢谢合作 :）</dd>
