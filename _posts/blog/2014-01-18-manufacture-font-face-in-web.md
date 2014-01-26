@@ -136,19 +136,93 @@ Web Icon 的制作，网上有很多在线工具，不过这些在线工具都�
 	</div>
 
 也可以直接戳这个 [DEMO](http://qianduannotes.duapp.com/demo/testFont/index.html)
+字体文件下载：[barret.ttf and others](/files/font.rar)
 
 ## 二、@font-face细节
 
+根据 CSS3 草案中的描述，'@font-face' 规则允许使用链接到需要时自动激活的字体。这使得用户可以使用在线的字体，而不仅仅拘泥于使用用户端系统内的字体。font-face，拆开来理解，字体的面孔。不管是什么样的面孔，对应的还是同一个码位，而网页设计者需要使用不同的字体来匹配当前的设计。
+
 ### 1. local()
+
+上面的教程中我给出了两个测试，一个是本地测试，一个是网页测试，本地测试之前需要先安装字体，如果本地已经有 barret 这个字体了，那我们的程序便没有必要在重新去网络上下载这个字体了。这是 CSS 程序应该这样写：
+
+	@font-face {
+		font-family: 'barretregular';
+		src: local("barret"),
+		     url('./font/barret.ttf');
+	}
+
+在解析的时候，会先从本地查找是否有 barret 字体，如果没有就忽略 local 语句，如果有的话就直接应用，忽略后面的 url 参数。除了获取本地字体的作用之外，他还有另外一个 hack 用途，看下面这段程序：
+
+	@font-face {
+	    font-family: 'barretregular';
+	    src: url('./font/barret-webfont.eot');
+	    src: local("☺"), 
+	    	 url('./font/barret-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('./font/barret-webfont.woff') format('woff'),
+	         url('./font/barret-webfont.ttf') format('truetype'),
+	         url('./font/barret-webfont.svg#barretregular') format('svg');
+	}
+
+代码中包含 local("☺")，local 中是一个笑脸，很显然，这绝对不是一个字体名字，那他的作用是什么呢？前面我们说了，低版本IE 只支持 eot 文件格式的字体，上面的代码中用到了两个 src，低版本IE会应用第一个 src 的结果，但是，他的解析不会在第一个 src 位置停止，而是继续往后读，看到后面的 src 会发送一个无效的 http 请求。若在 url 前加一个 local 可以阻断这个 http 请求的发送。
 
 ### 2. unicode-range
 
-### 3. 兼容性处理
+他的作用是定义字体支持的 Unicode 字符范围，以 "U+" 或者 "u+" 开头，默认是 "U+0-10FFFF"。
 
-## 三、小结
+unicode-range 有三种形式：
 
+1. 点，e.g. U+416
+2. 分段，e.g. U+400-U+4ff
+3. 通配符，e.g. U+4??(U+400-U+4FF)
 
-## 四、参考资料
+举几个例子：
+<ol>
+<li>大小写字符以及标点符号
+<pre><code>unicode-range: U+0021-U+007B;
+</code></pre>
+</li>
+<li>大小写字符和数字
+<pre><code>unicode-range:
+    U+0030-U+0039, /* 0-9 *
+    U+0041-U+005A, /* Uppercase A-Z */
+    U+0061-U+007A; /* Lowercase a-z */
+</code></pre>
+</li>
+<li>小写字母，大写字母 T，和 "." 号
+<pre><code>unicode-range:
+    U+0054-U+0054, /* T */
+    U+0061-U+007A, /* a-z */
+    U+002E-U+002E; /* . (period) */
+</code></pre>
+</li>
+<oi>
+这玩意儿有啥用途呢？可以看看知乎上的[这一贴](http://www.zhihu.com/question/20597706)
+
+<blockquote><p>`@font-face` 有相关属性 `unicode-range`，可用类似这样的一段 CSS 来指定以中文字体显示弯引号（这是 CSS3 特性，支持还不广泛，但对于这种非关键样式来说够用了）：</p>
+<pre><code>@font-face {
+	font-family: "Chinese Quotes";
+	src: local("Some Chinese Font");
+	unicode-range: U+2018-2019, U+201C-201D;
+}
+body { 
+	font-family: "Chinese Quotes", "Some Latin Font", 
+				 "Some Chinese Font", generic-family; 
+}</code></pre>
+<p>同理，这一招也可以用于破折号、间隔号等和西文标点共享码位的中文标点。</p>
+</blockquote>
+
+## 三、优缺点
+
+有点有一大堆，图标的颜色可以随意修改，大小也是可以随便控制的，不需要折腾图片与文字的对齐问题，因为他本身就是文字，还可以使用阴影、文字渐变等 CSS3 的效果，总之就像操作一般字体一样处理他们，该有的特点都有。
+
+缺点也是十分明显的，慢速网络以及翻墙代理下情况特别糟糕。外国很多网站的页面都使用了网络字体，而网络字体下载是需要时间的，有些字体可能还比较大，在下载完毕之前，页面有文字的地方都没有渲染出来，体验不好的情况需要等待三五秒中。不过这种情况还是可以优化的，先用一般字体顶替样式，等下载完毕了再利用 JS 来重新渲染，不过这个代码比较高，而且也不好判断何时下载完成了。
+
+## 四、小结
+
+本文的目的是展示 web icon 的从无到有的一个过程，一些网站提供了很多不错的 webIcon 字库，如果有需求可以直接去网站上下载，自己制作的话成本太高。
+
+## 五、参考资料
 - <http://www.w3.org/TR/css3-fonts/#the-font-face-rule> W3.ORG
 - <http://www.w3help.org/zh-cn/causes/RF1001> W3Help
 - <http://www.php100.com/manual/css3_0/@font-face.shtml> Font-Face
