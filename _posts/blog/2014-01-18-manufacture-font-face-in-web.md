@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 再探@font-face及webIcon制作
-description: 
+description: font-face 不能说他是什么新东西了，在 CSS2.0 规范中就有了这玩意儿，IE4.0 开始就已经出现，只是当时用的不是特别广泛，后来在 CSS2.1 草案中又被删掉。
 category: blog
 tags: font-face css3 fontCreator
 ---
