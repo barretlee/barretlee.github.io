@@ -4,7 +4,7 @@ title: 浅谈文字编码和Unicode(转)
 published: false
 ---
 
-<H1>浅谈文字编码和Unicode（下）</H1>
+<H1 style="font-size:30px;">浅谈文字编码和Unicode（下）</H1>
 <H2>3 字符编码模型</H2>
 <P>
 程序员经常会面对复杂的问题，而降低复杂性的最简单的方法就是分而治之。Peter Constable在他的文章<A HREF="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=IWS-Chapter03" target="_top">"Character set encoding basics 
@@ -13,7 +13,7 @@ Understanding character set encodings and legacy encodings"</A>中描述了字�
 <H3>3.1 字符的范围（Abstract character repertoire）</H3>
 <P>设计字符编码的第一层就是确定字符的范围，即要支持哪些字符。有些编码方案的字符范围是固定的，例如ASCII、ISO 8859 系列。有些编码方案的字符范围是开放的，例如Unicode的字符范围就是世界上所有的字符。</P>
 <H3>3.2 用数字表示字符（Coded character set）</H3>
-<P>设计字符编码的第二层是将字符和数字对应起来。可以将这个层次理解成数学家（即从数学角度）看到的字符编码。数学家看到的字符编码是一个正整数。例如在Unicode中：汉字“&#23383;”对应的数字是23383。汉字“<IMG SRC="images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT="">”对应的数字是134192。</P>
+<P>设计字符编码的第二层是将字符和数字对应起来。可以将这个层次理解成数学家（即从数学角度）看到的字符编码。数学家看到的字符编码是一个正整数。例如在Unicode中：汉字“&#23383;”对应的数字是23383。汉字“<IMG SRC="http://www.fmddlmyy.cn/images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT="">”对应的数字是134192。</P>
 <P>在写html文件时，可以通过输入"&amp;#23383;"来插入字符“字”。不过在设计字符编码时，我们还是习惯用16进制表示数字。即将23383写成0x5BD7，将134192写成0x20C30。</P>
 <H3>3.3 用基本数据类型表示字符（Character encoding form）</H3>
 <P>设计字符编码的第三层是用编程语言中的基本数据类型来表示字符。可以将这个层次理解成程序员看到的字符编码。在Unicode中，我们有很多方式将数字23383表示成程序中的数据，包括：UTF-8、UTF-16、UTF-32。UTF是“UCS Transformation Format”的缩写，可以翻译成Unicode字符集转换格式，即怎样将Unicode定义的数字转换成程序数据。例如，“汉字”对应的数字是0x6c49和0x5b57，而编码的程序数据是：</P>
@@ -204,10 +204,10 @@ Understanding character set encodings and legacy encodings"</A>中描述了字�
 <TR><TD>100000</TD><TD>10FFFF</TD><TD>Supplementary Private Use Area-B</TD><TD>补充专用区-B</TD></TR>
 </TABLE>
 <P>Block是Unicode字符的一个属性。属于同一个Block的字符有着相近的用途。Block表中的开始码位、结束码位只是用来划分出一块区域，在开始码位和结束码位之间可能还有很多未定义的码位。使用UniToy，大家可以按照Block浏览Unicode字符，既可以按列表显示：</P>
-<P><IMG SRC="images/block_list.png" WIDTH="874" HEIGHT="435" BORDER="0" ALT=""></P>
+<P><IMG SRC="http://www.fmddlmyy.cn/images/block_list.png" WIDTH="874" HEIGHT="435" BORDER="0" ALT=""></P>
 <P></P>
 也可以显示每个字符的详细信息：
-<P><IMG SRC="images/block_detail.png" WIDTH="829" HEIGHT="575" BORDER="0" ALT=""></P>
+<P><IMG SRC="http://www.fmddlmyy.cn/images/block_detail.png" WIDTH="829" HEIGHT="575" BORDER="0" ALT=""></P>
 <H4>4.1.3 Script</H4>
 <P>Unicode中每个字符都有一个Script属性，这个属性表明字符所属的文字系统。Unicode目前支持以下Script：</P>
 <TABLE border="1">
@@ -285,7 +285,7 @@ Understanding character set encodings and legacy encodings"</A>中描述了字�
 <LI>Inherited：Script属性为Inherited的字符会继承前一个字符的Script属性。主要是一些组合用符号，例如：在“组合附加符号”区（0x300-0x36f），字符的Script属性都是Inherited。</LI>
 </UL>
 <P>UCD中的Script.txt列出了每个字符的Script属性。使用UniToy可以按照Script属性查看字符。例如：</P>
-<P><IMG SRC="images/script.png" WIDTH="829" HEIGHT="428" BORDER="0" ALT=""></P>
+<P><IMG SRC="http://www.fmddlmyy.cn/images/script.png" WIDTH="829" HEIGHT="428" BORDER="0" ALT=""></P>
 <P>左侧Script窗口中，第一层节点是按英文字母顺序排列的Script属性。第二层节点是包含该Script文字的行（row），点击后显示该行内属于这个Script的字符。这样，就可以集中查看属于同一文字系统的字符。</P>
 <H4>4.1.4 Unicode中的汉字</H4>
 <P>前面提过，在Unicode已定义的99089个字符中，有71226个字符是汉字。它们的分布如下：</P>
@@ -300,7 +300,7 @@ Understanding character set encodings and legacy encodings"</A>中描述了字�
 <TR><TD>中日韩兼容表意文字补充</TD><TD>2f800</TD><TD>2fa1d</TD><TD>542</TD></TR>
 </TABLE>
 <P>UCD的Unihan.txt中的部首偏旁索引（kRSUnicode）可以检索全部71226个汉字。kRSUnicode的部首是按照康熙字典定义的，共214个部首。简体字按照简体部首对应的繁体部首检索。UniToy整理了康熙字典部首对应的简体部首，提供了按照部首检索汉字的功能：</P>
-<P><IMG SRC="images/kangxi.png" WIDTH="921" HEIGHT="653" BORDER="0" ALT=""></P>
+<P><IMG SRC="http://www.fmddlmyy.cn/images/kangxi.png" WIDTH="921" HEIGHT="653" BORDER="0" ALT=""></P>
 <H3>4.2 UTF编码</H3>
 <P>在字符编码的四个层次中，第一层的范围和第二层的编码在4.1节已经详细讨论过了。本节讨论第三层的UTF编码和第四层的字节序，主要谈谈第三层的UTF编码，即怎样将Unicode定义的编码转换成程序数据。</P>
 <H4>4.2.1 UTF-8</H4>
@@ -315,16 +315,16 @@ Understanding character set encodings and legacy encodings"</A>中描述了字�
 <P>UTF-8的特点是对不同范围的字符使用不同长度的编码。对于0x00-0x7F之间的字符，UTF-8编码与ASCII编码完全相同。UTF-8编码的最大长度是4个字节。从上表可以看出，4字节模板有21个x，即可以容纳21位二进制数字。Unicode的最大码位0x10FFFF也只有21位。</P>
 <p>例1：“汉”字的Unicode编码是0x6C49。0x6C49在0x0800-0xFFFF之间，使用用3字节模板了：<font color="#0000FF">1110</font>xxxx <font color="#0000FF">10</font>xxxxxx <font color="#0000FF">10</font>xxxxxx。将0x6C49写成二进制是：0110 1100 0100 1001， 用这个比特流依次代替模板中的x，得到：<font color="#0000FF">1110</font>0110 <font color="#0000FF">10</font>110001 
   <font color="#0000FF">10</font>001001，即E6 B1 89。</p>
-<p>例2：“<IMG SRC="images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT="">”字的Unicode编码是0x20C30。0x20C30在0x010000-0x10FFFF之间，使用用4字节模板了：<font color="#0000FF">11110</font>xxx <font color="#0000FF">10</font>xxxxxx <font color="#0000FF">10</font>xxxxxx <font color="#0000FF">10</font>xxxxxx。将0x20C30写成21位二进制数字（不足21位就在前面补0）：0 0010 0000 1100 0011 0000，用这个比特流依次代替模板中的x，得到：<font color="#0000FF">11110</font>000 <font color="#0000FF">10</font>100000 <font color="#0000FF">10</font>110000 <font color="#0000FF">10</font>110000，即F0 A0 B0 B0。</p>
+<p>例2：“<IMG SRC="http://www.fmddlmyy.cn/images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT="">”字的Unicode编码是0x20C30。0x20C30在0x010000-0x10FFFF之间，使用用4字节模板了：<font color="#0000FF">11110</font>xxx <font color="#0000FF">10</font>xxxxxx <font color="#0000FF">10</font>xxxxxx <font color="#0000FF">10</font>xxxxxx。将0x20C30写成21位二进制数字（不足21位就在前面补0）：0 0010 0000 1100 0011 0000，用这个比特流依次代替模板中的x，得到：<font color="#0000FF">11110</font>000 <font color="#0000FF">10</font>100000 <font color="#0000FF">10</font>110000 <font color="#0000FF">10</font>110000，即F0 A0 B0 B0。</p>
 <H4>4.2.2 UTF-16</H4>
-<P>UniToy有个“输出编码”功能，可以输出当前选择的文本编码。因为UniToy内部采用UTF-16编码，所以输出的编码就是文本的UTF-16编码。例如：如果我们输出“汉”字的UTF-16编码，可以看到0x6C49，这与“汉”字的Unicode编码是一致的。如果我们输出“<IMG SRC="images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT="">”字的UTF-16编码，可以看到0xD843, 0xDC30。“<IMG SRC="images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT="">”字的Unicode编码是0x20C30，它的UTF-16编码是怎样得到的呢？</P>
+<P>UniToy有个“输出编码”功能，可以输出当前选择的文本编码。因为UniToy内部采用UTF-16编码，所以输出的编码就是文本的UTF-16编码。例如：如果我们输出“汉”字的UTF-16编码，可以看到0x6C49，这与“汉”字的Unicode编码是一致的。如果我们输出“<IMG SRC="http://www.fmddlmyy.cn/images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT="">”字的UTF-16编码，可以看到0xD843, 0xDC30。“<IMG SRC="http://www.fmddlmyy.cn/images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT="">”字的Unicode编码是0x20C30，它的UTF-16编码是怎样得到的呢？</P>
 <H5>4.2.2.1 编码规则</H5>
 <P>UTF-16编码以16位无符号整数为单位。我们把Unicode编码记作U。编码规则如下：</P>
 <UL>
 <LI>如果U&lt;0x10000，U的UTF-16编码就是U对应的16位无符号整数（为书写简便，下文将16位无符号整数记作WORD）。</LI>
 <LI>如果U&#8805;0x10000，我们先计算U'=U-0x10000，然后将U'写成二进制形式：yyyy yyyy yyxx xxxx xxxx，U的UTF-16编码（二进制）就是：<font color="#0000FF">110110</font>yyyyyyyyyy <font color="#0000FF">110111</font>xxxxxxxxxx。</LI>
 </UL>
-<P>为什么U'可以被写成20个二进制位？Unicode的最大码位是0x10ffff，减去0x10000后，U'的最大值是0xfffff，所以肯定可以用20个二进制位表示。例如：“<IMG SRC="images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT="">”字的Unicode编码是0x20C30，减去0x10000后，得到0x10C30，写成二进制是：0001 0000 1100 0011 0000。用前10位依次替代模板中的y，用后10位依次替代模板中的x，就得到：<font color="#0000FF">110110</font>0001000011 <font color="#0000FF">110111</font>0000110000，即0xD843 0xDC30。</P>
+<P>为什么U'可以被写成20个二进制位？Unicode的最大码位是0x10ffff，减去0x10000后，U'的最大值是0xfffff，所以肯定可以用20个二进制位表示。例如：“<IMG SRC="http://www.fmddlmyy.cn/images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT="">”字的Unicode编码是0x20C30，减去0x10000后，得到0x10C30，写成二进制是：0001 0000 1100 0011 0000。用前10位依次替代模板中的y，用后10位依次替代模板中的x，就得到：<font color="#0000FF">110110</font>0001000011 <font color="#0000FF">110111</font>0000110000，即0xD843 0xDC30。</P>
 <H5>4.2.2.2 代理区（Surrogate）</H5>
 <P>按照上述规则，Unicode编码0x10000-0x10FFFF的UTF-16编码有两个WORD，第一个WORD的高6位是110110，第二个WORD的高6位是110111。可见，第一个WORD的取值范围（二进制）是<font color="#0000FF">110110</font>00 00000000到<font color="#0000FF">110110</font>11 11111111，即0xD800-0xDBFF。第二个WORD的取值范围（二进制）是<font color="#0000FF">110111</font>00 00000000到<font color="#0000FF">110111</font>11 11111111，即0xDC00-0xDFFF。</P>
 <P>为了将一个WORD的UTF-16编码与两个WORD的UTF-16编码区分开来，Unicode编码的设计者将0xD800-0xDFFF保留下来，并称为代理区（Surrogate）：</P>
@@ -346,7 +346,7 @@ Understanding character set encodings and legacy encodings"</A>中描述了字�
 <TABLE border="1">
 <TR><TD>字符</TD><TD>Unicode编码</TD><TD>UTF-16LE</TD><TD>UTF-16BE</TD><TD>UTF32-LE</TD><TD>UTF32-BE</TD></TR>
 <TR><TD>汉</TD><TD>0x6C49</TD><TD>49 6C</TD><TD>6C 49</TD><TD>49 6C 00 00</TD><TD>00 00 6C 49</TD></TR>
-<TR><TD><IMG SRC="images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT=""></TD><TD>0x20C30</TD><TD>43 D8 30 DC</TD><TD>D8 43 DC 30</TD><TD>30 0C 02 00</TD><TD>00 02 0C 30</TD></TR>
+<TR><TD><IMG SRC="http://www.fmddlmyy.cn/images/134192.png" WIDTH="14" HEIGHT="15" BORDER="0" ALT=""></TD><TD>0x20C30</TD><TD>43 D8 30 DC</TD><TD>D8 43 DC 30</TD><TD>30 0C 02 00</TD><TD>00 02 0C 30</TD></TR>
 </TABLE>
 </P>那么，怎么判断字节流的字节序呢？</P>
 <P>Unicode标准建议用BOM（Byte Order Mark）来区分字节序，即在传输字节流前，先传输被作为BOM的字符"零宽无中断空格"。这个字符的编码是FEFF，而反过来的FFFE（UTF-16）和FFFE0000（UTF-32）在Unicode中都是未定义的码位，不应该出现在实际传输中。下表是各种UTF编码的BOM：</P>
