@@ -4,6 +4,8 @@ title: 浅谈文字编码和Unicode(转)
 published: false
 ---
 
+原文地址：<http://www.fmddlmyy.cn/text17.html>
+
 <H1 style="font-size:30px;">浅谈文字编码和Unicode（下）</H1>
 <H2>3 字符编码模型</H2>
 <P>
