@@ -116,8 +116,10 @@ table td, table th {
 
 /****************entry style**************/
 #content .entry{margin-bottom:55px;}
+/*
 .entry p { text-indent: 2em;}
 .entry blockquote p { text-indent: 0;}
+*/
 .entry ul, .entry ol {margin: 25px 0 25px 35px;}
 .entry ul li,.entry ol li{margin-bottom:5px;list-style:circle;line-height:24px;font-size: 14px;}
 .entry ol li{list-style:decimal;}
