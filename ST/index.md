@@ -12,6 +12,9 @@ NotLoadComment: true
         <h2><a href="http://barretlee.com/ST/ES5.1/" itemprop="url">ECMAScript 5.1 Standard</a></h2>
     </li>
     <li itemscope itemtype="http://schema.org/Article">
+        <h2><a href="http://barretlee.com/ST/ES6/" itemprop="url">ECMAScript 6 Draft</a></h2>
+    </li>
+    <li itemscope itemtype="http://schema.org/Article">
         <h2><a href="http://barretlee.com/ST/RFC-HTTP/" itemprop="url">RFC-HTTP</a></h2>
     </li>
     <li itemscope itemtype="http://schema.org/Article">
