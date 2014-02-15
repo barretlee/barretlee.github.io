@@ -29,3 +29,7 @@ Array.prototype.unique = function(){
 	<span class="page-old" title="上一篇">&lt;&lt;<a href="#"></a></span>
 	<span class="page-new" title="下一篇"><a href="#"></a>&gt;&gt;</span>
 </div>
+
+HTTPS
+SPDY
+SSL
