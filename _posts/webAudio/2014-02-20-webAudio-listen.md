@@ -2,7 +2,7 @@
 layout: post
 title: 【web语音通信系列 1】 让音乐响起来
 description: 介绍 web audio 的相关内容，拿到数据源，让音乐响起来。
-category: webAudio
+category: webaudio
 tags: webAudio 
 ---
 
