@@ -21,6 +21,12 @@ layout: home
                 </div>
             </li>
             <li itemtype="http://schema.org/Article">
+                <h2><a href="http://barretlee.com/webAudio/" itemprop="url">web语音通信系列</a><sup class="stick-top">TOP</sup></h2>
+                <div class="title-desc" itemprop="description">
+                    目前 web audio api 还处于草案阶段，最新 Draft 编辑日期是 13/10/10，语音通讯是 web 发展的一个趋势！
+                </div>
+            </li>
+            <li itemtype="http://schema.org/Article">
                 <h2><a href="http://barretlee.com/ES6/" itemprop="url">ECMAScript 6系列</a><sup class="stick-top">TOP</sup></h2>
                 <div class="title-desc" itemprop="description">
                     ECMAScript 6 是JavaScript的下一个标准，正处在快速开发之中，大部分已经完成了，预计将在2014年正式发布。

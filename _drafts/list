@@ -33,3 +33,24 @@ Array.prototype.unique = function(){
 HTTPS
 SPDY
 SSL
+
+web语音通信系列文章
+
+[web语音通信系列 1] 让音乐响起来       webAudio-listen
+[web语音通信系列 2] 看得到的音乐       webAudio-show-audio
+[web语音通信系列 3] 音量的控制         webAudio-volume
+[web语音通信系列 4] 声道的转换         webAudio-cross-fading
+[web语音通信系列 5] 声音的滤波         webAudio-filter
+[web语音通信系列 6] 音频的传送         webAudio-transport
+[web语音通信系列 7] 语音通讯小DEMO     webAudio-communication-demo
+[web语音通信系列 8] 兼容方式介绍       webAudio-compatibility
+[web语音通信系列 9] webAudio接口封装   webAudio-code-package
+
+
+- <https://developer.mozilla.org/en-US/docs/Web_Audio_API>
+- <http://www.w3.org/TR/webaudio/>
+- <http://www.csdn.net/article/2013-07-10/2816178-Web-Audio-API-Firefox>
+- <http://www.html5rocks.com/en/tutorials/webaudio/intro/>
+- <http://www.html5rocks.com/zh/tutorials/file/xhr2/>
+
+- <https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html>
