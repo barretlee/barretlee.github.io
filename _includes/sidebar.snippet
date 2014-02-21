@@ -1,6 +1,6 @@
 <div class="sidebar clearfix">
     <div class="recent recent-page">
-        <b>1. 近期文章</b>
+        <b>» 近期文章</b>
         <ul class="side-list">
         {% for post in site.categories.blog limit:8 %}
             <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
@@ -8,7 +8,7 @@
         </ul>
     </div>
     <div class="recent">
-        <b>2. 站内搜索</b>
+        <b>» 站内搜索</b>
         <form method="GET" action="/search">
             <input type="text" class="web-search" name ="q" value="{{ page.category }}" />
             <input type="submit" value="GO" class="f-submit" />
