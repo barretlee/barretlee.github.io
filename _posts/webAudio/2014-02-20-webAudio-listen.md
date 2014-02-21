@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【web语音通信系列 1】 让音乐响起来
+title: 【Voice communications】 让音乐响起来
 description: 介绍 web audio 的相关内容，拿到数据源，让音乐响起来。
 category: webaudio
 tags: webAudio 
@@ -167,19 +167,7 @@ controls 属性是用来控制显示音频文件的控制部分的。默认未�
 
 本文是个介绍性的文章，提到了 Web Audio API 的相关知识，以及如何在你的 web 程序中引入 音频流。没有写相关 demo，感兴趣的童鞋可以复制代码自己去测试，在后续文章中会给出测试 DEMO。
 
-## 四、相关文章
-
-[web语音通信系列 1] 让音乐响起来       
-[web语音通信系列 2] 看得到的音乐       
-[web语音通信系列 3] 音量的控制         
-[web语音通信系列 4] 声道的转换         
-[web语音通信系列 5] 声音的滤波         
-[web语音通信系列 6] 音频的传送         
-[web语音通信系列 7] 语音通讯小DEMO     
-[web语音通信系列 8] 兼容方式介绍       
-[web语音通信系列 9] webAudio接口封装   
-
-## 五、参考文章
+## 四、参考文章
 
 - <http://www.csdn.net/article/2013-07-10/2816178-Web-Audio-API-Firefox> CSND
 - <https://hacks.mozilla.org/2013/07/web-audio-api-comes-to-firefox/> Mozilla
