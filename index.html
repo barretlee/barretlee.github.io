@@ -16,7 +16,7 @@ layout: home
 			<ul class="artical-list">   
 			{% for post in paginator.posts %}
 				<li itemscope itemtype="http://schema.org/Article">
-					<h2><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a> {{ post.category}}</h2>
+					<h2><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
 					<div class="title-desc" itemprop="description">{{ post.description }}</div>
 				</li>
 			{% endfor %}
