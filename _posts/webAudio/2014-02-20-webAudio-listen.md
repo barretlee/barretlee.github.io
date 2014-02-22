@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Voice communications】 让音乐响起来
+title: 【Voice communications】让音乐响起来
 description: 介绍 web audio 的相关内容，拿到数据源，让音乐响起来。
 category: webaudio
 tags: webAudio 
