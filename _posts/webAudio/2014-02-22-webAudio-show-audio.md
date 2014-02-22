@@ -27,7 +27,7 @@ tags: webAudio canvas javascript
 	                            +========>| Other Tools |
 	                              signal  +-------------+
 
-在 AudioContext 中，通过一个结点（AudioNode）来接受输入源，中间的一些结点可以过滤、放大、去杂等处理 Source Node 的信号，处理之后可以送到 AudioContext 的输出结点，然后启用 `context.start()` 播放音频信息；也可以将处理的信息送到外部交给其他对象来处理，比如本文要谈到的，将信号交给 Canvas 来处理，这样就能看到音频信号的波形图了。
+在 AudioContext 中，通过一个结点（AudioNode）来接受输入源，中间的一些结点可以过滤、放大、去杂等处理 Source Node 的信号，处理之后可以送到 AudioContext 的输出结点，然后启用 `source.start()` 播放音频信息；也可以将处理的信息送到外部交给其他对象来处理，比如本文要谈到的，将信号交给 Canvas 来处理，这样就能看到音频信号的波形图了。
 
 本文地址：{{ site.url }}{{ page.url }}，转载请注明源地址。
 
