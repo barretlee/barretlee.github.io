@@ -104,6 +104,8 @@ tags: webAudio javascript crossFading
 
 [![volume-equal]({{ site.repo }}/images/blog-article-images/blog/audio/equal-fade.png)]({{ site.repo }}/images/blog-article-images/blog/audio/equal-fade.png)
 
+详情可以戳这个 DEMO ：<http://qianduannotes.duapp.com/demo/audio/>
+
 
 ## 二、小结
 
