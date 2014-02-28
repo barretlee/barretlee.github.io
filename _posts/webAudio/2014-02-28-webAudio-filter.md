@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【Voice communications】声音的滤波
-description: 
+description: 通过设备获取音频流会不可避免的渗入一些杂音，这些杂音可能来自你周边的环境，也有可能来自录音设备本身，一些低频的声音还好，人耳难以分辨出来，但是那些高频的白噪声对音质的影响是特别大的，如我们听收音机没有调到正确的频率上，会听到吱吱兹兹的刺耳的杂音。
 category: webaudio
 tags: webAudio javascript filter
 ---
