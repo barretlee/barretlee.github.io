@@ -12,7 +12,7 @@ tags: webAudio javascript filter
 
 本文地址：{{ site.url }}{{ page.url }}，转载请注明源地址。
 
-**P.S：请在较新版的 chrome 火狐 Firefox 中测试。**
+**P.S：请在较新版的 chrome 或者 Firefox 中测试。**
 
 ## 一、滤波节点
 
