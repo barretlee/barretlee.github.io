@@ -92,6 +92,7 @@ tags: webAudio javascript filter
 	//连接：media → filter → destination
 	media.connect(filter);
 	filter.connect(context.destination);
+	audio.play();
 
 为了方面查看改变频率之后波形的变化，我做了一些处理：
 
