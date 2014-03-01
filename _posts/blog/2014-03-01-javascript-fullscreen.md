@@ -6,6 +6,8 @@ category: blog
 tags: javascript fullscreen 全屏
 ---
 
+<b style="color:red;">@update 文章有更新，详情请移步：<http://www.cnblogs.com/hustskyking/p/javascript-fullscreen.html></b>
+
 页面全屏是一个体验非常棒的功能，他可以让你的视觉焦点聚集在你想关注的元素块上。很多浏览器都支持全屏，按下 F11，哦了！ 页面全屏了~
 
 但是本文要说的并不是这种全屏。当页面中有个小 DEMO 或者小游戏要展示的时候，用户期望，这个 DEMO 或者游戏可以在全屏下展示，本文就教你如何来展示。
