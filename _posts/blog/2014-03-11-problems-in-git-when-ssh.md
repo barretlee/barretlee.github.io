@@ -3,7 +3,6 @@ layout: post
 title: git/ssh捋不清的几个问题
 description: git 和 ssh 两个几乎必备的工具，在使用的过程中，总会遇到无数的问题，我已经头疼了好几回了，这次要把他记录下来！
 category: blog
-published: false
 tags: git ssh github
 ---
 
