@@ -35,6 +35,8 @@ tags: javascript 大数据
 
 ## 二、Demo
 
+demo 在 IE 7、8 有 bug，请读者自己修复吧~
+
 代码：
 
 	<title>百万数据前端快速流畅显示</title>
