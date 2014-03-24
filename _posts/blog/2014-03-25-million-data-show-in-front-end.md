@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 百万数据如何在前端快速流畅显示？
-description: 
+description: 如果要在前端呈现大量的数据，一般的策略就是分页。前端要呈现百万数据，这个需求是很少见的，但是展示千条稍微复杂点的数据，这种需求还是比较常见，只要内存够，javascript 肯定是吃得消的，计算几千上万条数据，js 效率根本不在话下，但是 DOM 的渲染浏览器扛不住，CPU 稍微搓点的电脑必然会卡爆。
 category: blog
 tags: javascript 大数据
 ---
