@@ -20,6 +20,12 @@ layout: home
                     李靖，Barret Lee，华中科技大学，本科，就职于阿里巴巴淘宝UED
                 </div>
             </li>
+            <li itemscope itemtype="http://schema.org/Article">
+                <h2><a href="http://hi.barretlee.com" itemprop="url">我的微分享平台</a></h2>
+                <div class="title-desc" itemprop="description">
+                    软件、代码、心得、链接等，我爱分享！
+                </div>
+            </li>
             <li itemtype="http://schema.org/Article">
                 <h2><a href="http://barretlee.com/webAudio/" itemprop="url">web语音通信系列</a><sup class="stick-top">TOP</sup></h2>
                 <div class="title-desc" itemprop="description">
