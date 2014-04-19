@@ -27,6 +27,12 @@ layout: home
                 </div>
             </li>
             <li itemtype="http://schema.org/Article">
+                <h2><a href="http://barretlee.com/ST/" itemprop="url">技术文档和工具列表</a></h2>
+                <div class="title-desc" itemprop="description">
+                    ECMA-262, HTTP/1.x, RFC, JSParser...
+                </div>
+            </li>
+            <li itemtype="http://schema.org/Article">
                 <h2><a href="http://barretlee.com/webAudio/" itemprop="url">web语音通信系列</a><sup class="stick-top">TOP</sup></h2>
                 <div class="title-desc" itemprop="description">
                     目前 web audio api 还处于草案阶段，最新 Draft 编辑日期是 13/10/10，语音通讯是 web 发展的一个趋势！
@@ -42,12 +48,6 @@ layout: home
                 <h2><a href="http://barretlee.com/node/" itemprop="url">NodeJS 系列</a><sup class="stick-top">TOP</sup></h2>
                 <div class="title-desc" itemprop="description">
                     JavaScript 在服务器端大放光彩，有必要花点功夫去研究。
-                </div>
-            </li>
-            <li itemtype="http://schema.org/Article">
-                <h2><a href="http://barretlee.com/ST/" itemprop="url">技术文档</a></h2>
-                <div class="title-desc" itemprop="description">
-                    技术规范文档清单
                 </div>
             </li>
             <li itemtype="http://schema.org/Article">
