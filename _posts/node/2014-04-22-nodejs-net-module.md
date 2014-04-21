@@ -117,7 +117,7 @@ Server 除了有 listen 函数外，还有很多的接口：
 
 - `Server.close([callback])`，停止监听，那么之前的所有管道也就没有用了。
 - `Server.maxConnections`，Server 的最大连接数，这个连接数是有上限的（跟系统有关），我们也可以自己设定连接数的最大上限（不超过系统最大连接数）。
--`Server.address()`，在 listen 之后可以通过这个函数拿到服务器的相关信息。
+- `Server.address()`，在 listen 之后可以通过这个函数拿到服务器的相关信息。
 
 ```javascript
 // grab a random port.
