@@ -119,11 +119,13 @@ Server 除了有 listen 函数外，还有很多的接口：
 - `Server.maxConnections`，Server 的最大连接数，这个连接数是有上限的（跟系统有关），我们也可以自己设定连接数的最大上限（不超过系统最大连接数）。
 -`Server.address()`，在 listen 之后可以通过这个函数拿到服务器的相关信息。
 
-    // grab a random port.
-    server.listen(function() {
-        address = server.address();
-        console.log("opened server on %j", address);
-    });
+```javascript
+// grab a random port.
+server.listen(function() {
+    address = server.address();
+    console.log("opened server on %j", address);
+});
+```    
 
 还有 write、end、destroy、pause、resume 等等很多丰富的接口，可以在这里查看详情<http://nodejs.org/api/net.html>。
 
