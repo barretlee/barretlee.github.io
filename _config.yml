@@ -19,7 +19,7 @@ disqus_show_comment_count: true
 # site
 title: BarretLee's Blog
 url: http://barretlee.com
-repo: ./.
+repo: http://barretlee.com
 feed: /atom.xml
 
 # color scheme
