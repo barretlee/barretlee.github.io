@@ -19,7 +19,7 @@ disqus_show_comment_count: true
 # site
 title: BarretLee's Blog
 url: http://barretlee.com
-repo: http://qianduannotes.duapp.com/github/barretlee.github.com
+repo: /
 feed: /atom.xml
 
 # color scheme
