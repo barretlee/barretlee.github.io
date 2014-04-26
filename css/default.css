@@ -49,7 +49,8 @@ a:hover {
 }
 a.external {padding-right:13px;background:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/icons.gif) no-repeat right 1px;}
 a.external:hover {background-position:right -15px;}
-.entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#333;border-bottom: 1px solid #CCC;padding-bottom: 10px;}
+.entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#333;padding-bottom: 10px;}
+.entry-title {border-bottom: 1px solid #CCC;}
 .entry-title a:hover {text-decoration:none;color:#F00;}
 .entry-date {color:#999; font-size: 16px;line-height: 30px;text-indent: 0em !important;}
 
@@ -491,7 +492,7 @@ pre::-webkit-color-swatch {border:none;}
 
 @media screen and (max-width: 750px){
     body {font-size:14px}
-    #content {width:85%;margin:100px auto 50px; }
+    #content {width:92%;margin:100px auto 50px; }
 
     h2{font-size:20px;}
     h3{font-size:16px;}
