@@ -11,11 +11,11 @@ title: 订阅|Barret Lee的博客
      <description>BarretLee's Blog—关注互联网，热爱生活!</description>
      <script xmlns="http://www.w3.org/1999/xhtml" src="./js/rss.js"></script>
      {% for post in site.posts limit:15 %}<item>
-       <title>{{ post.title | xml_escape }}</title>
+       <title>{{ post.title | append:' ' | xml_escape }}</title>
        <link>http://barretlee.com{{ post.url }}</link>
        <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
        <description>
-         {{ post.description | xml_escape }}
+         {{ post.excerpt | xml_escape }}
        </description>
      </item>
      {% endfor %}
