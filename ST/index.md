@@ -28,4 +28,7 @@ NotLoadComment: true
     <li itemscope itemtype="http://schema.org/Article">
         <h2><a href="http://barretlee.com/tools/jsparser/" itemprop="url">JavaScript Parser</a></h2>
     </li>
+    <li itemscope itemtype="http://schema.org/Article">
+        <h2><a href="http://barretlee.com/tools/reg/" itemprop="url">RegExp-Learning in 30 Minutes</a></h2>
+    </li>
 </ul>
