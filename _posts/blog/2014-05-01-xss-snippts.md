@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: xss零碎指南
 description: 该文章是本人两天的学习笔记，共享出来，跟大家交流。知识比较零散，但是对有一定 JS 基础的人来说，每个小知识都有助于开阔你的 Hack 视角。首先声明，本文只是 XSS 攻击的冰山一角，读者自行深入研究。
 category: blog
@@ -10,17 +10,17 @@ tags: xss
 
 ## 一、XSS学习提要
 
-1. http://qdemo.sinaapp.com/ppt/xss/ 三水清
+1. <http://qdemo.sinaapp.com/ppt/xss/> 三水清
    简单介绍 xss
-2. http://drops.wooyun.org/tips/689  乌云
+2. <http://drops.wooyun.org/tips/689>  乌云
    xss与字符编码
-3. http://www.wooyun.org/whitehats/心伤的瘦子
+3. <http://www.wooyun.org/whitehats/心伤的瘦子>
    系列教程
-4. http://ha.ckers.org/xss.html
+4. <http://ha.ckers.org/xss.html>
    反射性XSS详细分析和解释
-5. http://html5sec.org/
+5. <http://html5sec.org/>
    各种技巧 ★★★★★
-6. http://www.80sec.com/
+6. <http://www.80sec.com/>
    一些不错的文章
 
 
