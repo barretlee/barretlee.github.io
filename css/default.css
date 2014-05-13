@@ -47,7 +47,7 @@ a:hover {
     -o-transition: all .4s ease;
     transition: all .4s ease;
 }
-a.external {padding-right:13px;background:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/icons.gif) no-repeat right 1px;}
+a.external {padding-right:13px;background:url(em/images/icons.gif) no-repeat right 1px;}
 a.external:hover {background-position:right -15px;}
 .entry-title,.entry-title a {font-size:30px;font-weight:bold;margin-bottom:6px;color:#333;padding-bottom: 10px;}
 .entry-title {border-bottom: 1px solid #CCC;}
@@ -148,17 +148,17 @@ table td, table th {
     _display:none;
 }
 .blog .aside{
-    background-image:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/blog.jpg);
+    background-image:url(/images/blog.jpg);
 }
 .opinion .aside{
-    background-image:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/opinion.jpg);
+    background-image:url(/images/opinion.jpg);
 }
 .life .aside{
-    background-image:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/life.jpg)
+    background-image:url(/images/life.jpg)
 }
 .trash .aside{
-    background-image:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/trash.jpg);
-    *background-image:url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/blog.jpg);
+    background-image:url(/images/trash.jpg);
+    *background-image:url(/images/blog.jpg);
 }
 .index-content .section { margin-left:30%;_margin-left:200px; padding-top:80px; padding-right:15%;_overflow:hidden;}
 
@@ -350,7 +350,7 @@ pre::-webkit-color-swatch {border:none;}
     position: fixed;
     right: -20px;
     bottom: -20px;
-    background: url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/rss80.png);
+    background: url(/images/rss80.png);
     z-index: 1000;
     _display:none;
 }
@@ -460,7 +460,7 @@ pre::-webkit-color-swatch {border:none;}
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 60px;
-    background-image: url(http://qianduannotes.duapp.com/github/barretlee.github.com/images/warn.png);
+    background-image: url(/images/warn.png);
     background-repeat: no-repeat;
     background-position: 15px;
     font-size: 12px; 
