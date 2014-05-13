@@ -3,7 +3,7 @@ layout: post
 title: git版本管理策略及相关技巧(A)
 description: 公司几乎所有的项目都是使用 git 仓库来管理代码，以前对 git 只有些肤浅的了解，每次提交代码或者上线的时候总是会提心吊胆，生怕出现一些未知的问题。经过三个月的踩坑和填坑， git 操作颇显成熟。仅以此文回忆学习 git 的历史。
 category: blog
-tags: git
+tags: git CMS
 ---
 
 **UNDER MIT LICENSE.**

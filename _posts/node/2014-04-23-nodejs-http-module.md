@@ -2,7 +2,7 @@
 layout: post
 title: 深入浅出NodeJS——数据通信，HTTP模块运行机制
 description: 整个数据通信就是围绕请求（Request）和响应（Response）两个点进行的设计和架构。在对请求和响应处理之前，我们必须深入的理解这两者之间的关系。
-category: nodejs
+category: node
 tags: nodejs http
 ---
 

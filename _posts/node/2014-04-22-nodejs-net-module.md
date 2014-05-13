@@ -2,7 +2,7 @@
 layout: post
 title: 深入浅出NodeJS—数据通信，NET模块运行机制
 description: 互联网的运作，最根本的驱动就是信息的交互，NodeJS 在数据交互这一块做的很带感，异步编程让人很惬意，关于 NodeJS 的数据通信，最基础的两个模块是 NET 和 HTTP，前者是基于 TCP 的封装，后者本质还是 TCP 层，只不过做了比较多的数据封装，我们视之为更高层。
-category: nodejs
+category: node
 tags: nodejs net
 ---
 
