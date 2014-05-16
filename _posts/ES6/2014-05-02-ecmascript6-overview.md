@@ -8,7 +8,7 @@ tags: JavaScript ES6
 
 预计在2014年底，ECMAScript 6将会正式发布，他的草案在13年3月份被冻结，后续提出新特性将会移至ECMASript 7中。目前还没有哪款浏览器实现了ES6的全部内容，兼容性最强的一款要数FireFox了。具体情况可以在[这里](http://kangax.github.io/es5-compat-table/es6/)查看。
 
-关于 ECMAScript 6 草案，我在博客里头复制了一份，可以点击[这里](http://barretlee.com/ST/ES6/)。
+关于 ECMAScript 6 草案，我在博客里头复制了一份，可以点击[这里](http://barretlee.github.io/ST/ES6/)。
 
 JavaScript的内容是越来越丰富，在ES6中还添加了模块（module）和类（class），感觉他已经失去了曾经的单纯了，不知道这些新功能的补充对开发者来说是福音还是负担。之前写过两篇关于ES6的文章，[ECMAScript 6 简介](/ES6-introduce) 和 [ECMAScript 6中的let和const关键词](/ES6-computed-properties)，本文将一一介绍ES6中的一些新特性。
 

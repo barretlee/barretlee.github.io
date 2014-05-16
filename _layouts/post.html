@@ -4,20 +4,20 @@ layout: page
 <link rel="stylesheet" href="{{ site.repo }}/js/prettify/prettify{% if site.highlight %}-{{ site.highlight }}{% endif %}.css" />
 
 <form class="page-loc" method="GET" action="/search">
-	<span style="float:right"><input type="text" class="web-search" name="q" value="站内搜索" /><a href="http://barretlee.com/about.html">关于</a><a href="http://hi.barretlee.com" target="_blank" class="page-rss" style="margin-left: 20px;">微分享</a><a href="http://barretlee.com/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
+	<span style="float:right"><input type="text" class="web-search" name="q" value="站内搜索" /><a href="http://barretlee.github.io/about.html">关于</a><a href="http://hi.barretlee.com" target="_blank" class="page-rss" style="margin-left: 20px;">微分享</a><a href="http://barretlee.github.io/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
  	
  	{% capture s %}{{ page.category }}{% endcapture %}
-  	李靖的博客 » <a href="http://barretlee.com/categories/#{{ s }}">{% if s == 'life' %}生活{% elsif s == 'opinion' %}交互{% else %}技术{% endif %}</a> » {{ page.category }}
+  	李靖的博客 » <a href="http://barretlee.github.io/categories/#{{ s }}">{% if s == 'life' %}生活{% elsif s == 'opinion' %}交互{% else %}技术{% endif %}</a> » {{ page.category }}
 </form>
 <div class="page-top-nav clearfix">
 	<div class="categoryList">
 		<strong>分类：</strong>
 		{% for category in page.categories %}
-	        <a href="http://barretlee.com/categories/#{{ category }}" itemprop="url">{{ category }}</a> 
+	        <a href="http://barretlee.github.io/categories/#{{ category }}" itemprop="url">{{ category }}</a> 
 	    {% endfor %}<br />
 	    <strong>标签：</strong>
 	    {% for tag in page.tags limit:3 %}
-	        <a href="http://barretlee.com/tags/#{{ tag }}" itemprop="url">{{ tag }}</a> 
+	        <a href="http://barretlee.github.io/tags/#{{ tag }}" itemprop="url">{{ tag }}</a> 
 	    {% endfor %}
 	</div>
 	<div class="page-paginator">
@@ -36,7 +36,7 @@ layout: page
 <div class="entry" itemscope itemtype="http://schema.org/Article">
     <h1 class="entry-title"><a href="{{ page.url }}" itemprop="url">{{ page.title }}</a></h1>
     <p class="entry-date">
-  		作者：<span itemprop="author"><a href="http://barretlee.com/about.html" target="_blank">{{ site.author_name }}</a></span><br />
+  		作者：<span itemprop="author"><a href="http://barretlee.github.io/about.html" target="_blank">{{ site.author_name }}</a></span><br />
   		日期：<time datatime="{{ page.date|date:"%Y-%m-%d" }}">{{ page.date|date:"%Y-%m-%d" }}</time>
   	</p>
 
@@ -53,5 +53,5 @@ layout: page
 {% include disqus.snippet %}
 
 <div class="footer">
-    <small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2013 - 2023 Designed by <a href="http://barretlee.com/about.html">Barret Lee</a> | <span class="label label-info">{{site.time | date:"%Y-%m-%d %H:%M:%S %Z"}}</span></small>
+    <small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2013 - 2023 Designed by <a href="http://barretlee.github.io/about.html">Barret Lee</a> | <span class="label label-info">{{site.time | date:"%Y-%m-%d %H:%M:%S %Z"}}</span></small>
 </div>

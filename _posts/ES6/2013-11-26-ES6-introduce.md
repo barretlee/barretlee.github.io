@@ -85,7 +85,7 @@ re({raw:'line1: (words )*\nline2: \w+',
 - <http://javascript.ruanyifeng.com/oop/ecmascript6.html> ruanyifeng
 
 
-ECMAScript 6系列文章请移步：<http://barretlee.com/ES6/>
+ECMAScript 6系列文章请移步：<http://barretlee.github.io/ES6/>
 
 
 

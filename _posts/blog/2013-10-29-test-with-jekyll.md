@@ -30,7 +30,7 @@ end
   {% if paginator.previous_page %}
     <p class="previous">
       {% if paginator.previous_page == 1 %}
-        <a href="http://barretlee.com/">Previous</a>
+        <a href="http://barretlee.github.io/">Previous</a>
       {% else %}
         <a href="{{ paginator.previous_page_path }}">Previous</a>
       {% endif %}
@@ -46,7 +46,7 @@ end
       {% if paginator.page == 1 %}
         <span class="current-page">1</span>
       {% else %}
-        <a href="http://barretlee.com/">1</a>
+        <a href="http://barretlee.github.io/">1</a>
       {% endif %}
     </li>
 
@@ -55,7 +55,7 @@ end
         {% if count == paginator.page %}
           <span class="current-page">{{ count }}</span>
         {% else %}
-          <a href="http://barretlee.com/page{{ count }}">{{ count }}</a>
+          <a href="http://barretlee.github.io/page{{ count }}">{{ count }}</a>
         {% endif %}
       </li>
     {% endfor %}

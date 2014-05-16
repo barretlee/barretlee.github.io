@@ -18,7 +18,7 @@ tags: JavaScript download file execCommand
 
 平时比较常见的有 txt、png、jpg、zip、tar 等各种文件格式，这些文件格式中，一部分浏览器是会直接打开链接显示内容的，而另外一部分，浏览器不识别响应头，或者不能解析对应的格式，于是当做文件直接下载下来了。如：
 
-	<a href="http://barretlee.com/test.rar">file</a>
+	<a href="http://barretlee.github.io/test.rar">file</a>
 
 这句代码，若直接点开链接，浏览器将会直接下载该文件。
 

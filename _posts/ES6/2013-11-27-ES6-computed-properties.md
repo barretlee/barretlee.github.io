@@ -61,7 +61,7 @@ Node已经支持了const和let关键词，可以这样使用`node --harmony`和`
 
 详情可以去<https://github.com/olov/defs>这里瞅瞅。
 
-ECMAScript 6系列文章请移步：<http://barretlee.com/ES6/>
+ECMAScript 6系列文章请移步：<http://barretlee.github.io/ES6/>
 
 [1]: http://wiki.ecmascript.org/doku.php?id=harmony:let let
 [2]: http://wiki.ecmascript.org/doku.php?id=harmony:const  const

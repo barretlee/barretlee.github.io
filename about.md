@@ -4,7 +4,7 @@ title: about
 ---
 <div id="content" class="aboutMe">
 <form class="page-loc" method="GET" action="/search">
-	<span style="float:right"><input type="text" class="web-search" name ="q" value="站内搜索" /><a href="http://barretlee.com/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
+	<span style="float:right"><input type="text" class="web-search" name ="q" value="站内搜索" /><a href="http://barretlee.github.io/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
   	李靖的博客 » 关于我
 </form>
 <dl class="aboutDl">
@@ -29,7 +29,7 @@ title: about
 </dl>
 {% include disqus.snippet %}
 <div class="footer">
-    <small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2013 - 2023 Designed by <a href="http://barretlee.com/about.html">Barret Lee</a> | <span class="label label-info">{{site.time | date:"%Y-%m-%d %H:%M:%S %Z"}}</span></small>
+    <small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> | Copyright 2013 - 2023 Designed by <a href="http://barretlee.github.io/about.html">Barret Lee</a> | <span class="label label-info">{{site.time | date:"%Y-%m-%d %H:%M:%S %Z"}}</span></small>
 </div>
 </div>
 <script type="text/javascript">

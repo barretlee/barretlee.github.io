@@ -21,7 +21,7 @@ tags: javascript 分号 semicolon
 <p>2. <span title="When, as the program is parsed from left to right, the end of the input stream of tokens is encountered and the parser is unable to parse the input token stream as a single complete ECMAScript Program, then a semicolon is automatically inserted at the end of the input stream." class="translator">程序从左到右解析，当纳入下一个（或几个） token 不能产生一条合法的语句的时候，会在这个地方插入一个分号。</span></p>
 <p>3. <span title="When, as the program is parsed from left to right, a token is encountered that is allowed by some production of the grammar, but the production is a restricted production and the token would be the first token for a terminal or nonterminal immediately following the annotation “[no LineTerminator here]” within the restricted production (and therefore such a token is called a restricted token), and the restricted token is separated from the previous token by at least one LineTerminator, then a semicolon is automatically inserted before the restricted token." class="translator">程序从左到右解析，当纳入的 token 能够产生一条合法语句，但是这条语句是受限产生式时，在该受限 token 前面自动插入分号。</span></p>
 
-上面提到的一些内容来自 ECMAScript5.1 第七章第九节，可以戳[这里](http://barretlee.com/ST/ES5.1/#sec-7.9.1)，翻译的不太通顺，实在是太难翻译了= =
+上面提到的一些内容来自 ECMAScript5.1 第七章第九节，可以戳[这里](http://barretlee.github.io/ST/ES5.1/#sec-7.9.1)，翻译的不太通顺，实在是太难翻译了= =
 
 ## 二、一些不加分号会出问题的场景
 

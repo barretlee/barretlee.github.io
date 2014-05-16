@@ -1,5 +1,5 @@
 if(!/barret/i.test(window.location.href)){
-    window.location.href = "http://barretlee.com";
+    window.location.href = "http://barretlee.github.io";
 }
 
 $(document).ready(function(){

@@ -5,10 +5,10 @@ layout: home
 <div class="index-content life">
     <div class="section">
         <ul class="artical-cate">
-            <li><a href="http://barretlee.com/"><span>技术积淀</span></a></li>
-            <li><a href="http://barretlee.com/opinion"><span>交互分析</span></a></li>
-            <li class="on"><a href="http://barretlee.com/life"><span>生活杂记</span></a></li>
-            <li><a href="http://barretlee.com/trash"><span>回收站</span></a></li>
+            <li><a href="http://barretlee.github.io/"><span>技术积淀</span></a></li>
+            <li><a href="http://barretlee.github.io/opinion"><span>交互分析</span></a></li>
+            <li class="on"><a href="http://barretlee.github.io/life"><span>生活杂记</span></a></li>
+            <li><a href="http://barretlee.github.io/trash"><span>回收站</span></a></li>
         </ul>
 
         <div class="cate-bar"><span id="cateBar"></span></div>

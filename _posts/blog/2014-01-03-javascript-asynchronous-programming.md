@@ -78,7 +78,7 @@ tags: javascript 异步编程 多线程 promise Generator
 
 可以戳戳这个 [DEMO](http://qianduannotes.duapp.com/demo/ansyc/)。
 
-本文地址：<http://barretlee.com/javascript-asynchronous-programming>，转载请注明出处。
+本文地址：<http://barretlee.github.io/javascript-asynchronous-programming>，转载请注明出处。
 
 ## 一、Javascript 异步编程原理
 

@@ -12,7 +12,7 @@ title: 订阅|Barret Lee的博客
      <script xmlns="http://www.w3.org/1999/xhtml" src="./js/rss.js"></script>
      {% for post in site.posts limit:15 %}<item>
        <title>{{ post.title | append:' ' | xml_escape }}</title>
-       <link>http://barretlee.com{{ post.url }}</link>
+       <link>http://barretlee.github.io{{ post.url }}</link>
        <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
        <description>
          {{ post.excerpt | xml_escape }}
