@@ -21,7 +21,7 @@ layout: home
                 </div>
             </li>
             <li itemscope itemtype="http://schema.org/Article">
-                <h2><a href="http://hi.barretlee.com" itemprop="url">我的微分享平台</a></h2>
+                <h2><a href="http://hi.barretlee.github.io" itemprop="url">我的微分享平台</a></h2>
                 <div class="title-desc" itemprop="description">
                     软件、代码、心得、链接等，我爱分享！
                 </div>

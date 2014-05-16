@@ -4,7 +4,7 @@ layout: single
 NotLoadComment: true
 ---
 <form class="page-loc" style="margin:0;margin-top:40px;" method="GET" action="/search">
-    <span style="float:right"><input type="text" class="web-search" name ="q" value="站内搜索" /><a href="http://barretlee.github.io/about.html">关于</a><a href="http://hi.barretlee.com" target="_blank" class="page-rss" style="margin-left: 20px;">微分享</a><a href="http://barretlee.github.io/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
+    <span style="float:right"><input type="text" class="web-search" name ="q" value="站内搜索" /><a href="http://barretlee.github.io/about.html">关于</a><a href="http://hi.barretlee.github.io" target="_blank" class="page-rss" style="margin-left: 20px;">微分享</a><a href="http://barretlee.github.io/atom.xml" class="page-rss" style="margin-left: 20px;">订阅</a></span>
     李靖的博客 » Tags
 </form>
 <div class="categories">
