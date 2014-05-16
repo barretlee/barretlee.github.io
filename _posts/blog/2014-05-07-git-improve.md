@@ -229,7 +229,7 @@ c) 如果你很自信，觉得线上的版本是存在问题，你这个版本�
 
 **2.2 SHA**
 
-关于 SHA 标识的介绍，我这里就懒得打字了，可以看我之前分享的[一点东西](http://hi.barretlee.github.io/2014/04/28/git-roll-back/)，使用
+关于 SHA 标识的介绍，我这里就懒得打字了，可以看我之前分享的[一点东西](http://hi.barretlee.com/2014/04/28/git-roll-back/)，使用
 
     git log
 
@@ -326,7 +326,7 @@ c) 如果你很自信，觉得线上的版本是存在问题，你这个版本�
     git checkout remotes/origin/branch_name
     git checkout branch_name
 
-详情请看之前分享的这篇文章，[git切换到远程分支](http://hi.barretlee.github.io/2014/04/30/switch-branch-in-git/)
+详情请看之前分享的这篇文章，[git切换到远程分支](http://hi.barretlee.com/2014/04/30/switch-branch-in-git/)
 
 **4.4 删除分支**
 
