@@ -138,8 +138,6 @@ tags: website
 
 [![blog-design-12](/images/blog-article-images/blog/blogdesign/blog-design-12.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-12.jpg)
 
-[![blog-design-13](/images/blog-article-images/blog/blogdesign/blog-design-13.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-13.jpg)
-
 这块效果还挺难做的，主要是滚动不好处理。左侧是一个 fixed 定位，容器的高度是死的，也就是 `$(window).height()` 的高度，blabla.. 细节我不说了，如果你感兴趣可以去思考下如何实现类似豆瓣FM左侧的功能块。我后来是监听鼠标滚动设置负margi-top值来模拟页面滚动。并且这个监听是在整个 document 而不是仅仅是 左侧的 box 上。
 
 整体效果实现并不复杂，麻烦的是一些细节处理。
@@ -248,7 +246,7 @@ Github pages 支持 jekyll 语法，jekyll 允许使用 Markdown，使用 jekyll
 	# 然后使用
 	MarkdownExtra::defaultTransform($content)
 
-使用 MarkdownExtra 的类来解析， MarkdownExtra 是继承 \Michelf\_MarkdownExtra_TmpImpl 的。
+使用 MarkdownExtra 的类来解析， MarkdownExtra 是继承 `\Michelf\_MarkdownExtra_TmpImpl` 的。
 
 ## 四、服务器的设置和维护
 
@@ -261,24 +259,26 @@ Github pages 支持 jekyll 语法，jekyll 允许使用 Markdown，使用 jekyll
 1. 在 httpd.conf 中开启 vhost 模块，并 include 其配置文件 httpd-vhosts.conf
 2. 在 httpd-vhosts.conf 写入
 
-	# 这是配置 localhost 这个"域名"
-	<VirtualHost *:80>
-	    ServerAdmin i@localhost
-	    DocumentRoot "E:/wamp/www"
-	    ServerName localhost
-	    ServerAlias localhost
-	    ErrorLog "logs/localhost.log"
-	    CustomLog "logs/localhost-access.log" common
-	</VirtualHost>
+```
+# 这是配置 localhost 这个"域名"
+<VirtualHost *:80>
+    ServerAdmin i@localhost
+    DocumentRoot "E:/wamp/www"
+    ServerName localhost
+    ServerAlias localhost
+    ErrorLog "logs/localhost.log"
+    CustomLog "logs/localhost-access.log" common
+</VirtualHost>
 
-	# 这是配置 test.barretlee.com 这个域名
-	<VirtualHost *:80>
-	    ServerAdmin test@barretlee.com
-	    DocumentRoot "E:/wamp/www/barretlee"
-	    ServerName test.barretlee.com
-	    ErrorLog "logs/test.barretlee.com-error.log"
-	    CustomLog "logs/test.barretlee.com-access.log" common
-	</VirtualHost>
+# 这是配置 test.barretlee.com 这个域名
+<VirtualHost *:80>
+    ServerAdmin test@barretlee.com
+    DocumentRoot "E:/wamp/www/barretlee"
+    ServerName test.barretlee.com
+    ErrorLog "logs/test.barretlee.com-error.log"
+    CustomLog "logs/test.barretlee.com-access.log" common
+</VirtualHost>
+```
 
 因为网上对这方面的配置有详细说明，我也不是行家，就不细说了。
 
@@ -295,7 +295,7 @@ Github pages 支持 jekyll 语法，jekyll 允许使用 Markdown，使用 jekyll
 URL 需要进行重写，算是内部重定向吧。这方面的工作可以交给 Nginx 来处理，也可以交给 Apache，由于我本地目前还只配置了 Apache，所以先看看 Apache 的配置方式：
 
 
-***1) 使用了Vhost*
+**1) 使用了Vhost**
 
 	<VirtualHost *:80>
 	    ServerAdmin test@barretlee.com
@@ -318,7 +318,7 @@ URL 需要进行重写，算是内部重定向吧。这方面的工作可以交�
 
 如果使用了 Vhost，可以在配置里写上 `RewriteEngine on`，然后加上需要的 RewriteRule 规则就行了。
 
-***2) 没有使用 Vhost*
+**2) 没有使用 Vhost**
 
 在网页所在文件的根目录下，新建一个 `.htaccess` 文件，里头写上：
 
