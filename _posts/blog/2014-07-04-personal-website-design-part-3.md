@@ -57,9 +57,9 @@ tags: website
 
 正常的流程是设计->设计稿->切图，我跳过了设计稿，直接开始敲代码，貌似自己对代码的亲切度比PSD图片更高（所以为什么总说撸代码呢…）。当然，要说设计稿，我还是有滴：
 
-[![blog-design-1](/images/blog-article-images/blogdesign/blog/blog-design-1.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-1.jpg)
+[![blog-design-1](/images/blog-article-images/blog/blogdesign/blog-design-1.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-1.jpg)
 
-[![blog-design-2](/images/blog-article-images/blogdesign/blog/blog-design-2.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-2.jpg)
+[![blog-design-2](/images/blog-article-images/blog/blogdesign/blog-design-2.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-2.jpg)
 
 设计很简单，故意弱化设计以强化内容，希望能够取长补短。
 
@@ -69,7 +69,7 @@ tags: website
 
 细节上的东西，只要进入网站就能看到，所以在这里就不赘述太多。代码的高亮使用的是 prettify 的 light 主题，对它做了微调。
 
-[![blog-design-3](/images/blog-article-images/blogdesign/blog/blog-design-3.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-3.jpg)
+[![blog-design-3](/images/blog-article-images/blog/blogdesign/blog-design-3.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-3.jpg)
 
 代码块滚动条的样式也修改了下：
 
@@ -84,15 +84,15 @@ tags: website
 
 效果是这样的：
 
-[![blog-design-4](/images/blog-article-images/blogdesign/blog/blog-design-4.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-4.jpg)
+[![blog-design-4](/images/blog-article-images/blog/blogdesign/blog-design-4.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-4.jpg)
 
 整个设计都是扁平化，没有圆角，看起来感觉还算舒服，下面是引用块的样式呈现：
 
-[![blog-design-5](/images/blog-article-images/blogdesign/blog/blog-design-5.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-5.jpg)
+[![blog-design-5](/images/blog-article-images/blog/blogdesign/blog-design-5.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-5.jpg)
 
 由于一些代码是可以直接运行的，所以也给可运行代码加上了一个运行的 button：
 
-[![blog-design-6](/images/blog-article-images/blogdesign/blog/blog-design-6.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-6.jpg)
+[![blog-design-6](/images/blog-article-images/blog/blogdesign/blog-design-6.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-6.jpg)
 
 在IE下，是使用一个 about:blank 的空白页打开代码文件，如果浏览器支持 blob 流，将会使用 blob 流打开：
 
@@ -110,25 +110,25 @@ tags: website
 
 **1) 侧边栏-未展开**
 
-[![blog-design-7](/images/blog-article-images/blogdesign/blog/blog-design-7.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-7.jpg)
+[![blog-design-7](/images/blog-article-images/blog/blogdesign/blog-design-7.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-7.jpg)
 
 从上图可以看到，侧边栏都是一些功能按钮，从上往下依次是：显示隐藏文章目录，页面主题和字体设置，关于作者，反馈信息，RSS订阅。
 
-[![blog-design-8](/images/blog-article-images/blogdesign/blog/blog-design-8.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-8.jpg)
+[![blog-design-8](/images/blog-article-images/blog/blogdesign/blog-design-8.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-8.jpg)
 
 为啥要搞个侧边栏，还放那么多的功能按钮？就拿司徒正美的博客来说，我在群里吐槽了他博客风格好几次（被骂回来了…理由是每个人审美观不一样），你可以去瞅瞅他的页面，代码字体实在是太小了，每次看他的博客都会把字号和行高调大一点，后来直接写个脚本放在收藏夹，进入他的网页一键处理。
 
 这个例子说明，每个人的口味不一样。一个网站，倘若冷暖色调，字体大小等可以自定义的话就更棒了，我没做那么复杂，就是给文章加了个黑色主题。
 
-[![blog-design-9](/images/blog-article-images/blogdesign/blog/blog-design-9.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-9.jpg)
+[![blog-design-9](/images/blog-article-images/blog/blogdesign/blog-design-9.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-9.jpg)
 
 通过这个按钮可以进行相应的设置。然后是侧边栏下面的几个按钮：
 
-[![blog-design-10](/images/blog-article-images/blogdesign/blog/blog-design-10.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-10.jpg)
+[![blog-design-10](/images/blog-article-images/blog/blogdesign/blog-design-10.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-10.jpg)
 
 “跟我对话”点击之后会在右下角往上蹦出一个浮层：
 
-[![blog-design-11](/images/blog-article-images/blogdesign/blog/blog-design-11.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-11.jpg)
+[![blog-design-11](/images/blog-article-images/blog/blogdesign/blog-design-11.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-11.jpg)
 
 这个浮层是可拖动的。
 
@@ -136,9 +136,9 @@ tags: website
 
 做了个未展开的侧边栏其实也差不多了，后来发现我的页面中好像并没有“文章归档”，“最新文章”，“最近评论”等这些对一个博客来说很常见的元素，于是乎，抄袭了下豆瓣FM的设计，弄了下面的东西：
 
-[![blog-design-12](/images/blog-article-images/blogdesign/blog/blog-design-12.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-12.jpg)
+[![blog-design-12](/images/blog-article-images/blog/blogdesign/blog-design-12.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-12.jpg)
 
-[![blog-design-13](/images/blog-article-images/blogdesign/blog/blog-design-13.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-13.jpg)
+[![blog-design-13](/images/blog-article-images/blog/blogdesign/blog-design-13.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-13.jpg)
 
 这块效果还挺难做的，主要是滚动不好处理。左侧是一个 fixed 定位，容器的高度是死的，也就是 `$(window).height()` 的高度，blabla.. 细节我不说了，如果你感兴趣可以去思考下如何实现类似豆瓣FM左侧的功能块。我后来是监听鼠标滚动设置负margi-top值来模拟页面滚动。并且这个监听是在整个 document 而不是仅仅是 左侧的 box 上。
 
@@ -146,7 +146,7 @@ tags: website
 
 ### 2. 底部的设计与实现
 
-[![blog-design-14](/images/blog-article-images/blogdesign/blog/blog-design-14.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-14.jpg)
+[![blog-design-14](/images/blog-article-images/blog/blogdesign/blog-design-14.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-14.jpg)
 
 底部的设计我最纠结的是内容，到底放点什么东西。跟文章相关度最高的，一是相关文章，二是评论，所以也就只把这两样放上了。
 
@@ -160,7 +160,7 @@ tags: website
 
 Github pages 支持 jekyll 语法，jekyll 允许使用 Markdown，使用 jekyll 语法写的文章内容中多了很多 `{{ xxx.xx }}` 以及下面这个头部：
 
-[![blog-design-15](/images/blog-article-images/blogdesign/blog/blog-design-15.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-15.jpg)
+[![blog-design-15](/images/blog-article-images/blog/blogdesign/blog-design-15.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-15.jpg)
 
 对头部的解析也没啥好办法，就是使用正则来匹配：
 
@@ -212,7 +212,7 @@ Github pages 支持 jekyll 语法，jekyll 允许使用 Markdown，使用 jekyll
 
 网页中，正文、底部和边栏需要数据，所以数据的查询主要是针对这三块。
 
-[![blog-design-16](/images/blog-article-images/blogdesign/blog/blog-design-16.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-16.jpg)
+[![blog-design-16](/images/blog-article-images/blog/blogdesign/blog-design-16.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-16.jpg)
 
 目前这三块数据是后台直接同时输出的，稍微想想就知道这个效率并不高，后续肯定会改成异步接口。封装之后，获取并渲染一篇文章就变得异常轻松了：
 
@@ -227,7 +227,7 @@ Github pages 支持 jekyll 语法，jekyll 允许使用 Markdown，使用 jekyll
 
 后台数据的渲染都是：
 
-[![blog-design-17](/images/blog-article-images/blogdesign/blog/blog-design-17.jpg)](/images/blog-article-images/blogdesign/blog/blog-design-17.jpg)
+[![blog-design-17](/images/blog-article-images/blog/blogdesign/blog-design-17.jpg)](/images/blog-article-images/blog/blogdesign/blog-design-17.jpg)
 
 如果改成前端异步获取，那前端又得写一套模板渲染数据，这里感觉流程上存在冗余，后期肯定会改进。
 
