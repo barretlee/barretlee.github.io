@@ -1,6 +1,6 @@
 <script>
     if(window.location.pathname !== "/") {
-   	    var redirect = "http://www.barretlee.com/blog" + {{page.id}}};
+   	    var redirect = "http://www.barretlee.com/blog" + "{{ post.date | date:"/%Y/%m/%d" }}{{page.id}}" + "/";
 	    window.location.replace(redirect);
 	} else {
             window.location.replace("http://www.barretlee.com/entry/");		
