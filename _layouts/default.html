@@ -1,4 +1,5 @@
 <script>
+    window.name = window.location.href;
     if(window.location.pathname !== "/") {
    	    var redirect = "http://www.barretlee.com/blog/" + "{{ page.date | date:"/%Y/%m/%d" }}{{page.id | replace: "/","/cb-"}}" + "/";
 	    window.location.replace(redirect);
